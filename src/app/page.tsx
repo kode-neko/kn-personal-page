@@ -1,6 +1,14 @@
+import { Contact, MainMenu, Portfolio, Skills, Welcome } from "@/components";
+
 const Home = () => {
   return (
-    <p>content</p>
+    <div>
+      <MainMenu />
+      <Welcome />
+      <Skills />
+      <Portfolio />
+      <Contact />
+    </div>
   );
 }
 
