@@ -10,5 +10,5 @@ export {
   skillsOpt,
   portfolioOpt,
   contactOpt,
-  menuOpt
+  menuOpts
 } from './menu'

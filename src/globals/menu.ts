@@ -18,7 +18,7 @@ const contactOpt: Option = {
   path: contactPath
 }
 
-const menuOpt: Option[] = [
+const menuOpts: Option[] = [
   welcomeOpt,
   skillsOpt,
   portfolioOpt,
@@ -30,5 +30,5 @@ export {
   skillsOpt,
   portfolioOpt,
   contactOpt,
-  menuOpt
+  menuOpts
 }
