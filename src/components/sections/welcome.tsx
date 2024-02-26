@@ -1,8 +1,8 @@
-import React from 'react'
+import styles from './styles.module.css'
 
 const Welcome = () => {
   return (
-    <div>Welcome</div>
+    <section className={styles.welcome}>Welcome</section>
   )
 }
 

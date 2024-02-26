@@ -1,13 +1,21 @@
-import { Contact, MainBar, Portfolio, Skills, Welcome } from "@/components";
+import { Contact, Footer, MainBar, Portfolio, Skills, Welcome } from "@/components";
+import styles from './styles.module.css'
 
 const Home = () => {
   return (
     <div>
-      <MainBar />
-      <Welcome />
-      <Skills />
-      <Portfolio />
-      <Contact />
+      <header>
+        <MainBar />
+      </header>
+      <main className={styles.main}>
+        <Welcome />
+        <Skills />
+        <Portfolio />
+        <Contact />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
