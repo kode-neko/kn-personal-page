@@ -1,11 +1,14 @@
 .mainBar {
   display: flex;
   justify-content: end;
+  padding: 1.25rem 2.5rem;
 }
 
 .mainBar .menu {
   display: flex;
   gap: 3.25rem;
+  padding: 0;
+  margin: 0;
 }
 
 .mainBar .menu li {
@@ -16,4 +19,5 @@
 .mainBar .menu a {
   color: var(--color-light);
   text-decoration: none;
+  font-weight: bold;
 }
