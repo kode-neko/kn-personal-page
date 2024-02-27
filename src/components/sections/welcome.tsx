@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
-import { avatarPic } from '@/globals'
+import { avatarPic, socialList } from '@/globals'
+import Link from 'next/link'
 
 const Welcome = () => {
   return (
@@ -8,11 +9,24 @@ const Welcome = () => {
       <div className={styles.left}>
         <h1 className={styles.title}>mainTitle</h1>
         <div className={styles.cont}>
-          <h2 className={styles.subtitle}>Kodeneko</h2>
-          <h3 className={styles.ocupation}>occupation</h3>
-          <p className={styles.desc}>
-            Sunt do ad nulla exercitation exercitation eu occaecat ea velit.
-          </p>
+          <div className={styles.desc}>
+            <h2>Kodeneko</h2>
+            <h3>occupation</h3>
+            <p>
+              Sunt do ad nulla exercitation exercitation eu occaecat ea velit.
+            </p>
+          </div>
+          <ul className={styles.social}>
+            {socialList.map(s => (
+              <Link
+                key={s.id}
+                about={s.path}
+                href={s.path}
+              >
+                {s.id}
+              </Link>
+            ))}
+          </ul>
         </div>
       </div>
       <div className={styles.right}>

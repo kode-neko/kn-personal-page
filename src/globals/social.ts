@@ -1,6 +1,5 @@
 import { codepenPath, figmaPath, githubPath, stackblitzPath } from "./paths"
 
-
 const githubLink = {
   id: 'Github',
   path: githubPath
