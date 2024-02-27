@@ -1,6 +1,15 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 
+const Field = () => {
+  return (
+    <div>
+      <div>icon</div>
+      <div><input /></div>
+    </div>
+  )
+}
+
 const Contact = () => {
   return (
     <section>
@@ -10,23 +19,14 @@ const Contact = () => {
       </div>
       <div>
         <div>
+          <Field />
+          <Field />
+          <Field />
+        </div>
+        <div>
+          <div>hint</div>
           <div>
-            <div>icon</div>
-            <div><input /></div>
-          </div>
-          <div>
-            <div>icon</div>
-            <div><input /></div>
-          </div>
-          <div>
-            <div>icon</div>
-            <div><input /></div>
-          </div>
-          <div>
-            <div>hint</div>
-            <div>
-              <button>enviar</button>
-            </div>
+            <button>enviar</button>
           </div>
         </div>
       </div>
