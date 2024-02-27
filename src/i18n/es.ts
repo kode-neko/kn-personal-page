@@ -22,6 +22,12 @@ export default {
     design: 'Design',
     tools: 'Tools'
   },
+  skills: {
+    front: 'Front',
+    back: 'Back',
+    design: 'Design',
+    tools: 'Tools'
+  },
   placeH: {
     name: 'My name is...',
     email: 'my@mail.com',

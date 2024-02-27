@@ -27,6 +27,15 @@ export {
 } from './pictures'
 
 export {
+  frontSkills,
+  backSkills,
+  designSkills,
+  toolsSkills,
+
+  listSkill
+} from './skills'
+
+export {
   githubLink,
   codepenLink,
   stackblitzLink,

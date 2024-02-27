@@ -55,6 +55,46 @@
 
 /* Skills */
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.skills > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skills .areas {
+  display: flex;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.skills .areas > li {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+
+.skills .areas > li > h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.skills .areas > li > .techs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+}
+
+.skills .areas > li > .techs > li {
+}
+
 /* Portfolio */
 
 /* Contact */
