@@ -5,6 +5,7 @@ export {
   contactPath,
   listPath
 } from './paths'
+
 export {
   welcomeOpt,
   skillsOpt,
@@ -12,3 +13,9 @@ export {
   contactOpt,
   menuOpts
 } from './menu'
+
+export {
+  avatarPic,
+  officePic,
+  mailBoxPic
+} from './pictures'
