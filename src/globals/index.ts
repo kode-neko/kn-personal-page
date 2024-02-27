@@ -3,6 +3,12 @@ export {
   skillsPath,
   portfolioPath,
   contactPath,
+
+  githubPath,
+  codepenPath,
+  stackblitzPath,
+  figmaPath,
+
   listPath
 } from './paths'
 
@@ -19,3 +25,12 @@ export {
   officePic,
   mailBoxPic
 } from './pictures'
+
+export {
+  githubLink,
+  codepenLink,
+  stackblitzLink,
+  figmaLink,
+
+  socialList
+} from './social'

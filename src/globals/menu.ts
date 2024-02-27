@@ -1,24 +1,24 @@
-import { Option } from "@/models";
+import { Link } from "@/models";
 import { contactPath, portfolioPath, skillsPath, welcomePath } from ".";
 
-const welcomeOpt: Option = {
+const welcomeOpt: Link = {
   id: 'welcome',
   path: welcomePath
 }
-const skillsOpt: Option = {
+const skillsOpt: Link = {
   id: 'skills',
   path: skillsPath
 }
-const portfolioOpt: Option = {
+const portfolioOpt: Link = {
   id: 'portfolio',
   path: portfolioPath
 }
-const contactOpt: Option = {
+const contactOpt: Link = {
   id: 'contact',
   path: contactPath
 }
 
-const menuOpts: Option[] = [
+const menuOpts: Link[] = [
   welcomeOpt,
   skillsOpt,
   portfolioOpt,
