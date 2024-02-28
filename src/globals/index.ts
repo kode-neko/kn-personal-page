@@ -27,6 +27,14 @@ export {
 } from './pictures'
 
 export {
+  akkountProject,
+  cheettyProject,
+  codeTestProject,
+  
+  listProject
+} from './projects'
+
+export {
   frontSkills,
   backSkills,
   designSkills,
