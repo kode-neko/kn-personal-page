@@ -12,6 +12,7 @@
 h1,
 h2,
 h3,
+h4,
 p,
 ul,
 li,
@@ -21,6 +22,19 @@ a {
   list-style: none;
   text-decoration: none;
   color: var(--color-light);
+}
+
+input,
+textarea,
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 799px) {
