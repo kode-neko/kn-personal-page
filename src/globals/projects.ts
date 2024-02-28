@@ -2,6 +2,12 @@ import Project from "@/models/Project";
 
 const akkountProject: Project = {
   id: 'akkount',
+  pic: {
+    id: "akkount",
+    src: "/project/akkount.webp",
+    width: 450,
+    height: 450
+  },
   social: [
     {
       id: 'web',
@@ -21,6 +27,12 @@ const akkountProject: Project = {
 
 const cheettyProject: Project = {
   id: 'cheety',
+  pic: {
+    id: "cheetty",
+    src: "/project/cheetty.webp",
+    width: 450,
+    height: 450
+  },
   social: [
     {
       id: 'web',
@@ -40,6 +52,12 @@ const cheettyProject: Project = {
 
 const codeTestProject: Project = {
   id: 'codetest',
+  pic: {
+    id: "codeTest",
+    src: "/project/code-test.webp",
+    width: 450,
+    height: 450
+  },
   social: [
     {
       id: 'codepen',
@@ -53,7 +71,7 @@ const codeTestProject: Project = {
   tags: []
 };
 
-const listProject = [
+const listProject: Project[] = [
   akkountProject,
   cheettyProject,
   codeTestProject
