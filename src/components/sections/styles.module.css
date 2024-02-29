@@ -104,6 +104,7 @@
   background-image: url("/office.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-origin: padding-box;
 }
 
 .portfolio > .header {
