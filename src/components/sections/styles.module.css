@@ -101,6 +101,9 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  background-image: url("/office.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .portfolio > .header {
@@ -127,6 +130,7 @@
 }
 
 .portfolio > .content {
+  max-width: 46.88rem;
   display: flex;
   gap: 5rem;
 }
