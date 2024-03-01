@@ -1,8 +1,8 @@
 import { Contact, Footer, MainBar, Portfolio, Skills, Welcome } from "@/components";
-import '../fontawesome'
 import styles from './styles.module.css'
 
 const Home = () => {
+  console.log('jelouuuu')
   return (
     <div>
       <header>
