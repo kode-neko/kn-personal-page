@@ -1,0 +1,34 @@
+.mainBar {
+  display: flex;
+  justify-content: end;
+  padding: 1.25rem 2.5rem;
+}
+
+.mainBar .menu {
+  display: flex;
+  gap: 3.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.mainBar .menu li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mainBar .menu a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: var(--trans-light);
+  padding: 1.25rem;
+  margin-top: 5rem;
+}
+
+.footer > p {
+  text-align: center;
+  font-size: 1.5rem;
+}

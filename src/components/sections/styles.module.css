@@ -1,0 +1,298 @@
+/* General */
+
+.welcome,
+.skills,
+.portfolio,
+.contact {
+}
+
+/* Welcome */
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  gap: 7.75rem;
+}
+
+.welcome .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome .left .title {
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.welcome .left .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+}
+
+.welcome .left .cont .desc > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--color-pink);
+}
+
+.welcome .left .cont .desc > h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.welcome .left .cont .social {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.welcome .right {
+}
+
+.welcome .right .pic {
+}
+
+/* Skills */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.skills > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skills .areas {
+  display: flex;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.skills .areas > li {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+
+.skills .areas > li > h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.skills .areas > li > .techs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+}
+
+.skills .areas > li > .techs > li {
+}
+
+/* Portfolio */
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/office.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: padding-box;
+}
+
+.portfolio > .cont {
+  width: 65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.portfolio > .cont > .header {
+  display: flex;
+}
+
+.portfolio > .cont > .header > h2 {
+  flex-grow: 1;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.portfolio > .cont > .header > .arrows {
+  display: flex;
+  gap: 0.63rem;
+}
+
+.portfolio > .cont > .header > .arrows button {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.63rem;
+  background-color: var(--color-pink);
+  color: var(--color-light);
+}
+
+.portfolio > .cont > .content {
+  display: flex;
+  gap: 5rem;
+}
+
+.portfolio > .cont > .content > .pic {
+  width: 450px;
+  height: 450px;
+  border: 0.25rem solid var(--color-pink);
+  border-radius: 1.25rem;
+}
+
+.portfolio > .cont > .content > .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+}
+
+.portfolio > .cont > .content > .info > .title {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.portfolio > .cont > .content > .info > .title > h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.portfolio > .cont > .content > .info > .title > .social {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.portfolio > .cont > .content > .info > .title > .social > li > a {
+  color: var(--color-blue);
+}
+
+.portfolio > .cont > .content > .info > p {
+  display: flex;
+}
+
+.portfolio > .cont > .content > .info > .tags {
+  display: flex;
+  margin-top: 3.13rem;
+}
+
+.portfolio > .cont > .content > .info > .tags > li {
+  font-size: 1.5rem;
+  padding: 0.38rem 0.75rem;
+  border-radius: 0.63rem;
+  background-color: var(--color-blue);
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.contact > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.contact > .cont {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.contact > .cont > .contPic {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > .cont > form {
+  flex-basis: 50%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--trans-light);
+  padding: 3.65rem;
+  border-radius: 1.25rem;
+}
+
+.contact > .cont > form > .fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact > .cont > form > .fieldset > .field {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contact > .cont > form > .fieldset > .field > .icon {
+  width: 2.63rem;
+  color: var(--color-pink);
+}
+
+.contact > .cont > form > .fieldset > .field > input {
+  align-self: stretch;
+  flex-grow: 1;
+  border-bottom: 0.25rem solid var(--color-pink);
+  font-size: 1.5rem;
+  color: var(--color-light);
+}
+
+.contact > .cont > form > .fieldset > .field > textarea {
+  flex-grow: 1;
+  border-bottom: 0.25rem solid var(--color-pink);
+  color: var(--color-light);
+}
+
+.contact > .cont > form > .fieldset > .field > input::placeholder {
+  color: var(--color-pink);
+  font-style: oblique;
+}
+
+.contact > .cont > form > .fieldset > .field > textarea::placeholder {
+  color: var(--color-light);
+  font-style: oblique;
+}
+
+.contact > .cont > form > .bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1.25rem;
+}
+
+.contact > .cont > form > .bottom > .hint {
+  flex-grow: 1;
+  display: flex;
+  color: var(--color-blue);
+  font-size: 1.5rem;
+  font-style: oblique;
+  margin-left: 4.1rem;
+}
+
+.contact > .cont > form > .bottom > .actions {
+  display: flex;
+}
+
+.contact > .cont > form > .bottom > .actions > button {
+  background-color: var(--color-pink);
+  color: var(--color-light);
+  font-size: 2rem;
+  padding: 0.63rem;
+  border-radius: 0.63rem;
+}
