@@ -3,6 +3,7 @@
   --color-light: #f4ecfb;
   --color-pink: #7e108f;
   --color-blue: #2094ff;
+  --trans-light: rgb(244, 236, 251, 0.04);
 
   font-size: 16px;
   background-color: var(--color-back);
@@ -31,6 +32,12 @@ button {
   margin: 0;
   border: none;
   background: none;
+}
+
+input:focus-within,
+textarea:focus-within {
+  border: none;
+  outline: none;
 }
 
 button:hover {

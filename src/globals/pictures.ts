@@ -16,7 +16,7 @@ const officePic: Picture = {
 
 const mailBoxPic: Picture = {
   id: 'mailBox',
-  src: '/mailBox.png',
+  src: '/mail-box.png',
   width: 399,
   height: 280
 }
