@@ -203,18 +203,18 @@
 
 .contact > .cont {
   display: flex;
-  justify-content: space-between;
   gap: 2.5rem;
 }
 
 .contact > .cont > .contPic {
+  flex-basis: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact > .cont > form {
-  width: 100%;
+  flex-basis: 50%;
   display: flex;
   gap: 2.5rem;
   flex-direction: column;
