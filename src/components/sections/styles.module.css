@@ -100,29 +100,35 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
   background-image: url("/office.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-origin: padding-box;
 }
 
-.portfolio > .header {
+.portfolio > .cont {
+  width: 65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.portfolio > .cont > .header {
   display: flex;
 }
 
-.portfolio > .header > h2 {
+.portfolio > .cont > .header > h2 {
   flex-grow: 1;
   font-size: 4rem;
   font-weight: bold;
 }
 
-.portfolio > .header > .arrows {
+.portfolio > .cont > .header > .arrows {
   display: flex;
   gap: 0.63rem;
 }
 
-.portfolio > .header .arrows button {
+.portfolio > .cont > .header > .arrows button {
   height: 4rem;
   width: 4rem;
   border-radius: 0.63rem;
@@ -130,56 +136,54 @@
   color: var(--color-light);
 }
 
-.portfolio > .content {
-  max-width: 46.88rem;
+.portfolio > .cont > .content {
   display: flex;
   gap: 5rem;
 }
 
-.portfolio > .content > .pic {
+.portfolio > .cont > .content > .pic {
   width: 450px;
   height: 450px;
   border: 0.25rem solid var(--color-pink);
   border-radius: 1.25rem;
 }
 
-.portfolio > .content > .info {
-  flex-grow: 1;
+.portfolio > .cont > .content > .info {
   display: flex;
   flex-direction: column;
   gap: 0.63rem;
 }
 
-.portfolio > .content > .info > .title {
+.portfolio > .cont > .content > .info > .title {
   display: flex;
   gap: 1.25rem;
 }
 
-.portfolio > .content > .info > .title > h3 {
+.portfolio > .cont > .content > .info > .title > h3 {
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-.portfolio > .content > .info > .title > .social {
+.portfolio > .cont > .content > .info > .title > .social {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
 
-.portfolio > .content > .info > .title > .social > li > a {
+.portfolio > .cont > .content > .info > .title > .social > li > a {
   color: var(--color-blue);
 }
 
-.portfolio > .content > .info > p {
+.portfolio > .cont > .content > .info > p {
   display: flex;
 }
 
-.portfolio > .content > .info > .tags {
+.portfolio > .cont > .content > .info > .tags {
   display: flex;
   margin-top: 3.13rem;
 }
 
-.portfolio > .content > .info > .tags > li {
+.portfolio > .cont > .content > .info > .tags > li {
   font-size: 1.5rem;
   padding: 0.38rem 0.75rem;
   border-radius: 0.63rem;

@@ -39,15 +39,17 @@ const InfoPortfolio = ({project}: {project: Project}) => {
 const Portfolio = () => {
   return (
     <section className={styles.portfolio}>
-      <div className={styles.header}>
-        <h2>portfolio</h2>
-        <div className={styles.arrows}>
-          <button>izq</button>
-          <button>der</button>
+      <div className={styles.cont}>
+        <div className={styles.header}>
+          <h2>portfolio</h2>
+          <div className={styles.arrows}>
+            <button>izq</button>
+            <button>der</button>
+          </div>
         </div>
-      </div>
-      <div className={styles.content}>
-        <InfoPortfolio project={listProject[0]} />
+        <div className={styles.content}>
+          <InfoPortfolio project={listProject[0]} />
+        </div>
       </div>
     </section>
   )
