@@ -4,3 +4,4 @@ export {
   MainBar,
   MainMenu
 } from './main-bar'
+export { SubTitle} from './sub-title'
