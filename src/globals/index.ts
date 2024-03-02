@@ -4,6 +4,7 @@ export {
   portfolioPath,
   contactPath,
 
+  twitterPath,
   githubPath,
   codepenPath,
   stackblitzPath,
