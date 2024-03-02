@@ -1,0 +1,19 @@
+.sm {
+  height: 34px;
+}
+
+.md {
+  height: 42px;
+}
+
+.lg {
+  height: 52px;
+}
+
+.pink {
+  color: var(--color-pink);
+}
+
+.blue {
+  color: var(--color-blue);
+}

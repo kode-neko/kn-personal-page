@@ -5,3 +5,4 @@ export {
   MainMenu
 } from './main-bar'
 export { SubTitle} from './sub-title'
+export { BtnIcon} from './btn-icon'
