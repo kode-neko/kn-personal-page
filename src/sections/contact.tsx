@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './styles.module.css'
-import Icon from '../icon'
+import { Icon } from '@/components'
 
 interface FieldProps {
   icon: string, 
