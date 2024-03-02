@@ -3,14 +3,21 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../app/globals.css'
 
 const meta = {
-  title: 'MainMenu',
+  title: 'Personal Page/MainMenu',
   component: MainMenu,
   parameters: {
     layout: 'fullscreen',
+    backgrounds: {
+      values: [
+        { name: 'light', value: '#fff' },
+        { name: 'dark', value: '#333' },
+      ],
+    },
   },
+  tags: ['autodocs'],
 } satisfies Meta<typeof MainMenu>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedOut: Story = {};
+export const def: Story = {};
