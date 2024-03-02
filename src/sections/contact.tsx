@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './styles.module.css'
-import { Icon } from '@/components'
+import { Icon, SubTitle } from '@/components'
 
 interface FieldProps {
   icon: string, 
@@ -22,7 +22,10 @@ const Field = ({icon, placeholder, onChange}: FieldProps) => {
 const Contact = () => {
   return (
     <section className={styles.contact}>
-      <h2>Contact</h2>
+          <SubTitle
+            label="contact"
+            align='right'
+          />
       <div className={styles.cont}>
         <div className={styles.contPic}>
           <Image

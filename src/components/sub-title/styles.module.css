@@ -3,3 +3,15 @@
   font-size: 4rem;
   font-weight: bold;
 }
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}

@@ -1,5 +1,6 @@
 import { listSkill } from '@/globals'
 import styles from './styles.module.css'
+import { SubTitle } from '@/components';
 
 const Techs = ({techs}: {techs: string[]}) => {
   return (
@@ -14,7 +15,7 @@ const Techs = ({techs}: {techs: string[]}) => {
 const Skills = () => {
   return (
     <section className={styles.skills}>
-      <h2>Skills</h2>
+      <SubTitle label='Skills' />
       <ul className={styles.areas}>
         {listSkill.map(s => (
           <li key={s.id}>

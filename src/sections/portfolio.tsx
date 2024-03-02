@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import Project from '@/models/Project'
 import { listProject } from '@/globals'
 import Link from 'next/link'
+import { SubTitle } from '@/components'
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
@@ -41,7 +42,10 @@ const Portfolio = () => {
     <section className={styles.portfolio}>
       <div className={styles.cont}>
         <div className={styles.header}>
-          <h2>portfolio</h2>
+          <SubTitle
+            label="portfolio"
+            align='left'
+          />
           <div className={styles.arrows}>
             <button>izq</button>
             <button>der</button>

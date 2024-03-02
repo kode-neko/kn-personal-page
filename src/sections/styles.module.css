@@ -62,12 +62,6 @@
   gap: 3.75rem;
 }
 
-.skills > h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: center;
-}
-
 .skills .areas {
   display: flex;
   justify-content: center;
