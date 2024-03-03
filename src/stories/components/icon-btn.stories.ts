@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../app/globals.css'
 
 const meta = {
-  title: 'Personal Page/IconBtn',
+  title: 'Personal Page/BtnIcon',
   component: BtnIcon,
   parameters: {
     layout: 'fullscreen',
@@ -11,7 +11,8 @@ const meta = {
   args: {
     icon: 'fa-brands fa-twitter',
     size: 'sm',
-    color: 'pink'
+    color: 'pink',
+    href: ''
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof BtnIcon>;

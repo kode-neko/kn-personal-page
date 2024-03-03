@@ -10,7 +10,7 @@ const twitterLink: Link = {
 const githubLink: Link = {
   id: 'Github',
   path: githubPath,
-  icon: 'fa-brands fa-github'
+  icon: 'fa-brands fa-github-alt'
 }
 
 const codepenLink = {
@@ -39,6 +39,7 @@ const socialList = [
 ]
 
 export {
+  twitterLink,
   githubLink,
   codepenLink,
   stackblitzLink,

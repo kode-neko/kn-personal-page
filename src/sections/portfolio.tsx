@@ -3,9 +3,8 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 import Project from '@/models/Project'
-import { listProject } from '@/globals'
-import Link from 'next/link'
-import { Icon, SubTitle } from '@/components'
+import { iconProjectDic, listProject } from '@/globals'
+import { BtnIcon, Icon, SubTitle } from '@/components'
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
@@ -23,11 +22,13 @@ const InfoPortfolio = ({project}: {project: Project}) => {
           <h3>{id}</h3>
           <ul className={styles.social}>{social.map(s => (
             <li key={s.id}>
-              <Link 
-                about={s.id}
-                href={s.path}
-              >{s.id}</Link>
-              </li>
+              <BtnIcon
+                href={s.path as string}
+                color='blue'
+                size='sm'
+                icon={iconProjectDic[s.id] as string}
+              />
+            </li>
           ))}</ul>
         </div>
         <p>Anim reprehenderit laboris occaecat laboris velit aliqua nisi minim labore amet irure adipisicing velit nisi. Fugiat dolore ad fugiat commodo voluptate.</p>
