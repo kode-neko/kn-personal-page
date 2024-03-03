@@ -26,6 +26,7 @@
   font-weight: bold;
   box-sizing: border-box;
   border-bottom: 0.25rem solid var(--color-trans);
+  transition: border-bottom 0.2s;
 }
 
 .mainMenu > li > a:hover {
