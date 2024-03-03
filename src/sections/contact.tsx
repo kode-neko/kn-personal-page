@@ -2,30 +2,15 @@
 
 import Image from 'next/image'
 import styles from './styles.module.css'
-import { Icon, SubTitle } from '@/components'
-
-interface FieldProps {
-  icon: string, 
-  placeholder: string, 
-  onChange: () => {}
-}
-
-const Field = ({icon, placeholder, onChange}: FieldProps) => {
-  return (
-    <div className={styles.field}>
-      <Icon className={styles.icon} icon={icon} />
-      <input placeholder={placeholder} onChange={onChange}/>
-    </div>
-  )
-}
+import { ContactForm, Icon, SubTitle } from '@/components'
 
 const Contact = () => {
   return (
     <section className={styles.contact}>
-          <SubTitle
-            label="contact"
-            align='right'
-          />
+      <SubTitle
+        label="contact"
+        align='right'
+      />
       <div className={styles.cont}>
         <div className={styles.contPic}>
           <Image
@@ -36,31 +21,7 @@ const Contact = () => {
             className={styles.pic}
           />
         </div>
-        <form>
-          <div className={styles.fieldset}>
-            <Field
-              icon='fa-solid fa-face-smile'
-              placeholder='my name is...'
-              onChange={() => console.log('cambio name')}
-            />
-            <Field
-              icon='fa-solid fa-envelope'
-              placeholder='mail@mail.com'
-              onChange={() => console.log('cambio mail')}
-            />
-            <Field
-              icon='fa-solid fa-comment-dots'
-              placeholder='Congrats, critics, bla, bla'
-              onChange={() => console.log('cambio msg')}
-            />
-          </div>
-          <div className={styles.bottom}>
-            <p className={styles.hint}>Quis nulla deserunt nostrud anim</p>
-            <div className={styles.actions}>
-              <button>enviar</button>
-            </div>
-          </div>
-        </form>
+        <ContactForm />
       </div>                                 
     </section>
   )
