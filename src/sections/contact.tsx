@@ -3,8 +3,16 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { ContactForm, Icon, SubTitle } from '@/components'
+import { useState } from 'react'
+import { Contact } from '@/models'
 
 const Contact = () => {
+  const [contact, setContact] = useState<Contact>({
+    name: '',
+    mail: '',
+    msg: ''
+  });
+
   return (
     <section className={styles.contact}>
       <SubTitle
@@ -21,7 +29,10 @@ const Contact = () => {
             className={styles.pic}
           />
         </div>
-        <ContactForm />
+        <ContactForm 
+          values={contact} 
+          onSubmit={(result) => setContact(result)} 
+        />
       </div>                                 
     </section>
   )

@@ -4,6 +4,7 @@ import { useFormState } from 'react-dom';
 import { Field } from '../field'
 import styles from './styles.module.css'
 import { Contact } from '@/models';
+import { useEffect } from 'react';
 
 export async function action( previousState: string | undefined | null, formData: FormData,) {
   console.log("previous recorded state ", previousState);
@@ -14,12 +15,17 @@ export async function action( previousState: string | undefined | null, formData
   };
 }
 
-const ContactForm = () => {
-  const [state, formAction] = useFormState(action, {
-    name: '',
-    mail:  '',
-    msg:  '',
-  });
+interface ContactFormProps {
+  values: Contact,
+  onSubmit: (contact: Contact) => void
+}
+
+const ContactForm = ({values, onSubmit}: ContactFormProps) => {
+  const [state, formAction] = useFormState(action, values);
+
+  useEffect(() => {
+    onSubmit(state as Contact)
+  }, [state])
 
   return (
     <form 
