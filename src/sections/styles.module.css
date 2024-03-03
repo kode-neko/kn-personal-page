@@ -138,12 +138,23 @@
   gap: 0.63rem;
 }
 
-.portfolio > .cont > .header > .arrows button {
+.portfolio > .cont > .header > .arrows > button {
   height: 4rem;
   width: 4rem;
   border-radius: 0.63rem;
   background-color: var(--color-pink);
   color: var(--color-light);
+  transition: background-color 0.2s, cursor 0.2s;
+}
+
+.portfolio > .cont > .header > .arrows > button:hover {
+  background-color: var(--color-light);
+  cursor: pointer;
+}
+
+.portfolio > .cont > .header > .arrows > button > .arrow {
+  color: var(--color-back);
+  height: 2.63rem;
 }
 
 .portfolio > .cont > .content {
