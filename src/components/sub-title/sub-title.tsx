@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 interface SubTitleProps {
   label: string,
-  align: 'center' | 'left' | 'right'
+  align?: 'center' | 'left' | 'right'
 }
 
 const SubTitle = ({label, align = 'center'}: SubTitleProps) => {

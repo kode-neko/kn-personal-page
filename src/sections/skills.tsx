@@ -1,6 +1,6 @@
 import { listSkill } from '@/globals'
 import styles from './styles.module.css'
-import { SubTitle } from '@/components';
+import { BtnIcon, Icon, SubTitle } from '@/components';
 
 const Techs = ({techs}: {techs: string[]}) => {
   return (
@@ -19,7 +19,13 @@ const Skills = () => {
       <ul className={styles.areas}>
         {listSkill.map(s => (
           <li key={s.id}>
-            <h3>{s.id}</h3>
+            <h3>
+              <Icon 
+                icon={s.icon} 
+                className={styles.icon} 
+              />
+              <span>{s.id}</span>
+            </h3>
             <Techs techs={s.techs} />
           </li>
         ))}

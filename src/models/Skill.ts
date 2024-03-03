@@ -1,5 +1,6 @@
 interface Skill {
   id: string,
+  icon: string,
   techs: string []
 }
 
