@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 
 interface TagProps {
   label: string,
-  color: 'blue' | 'pink'
+  color?: 'blue' | 'pink'
 }
 
 const Tag = ({label, color='blue'}: TagProps) => {

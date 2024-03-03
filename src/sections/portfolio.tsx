@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './styles.module.css'
 import Project from '@/models/Project'
 import { iconProjectDic, listProject } from '@/globals'
-import { BtnIcon, Icon, SubTitle } from '@/components'
+import { BtnIcon, Icon, SubTitle, Tag } from '@/components'
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
@@ -33,7 +33,11 @@ const InfoPortfolio = ({project}: {project: Project}) => {
         </div>
         <p>Anim reprehenderit laboris occaecat laboris velit aliqua nisi minim labore amet irure adipisicing velit nisi. Fugiat dolore ad fugiat commodo voluptate.</p>
         <ul className={styles.tags}>
-          {tags.map(t => <li key={t}>{t}</li>)}
+          {tags.map(t => (
+            <li key={t}>
+              <Tag label={t} />
+            </li>
+          ))}
         </ul>
       </div>
     </>

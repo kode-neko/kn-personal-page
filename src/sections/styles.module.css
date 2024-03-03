@@ -117,7 +117,7 @@
 }
 
 .portfolio > .cont {
-  width: 65rem;
+  width: 75rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -196,7 +196,7 @@
 }
 
 .portfolio > .cont > .content > .info > p {
-  display: flex;
+  font-size: 2rem;
 }
 
 .portfolio > .cont > .content > .info > .tags {
