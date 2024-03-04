@@ -1,7 +1,7 @@
 interface Link {
   id: string,
   icon?: string,
-  path: string
+  path?: string
 }
 
 export default Link;

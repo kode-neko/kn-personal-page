@@ -1,0 +1,15 @@
+.tag {
+  display: inline-block;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.63rem;
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}

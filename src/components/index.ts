@@ -1,9 +1,11 @@
+export {default as Footer } from './footer'
+export {default as Icon } from './icon'
 export {
-  Contact,
-  Portfolio,
-  Skills,
-  Welcome,
-} from './sections'
-export {default as Footer} from './footer'
-export {default as Icon} from './icon'
-export {default as MainBar} from './main-bar'
+  MainBar,
+  MainMenu
+} from './main-bar'
+export { SubTitle } from './sub-title'
+export { Tag } from './tag'
+export { BtnIcon } from './btn-icon'
+export { Field } from './field'
+export { ContactForm } from './contact-form'

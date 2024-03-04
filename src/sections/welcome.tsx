@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { avatarPic, socialList } from '@/globals'
-import Link from 'next/link'
+import { BtnIcon } from '@/components'
 
 const Welcome = () => {
   return (
@@ -18,13 +18,12 @@ const Welcome = () => {
           </div>
           <ul className={styles.social}>
             {socialList.map(s => (
-              <Link
-                key={s.id}
-                about={s.path}
+              <li><BtnIcon
                 href={s.path}
-              >
-                {s.id}
-              </Link>
+                color='blue'
+                size='lg'
+                icon={s.icon as string}
+              /></li>
             ))}
           </ul>
         </div>

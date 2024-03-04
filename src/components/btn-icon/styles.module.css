@@ -1,0 +1,27 @@
+.btn {
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.sm {
+  height: 34px;
+}
+
+.md {
+  height: 42px;
+}
+
+.lg {
+  height: 52px;
+}
+
+.pink {
+  color: var(--color-pink);
+}
+
+.blue {
+  color: var(--color-blue);
+}

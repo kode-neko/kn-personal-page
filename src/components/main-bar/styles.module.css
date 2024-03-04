@@ -1,0 +1,35 @@
+.mainBar {
+  position: fixed;
+  width: 100%;
+  background: var(--color-back);
+  display: flex;
+  justify-content: end;
+}
+
+.mainMenu {
+  display: flex;
+  gap: 3.25rem;
+  padding: 0;
+  margin: 0;
+  padding: 1.25rem 2.5rem;
+}
+
+.mainMenu > li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mainMenu > li > a {
+  display: inline-block;
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-bottom: 0.25rem solid var(--color-trans);
+  transition: border-bottom 0.2s;
+}
+
+.mainMenu > li > a:hover {
+  box-sizing: border-box;
+  border-bottom: 0.25rem solid var(--color-pink);
+}

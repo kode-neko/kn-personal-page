@@ -4,6 +4,7 @@ export {
   portfolioPath,
   contactPath,
 
+  twitterPath,
   githubPath,
   codepenPath,
   stackblitzPath,
@@ -31,7 +32,8 @@ export {
   cheettyProject,
   codeTestProject,
   
-  listProject
+  listProject,
+  iconProjectDic
 } from './projects'
 
 export {
@@ -44,6 +46,7 @@ export {
 } from './skills'
 
 export {
+  twitterLink,
   githubLink,
   codepenLink,
   stackblitzLink,

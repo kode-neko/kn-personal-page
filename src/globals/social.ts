@@ -1,23 +1,34 @@
-import { codepenPath, figmaPath, githubPath, stackblitzPath } from "./paths"
+import { Link } from "@/models"
+import { codepenPath, figmaPath, githubPath, stackblitzPath, twitterPath } from "./paths"
 
-const githubLink = {
+const twitterLink: Link = {
+  id: 'Twitter',
+  path: twitterPath,
+  icon: 'fa-brands fa-twitter'
+}
+
+const githubLink: Link = {
   id: 'Github',
-  path: githubPath
+  path: githubPath,
+  icon: 'fa-brands fa-github'
 }
 
 const codepenLink = {
   id: 'Codepen',
-  path: codepenPath
+  path: codepenPath,
+  icon: 'fa-brands fa-codepen'
 }
 
 const stackblitzLink = {
   id: 'StackBlitz',
-  path: stackblitzPath
+  path: stackblitzPath,
+  icon: 'fa-solid fa-bolt'
 }
 
 const figmaLink = {
   id: 'Figma',
-  path: figmaPath
+  path: figmaPath,
+  icon: 'fa-brands fa-figma'
 }
 
 const socialList = [
@@ -28,6 +39,7 @@ const socialList = [
 ]
 
 export {
+  twitterLink,
   githubLink,
   codepenLink,
   stackblitzLink,

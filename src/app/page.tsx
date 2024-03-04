@@ -1,5 +1,6 @@
-import { Contact, Footer, MainBar, Portfolio, Skills, Welcome } from "@/components";
+import { Footer, MainBar } from "@/components";
 import styles from './styles.module.css'
+import { Contact, Portfolio, Skills, Welcome } from "@/sections";
 
 const Home = () => {
   console.log('jelouuuu')

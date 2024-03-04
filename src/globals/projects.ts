@@ -71,6 +71,14 @@ const codeTestProject: Project = {
   tags: []
 };
 
+const iconProjectDic = {
+  web: 'fa-solid fa-link',
+  github: 'fa-brands fa-github',
+  figma: 'fa-brands fa-figma',
+  codepen: 'fa-brands fa-codepen',
+  stackBlitz: 'fa-solid fa-bolt'
+} 
+
 const listProject: Project[] = [
   akkountProject,
   cheettyProject,
@@ -82,5 +90,6 @@ export {
   cheettyProject,
   codeTestProject,
   
-  listProject
+  listProject,
+  iconProjectDic
 }

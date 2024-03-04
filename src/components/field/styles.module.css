@@ -1,0 +1,34 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.field > .icon {
+  width: 2.63rem;
+  color: var(--color-pink);
+}
+
+.field > input {
+  align-self: stretch;
+  flex-grow: 1;
+  border-bottom: 0.25rem solid var(--color-pink);
+  font-size: 1.5rem;
+  color: var(--color-light);
+}
+
+.field > textarea {
+  flex-grow: 1;
+  border-bottom: 0.25rem solid var(--color-pink);
+  color: var(--color-light);
+}
+
+.field > input::placeholder {
+  color: var(--color-pink);
+  font-style: oblique;
+}
+
+.field > textarea::placeholder {
+  color: var(--color-light);
+  font-style: oblique;
+}
