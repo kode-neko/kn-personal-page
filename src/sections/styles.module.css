@@ -202,6 +202,8 @@
 .portfolio > .cont > .content > .info > .tags {
   display: flex;
   margin-top: 3.13rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .portfolio > .cont > .content > .info > .tags > li {

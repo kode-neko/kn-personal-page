@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import Project from '@/models/Project'
 import { iconProjectDic, listProject } from '@/globals'
 import { BtnIcon, Icon, SubTitle, Tag } from '@/components'
+import { useState } from 'react'
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
@@ -45,6 +46,17 @@ const InfoPortfolio = ({project}: {project: Project}) => {
 }
  
 const Portfolio = () => {
+  const [idProject, setIdProject] = useState<number>(0);
+
+  const handleClickBtn = (moveQty: number) => {
+    let calcIndex = idProject + moveQty;
+    if(calcIndex === listProject.length)
+      calcIndex = 0
+    else if(calcIndex < 0)
+      calcIndex = listProject.length - 1
+    setIdProject(calcIndex)
+  }
+
   return (
     <section className={styles.portfolio}>
       <div className={styles.cont}>
@@ -54,13 +66,13 @@ const Portfolio = () => {
             align='left'
           />
           <div className={styles.arrows}>
-            <button>
+            <button onClick={() => handleClickBtn(-1)}>
               <Icon 
                 icon='fa-solid fa-chevron-left'
                 className={styles.arrow} 
               />
             </button>
-            <button>
+            <button onClick={() => handleClickBtn(1)}>
               <Icon 
                 icon='fa-solid fa-chevron-right'
                 className={styles.arrow} 
@@ -69,7 +81,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className={styles.content}>
-          <InfoPortfolio project={listProject[0]} />
+          <InfoPortfolio project={listProject[idProject]} />
         </div>
       </div>
     </section>

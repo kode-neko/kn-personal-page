@@ -10,7 +10,7 @@ const twitterLink: Link = {
 const githubLink: Link = {
   id: 'Github',
   path: githubPath,
-  icon: 'fa-brands fa-github-alt'
+  icon: 'fa-brands fa-github'
 }
 
 const codepenLink = {
