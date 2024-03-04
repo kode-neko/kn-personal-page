@@ -1,0 +1,24 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.contact > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.contact > .cont {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.contact > .cont > .contPic {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

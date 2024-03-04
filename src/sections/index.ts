@@ -1,4 +1,4 @@
-export {default as Contact} from './contact'
-export {default as Portfolio} from './portfolio'
-export {default as Skills} from './skills'
-export {default as Welcome} from './welcome'
+export {Contact} from './contact'
+export {Portfolio} from './portfolio'
+export {Skills} from './skills'
+export {Welcome} from './welcome'
