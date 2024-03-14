@@ -63,7 +63,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
   return (
     <form
       action={() => onSubmit(contact)} 
-      className={styles.contact}
+      className={styles.form}
     >
       <div className={styles.fieldset}>
         <Field
