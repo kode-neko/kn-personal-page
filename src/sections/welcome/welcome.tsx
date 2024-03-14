@@ -18,12 +18,14 @@ const Welcome = () => {
           </div>
           <ul className={styles.social}>
             {socialList.map(s => (
-              <li><BtnIcon
-                href={s.path}
-                color='blue'
-                size='lg'
-                icon={s.icon as string}
-              /></li>
+              <li key={s.id}>
+                <BtnIcon
+                  href={s.path as string}
+                  color='blue'
+                  size='lg'
+                  icon={s.icon as string}
+                />
+              </li>
             ))}
           </ul>
         </div>
