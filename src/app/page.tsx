@@ -4,7 +4,8 @@ import { Contact, Portfolio, Skills, Welcome } from "@/sections";
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.mainCont}>
+      <div className={styles.round} />
       <header>
         <MainBar />
       </header>

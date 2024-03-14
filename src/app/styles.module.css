@@ -1,4 +1,35 @@
+.mainCont {
+  position: relative;
+}
+
 .main > section {
   padding: 2.5rem;
   padding-top: 10rem;
+}
+
+.mainCont > .round {
+  z-index: -1;
+  opacity: 20%;
+  position: absolute;
+  top: -22rem;
+  left: -22rem;
+  width: 48rem;
+  height: 48rem;
+  border: 0.9rem dashed #7e108f;
+  border-radius: 50%;
+
+  /* Animation */
+  animation-name: spinningItself;
+  animation-duration: 120s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinningItself {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

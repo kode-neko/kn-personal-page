@@ -1,7 +1,7 @@
 .mainBar {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
-  background: var(--color-back);
+  /* background: var(--color-back); */
   display: flex;
   justify-content: end;
 }
