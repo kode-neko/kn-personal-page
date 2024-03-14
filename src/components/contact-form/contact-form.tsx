@@ -1,83 +1,121 @@
 'use client'
 
-import { useFormState } from 'react-dom';
 import { ZodError, ZodString, z } from "zod";
 import { Field } from '../field'
-import styles from './styles.module.css'
 import { Contact } from '@/models';
-import { useEffect } from 'react';
+import { useState } from 'react';
+import styles from './styles.module.css'
+import Image from 'next/image';
 
 const schema: {[key: string]: ZodString} = {
-  name: z.string(),
+  name: z.string().min(1, { message: "El campo es requerido" }),
   mail: z.string().email({message: 'wrong mail'}),
-  msg: z.string(),
+  msg: z.string().min(1, { message: "El campo es requerido" }),
 }
 const contactSchema = z.object(schema);
 
-function chkData(field: string, val: string) {
-  try {
-    schema[field].parse(val)
-    console.log(field, val)
-  } catch(err) {
-    console.log((err as ZodError).issues)
-  }
+const defaultHint: {[key: string]: string} = {
+  name: '',
+  mail: '',
+  msg: ''
 }
 
-export async function chkForm( previousState: string | undefined | null, formData: FormData,) {
-  const result = {
-    name: formData.get("name")?.toString(),
-    mail: formData.get("mail")?.toString(),
-    msg: formData.get("msg")?.toString(),
-  }
-  try {
-    contactSchema.parse(result);
-  } catch(err) {
-    console.log((err as ZodError).issues)
-  }
-  return result;
+const defaultDirty: {[key: string]: boolean} = {
+  name: false,
+  mail: false,
+  msg: false
 }
 
 interface ContactFormProps {
   values: Contact,
-  onSubmit: (contact: Contact) => void
+  onSubmit: (contact: Contact) => void,
+  isSubmit: boolean,
 }
 
-const ContactForm = ({values, onSubmit}: ContactFormProps) => {
-  const [state, formAction] = useFormState(chkForm, values);
+const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
+  const [form, setForm] = useState(values);
+  const [hint, setHint] = useState(defaultHint)
+  const [dirty, setDirty] = useState(defaultDirty)
 
-  useEffect(() => {
-    onSubmit(state as Contact)
-  }, [state])
+  const chkData = (field: string, val: string) => {
+    let msg = ''
+    try {
+      schema[field].parse(val)
+    } catch(err) {
+      msg = (err as ZodError).issues[0].message
+    }
+    setHint({...hint, [field]: msg})
+  }
+
+  const handleChange = (field: string, val: string) => {
+    setForm({...form, [field]: val})
+    if(dirty[field] === true) chkData(field, val)
+  }
+
+  const setDirtyField = (field: string) => {
+    setDirty({...dirty, [field]: true})
+    chkData(field, form[field])
+  }
+
+  const isValidForm = (): boolean => {
+    const result = contactSchema.safeParse(form)
+    console.log('parsesafe', result)
+    return result.success;
+  }
 
   return (
-    <form 
-      action={formAction}
+    <form
+      action={() => onSubmit(form)} 
       className={styles.form}
     >
       <div className={styles.fieldset}>
         <Field
+          value={form.name}
           name='name'
           icon='fa-solid fa-face-smile'
+          hint={hint.name}
           placeholder='my name is...'
-          onChange={(val) => chkData('name', val)}
+          onChange={(val) => handleChange('name', val)}
+          onBlur={() => setDirtyField('name')}
         />
         <Field
+          value={form.mail}
           name='mail'
           icon='fa-solid fa-envelope'
+          hint={hint.mail}
           placeholder='mail@mail.com'
-          onChange={(val) => chkData('mail', val)}
+          onChange={(val) => handleChange('mail', val)}
+          onBlur={() => setDirtyField('mail')}
         />
         <Field
+          value={form.msg}
           name='msg'
           icon='fa-solid fa-comment-dots'
+          hint={hint.msg}
           placeholder='Congrats, critics, bla, bla'
-          onChange={() => console.log('cambio msg')}
+          onChange={(val) => handleChange('msg', val)}
+          onBlur={() => setDirtyField('msg')}
         />
       </div>
       <div className={styles.bottom}>
          {/* <p className={styles.hint}>Quis nulla deserunt nostrud anim</p> */}
         <div className={styles.actions}>
-          <button type='submit'>enviar</button>
+          <button 
+            type='submit'
+            disabled={!isValidForm()}
+            onClick={() => onSubmit(form)}
+          >
+            { isSubmitting ? 
+              <Image
+                src='/spinner.png'
+                alt=''
+                width={37}
+                height={37}
+                className={styles.spinner}
+              /> : 
+              <span>enviar</span> 
+            }
+          </button>
         </div>
       </div>
     </form>

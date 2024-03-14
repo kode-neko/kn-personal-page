@@ -7,6 +7,7 @@
   --color-blue: #2094ff;
   --trans-light: rgb(244, 236, 251, 0.04);
   --color-trans: rgb(0, 0, 0, 0);
+  --color-disabled: #b654c5;
 
   font-family: "Roboto";
   font-size: 16px;

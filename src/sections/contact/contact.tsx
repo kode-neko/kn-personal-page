@@ -30,8 +30,10 @@ const Contact = () => {
           />
         </div>
         <ContactForm 
-          values={contact} 
-          onSubmit={(result) => setContact(result)} 
+          values={contact}
+          onChange={(result) => setContact(result)} 
+          onSubmit={(result) => setContact(result)}
+          onValid={(isValid) => console.log('Es válido: ', isValid)}
         />
       </div>                                 
     </section>
