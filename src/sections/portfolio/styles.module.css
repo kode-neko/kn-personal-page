@@ -1,5 +1,6 @@
 .portfolio {
   display: flex;
+  background-color: var(--color-back);
   flex-direction: column;
   background-image: url("/office.png");
   background-repeat: no-repeat;

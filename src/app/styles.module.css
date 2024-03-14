@@ -4,7 +4,7 @@
 
 .main > section {
   padding: 2.5rem;
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
 }
 
 .mainCont > .round {
@@ -15,7 +15,7 @@
   left: -22rem;
   width: 48rem;
   height: 48rem;
-  border: 0.9rem dashed #7e108f;
+  border: 0.9rem dashed rgb(126, 16, 143);
   border-radius: 50%;
 
   /* Animation */
