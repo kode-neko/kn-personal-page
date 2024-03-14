@@ -105,7 +105,7 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
             disabled={!isValidForm()}
             onClick={() => onSubmit(form)}
           >
-            { isSubmitting ? 
+            { isSubmit ? 
               <Image
                 src='/spinner.png'
                 alt=''
