@@ -57,7 +57,6 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
 
   const isValidForm = (): boolean => {
     const result = contactSchema.safeParse(contact)
-    console.log('parsesafe', result)
     return result.success;
   }
 
