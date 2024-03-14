@@ -1,4 +1,5 @@
 section.skills {
+  position: relative;
   display: flex;
   background-image: linear-gradient(
     0deg,
@@ -53,4 +54,47 @@ section.skills {
 
 .skills .areas > li > .techs > li {
   font-size: 2rem;
+}
+
+.skills > .line {
+  position: absolute;
+  height: 0.25rem;
+  width: 100%;
+  left: 0;
+  background-color: var(--trans-light);
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.skills > .line.line01 {
+  bottom: 3rem;
+  transform: rotate(1.8deg);
+  animation-name: moveLine01;
+}
+
+.skills > .line.line02 {
+  bottom: 2rem;
+  transform: rotate(-1deg);
+  animation-name: moveLine02;
+}
+
+@keyframes moveLine02 {
+  0% {
+    transform: rotate(1deg) translateY(-0.2rem);
+  }
+  100% {
+    transform: rotate(-1deg) translateY(0.2rem);
+  }
+}
+
+@keyframes moveLine01 {
+  0% {
+    transform: rotate(-1.8deg) translateY(-0.2rem);
+  }
+  100% {
+    transform: rotate(1.8deg) translateY(0.2rem);
+  }
 }

@@ -1,6 +1,7 @@
 import { listSkill } from '@/globals'
 import styles from './styles.module.css'
 import { BtnIcon, Icon, SubTitle } from '@/components';
+import clsx from 'clsx';
 
 const Techs = ({techs}: {techs: string[]}) => {
   return (
@@ -30,6 +31,8 @@ const Skills = () => {
           </li>
         ))}
       </ul>
+      <div className={clsx(styles.line, styles.line01)} />
+      <div className={clsx(styles.line, styles.line02)} />
     </section>
   )
 }
