@@ -1,7 +1,7 @@
 import { ContactLocal, ContactRest } from "..";
 import IContact from "../IContact";
 
-function getterContact(): IContact {
+function getContact(): IContact {
   let contact: IContact
 
   switch(process.env.SERVICE) {
@@ -15,4 +15,4 @@ function getterContact(): IContact {
   return contact;
 }
 
-export default getterContact;
+export default getContact;
