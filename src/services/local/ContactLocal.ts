@@ -15,8 +15,8 @@ class ContactLocal implements IContact {
     return this._instance;
   }
 
-  newMesvsage(contact: Contact) : Contact {
-    return contact;
+  newMesvsage(contact: Contact): Promise<Contact> {
+    return Promise.resolve(contact);
   }
 }
 
