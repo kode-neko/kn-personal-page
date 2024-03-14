@@ -27,6 +27,11 @@ body {
       circle farthest-corner at 100% 40%,
       rgba(157, 11, 160, 0.3) 0%,
       rgba(0, 0, 0, 0) 30%
+    ),
+    radial-gradient(
+      circle farthest-corner at 0% 70%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 20%
     );
 }
 
