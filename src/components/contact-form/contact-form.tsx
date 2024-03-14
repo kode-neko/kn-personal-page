@@ -13,13 +13,11 @@ const schema: {[key: string]: ZodString} = {
   msg: z.string().min(1, { message: "El campo es requerido" }),
 }
 const contactSchema = z.object(schema);
-
 const defaultHint: {[key: string]: string} = {
   name: '',
   mail: '',
   msg: ''
 }
-
 const defaultDirty: {[key: string]: boolean} = {
   name: false,
   mail: false,
@@ -27,13 +25,13 @@ const defaultDirty: {[key: string]: boolean} = {
 }
 
 interface ContactFormProps {
-  values: Contact,
+  initValues: Contact,
   onSubmit: (contact: Contact) => void,
   isSubmit: boolean,
 }
 
-const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
-  const [form, setForm] = useState(values);
+const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
+  const [contact, setContact] = useState(initValues);
   const [hint, setHint] = useState(defaultHint)
   const [dirty, setDirty] = useState(defaultDirty)
 
@@ -48,29 +46,29 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
   }
 
   const handleChange = (field: string, val: string) => {
-    setForm({...form, [field]: val})
+    setContact({...contact, [field]: val})
     if(dirty[field] === true) chkData(field, val)
   }
 
   const setDirtyField = (field: string) => {
     setDirty({...dirty, [field]: true})
-    chkData(field, form[field])
+    chkData(field, contact[field])
   }
 
   const isValidForm = (): boolean => {
-    const result = contactSchema.safeParse(form)
+    const result = contactSchema.safeParse(contact)
     console.log('parsesafe', result)
     return result.success;
   }
 
   return (
     <form
-      action={() => onSubmit(form)} 
-      className={styles.form}
+      action={() => onSubmit(contact)} 
+      className={styles.contact}
     >
       <div className={styles.fieldset}>
         <Field
-          value={form.name}
+          value={contact.name}
           name='name'
           icon='fa-solid fa-face-smile'
           hint={hint.name}
@@ -79,7 +77,7 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
           onBlur={() => setDirtyField('name')}
         />
         <Field
-          value={form.mail}
+          value={contact.mail}
           name='mail'
           icon='fa-solid fa-envelope'
           hint={hint.mail}
@@ -88,7 +86,7 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
           onBlur={() => setDirtyField('mail')}
         />
         <Field
-          value={form.msg}
+          value={contact.msg}
           name='msg'
           icon='fa-solid fa-comment-dots'
           hint={hint.msg}
@@ -103,7 +101,7 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
           <button 
             type='submit'
             disabled={!isValidForm()}
-            onClick={() => onSubmit(form)}
+            onClick={() => onSubmit(contact)}
           >
             { isSubmit ? 
               <Image
@@ -113,8 +111,7 @@ const ContactForm = ({values, onSubmit, isSubmit}: ContactFormProps) => {
                 height={37}
                 className={styles.spinner}
               /> : 
-              <span>enviar</span> 
-            }
+              <span>enviar</span> }
           </button>
         </div>
       </div>
