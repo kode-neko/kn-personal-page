@@ -1,7 +1,7 @@
 conn = Mongo();
 db = conn.getDB('perpage');
 
-db.mail.insertMany([{
+db.contact.insertMany([{
   name: 'test',
   mail: 'test@test.es',
   msg: 'test test test'
