@@ -5,13 +5,24 @@ import styles from './styles.module.css'
 import { ContactForm, Icon, SubTitle } from '@/components'
 import { useState } from 'react'
 import { Contact } from '@/models'
+import { getContact } from '@/services'
 
 const Contact = () => {
+  const [isSubmit, setIsSubmit] = useState<boolean>(false)
   const [contact, setContact] = useState<Contact>({
     name: '',
     mail: '',
     msg: ''
   });
+
+  const handleSendMessage = (contact: Contact) => {
+    setIsSubmit(true);
+    const contactService = getContact();
+    contactService.newMesvsage(contact)
+      .then(contact => console.log('message sended'))
+      .catch(err => console.log(err))
+      .finally(() => setTimeout(() => setIsSubmit(false), 5000))
+  }
 
   return (
     <section className={styles.contact}>
@@ -30,8 +41,9 @@ const Contact = () => {
           />
         </div>
         <ContactForm 
-          values={contact} 
-          onSubmit={(result) => setContact(result)} 
+          initValues={contact} 
+          onSubmit={handleSendMessage}
+          isSubmit={isSubmit}
         />
       </div>                                 
     </section>

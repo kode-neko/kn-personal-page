@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --color-back: #0f081f;
-  --color-light: #f4ecfb;
-  --color-pink: #7e108f;
-  --color-blue: #2094ff;
+  --color-back: rgb(15, 8, 31);
+  --color-light: rgb(244, 236, 251);
+  --color-pink: rgb(126, 16, 143);
+  --color-blue: rgb(32, 148, 255);
   --trans-light: rgb(244, 236, 251, 0.04);
   --color-trans: rgb(0, 0, 0, 0);
+  --color-disabled: rgb(182, 84, 197);
 
   font-family: "Roboto";
   font-size: 16px;
@@ -17,6 +18,21 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: radial-gradient(
+      circle farthest-corner at 0% 0%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    radial-gradient(
+      circle farthest-corner at 100% 40%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    radial-gradient(
+      circle farthest-corner at 0% 70%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 20%
+    );
 }
 
 h1,

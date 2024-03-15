@@ -36,9 +36,20 @@ form > .bottom > .actions {
 }
 
 form > .bottom > .actions > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-pink);
   color: var(--color-light);
   font-size: 2rem;
   padding: 0.63rem;
   border-radius: 0.63rem;
+}
+
+form > .bottom > .actions > button:disabled {
+  color: var(--color-disabled);
+}
+
+form > .bottom > .actions > button > .spinner {
+  padding: 0rem 0.63rem;
 }

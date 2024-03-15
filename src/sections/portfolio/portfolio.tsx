@@ -1,11 +1,12 @@
 'use client'
 
+import { motion, useAnimate } from "framer-motion";
 import Image from 'next/image'
 import styles from './styles.module.css'
 import Project from '@/models/Project'
 import { iconProjectDic, listProject } from '@/globals'
 import { BtnIcon, Icon, SubTitle, Tag } from '@/components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
@@ -46,15 +47,20 @@ const InfoPortfolio = ({project}: {project: Project}) => {
 }
  
 const Portfolio = () => {
+  const [scope, animate] = useAnimate()
   const [idProject, setIdProject] = useState<number>(0);
 
   const handleClickBtn = (moveQty: number) => {
-    let calcIndex = idProject + moveQty;
-    if(calcIndex === listProject.length)
-      calcIndex = 0
-    else if(calcIndex < 0)
-      calcIndex = listProject.length - 1
-    setIdProject(calcIndex)
+    animate(scope.current, {opacity: 0, transform: 'translateX(-75rem)'}, { duration: 0.4, ease: "easeIn" })
+    setTimeout(() => {
+      let calcIndex = idProject + moveQty;
+      if(calcIndex === listProject.length)
+        calcIndex = 0
+      else if(calcIndex < 0)
+        calcIndex = listProject.length - 1
+      setIdProject(calcIndex)
+      animate(scope.current, {opacity: 1, transform: 'translateX(0rem)'}, { duration: 0.4, ease: "easeOut" })
+    }, 400)
   }
 
   return (
@@ -80,7 +86,10 @@ const Portfolio = () => {
             </button>
           </div>
         </div>
-        <div className={styles.content}>
+        <div 
+          ref={scope}
+          className={styles.content}
+        >
           <InfoPortfolio project={listProject[idProject]} />
         </div>
       </div>
