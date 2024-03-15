@@ -11,8 +11,6 @@
   z-index: -1;
   opacity: 20%;
   position: absolute;
-  top: -22rem;
-  left: -22rem;
   width: 48rem;
   height: 48rem;
   border: 0.9rem dashed rgb(126, 16, 143);
@@ -23,6 +21,16 @@
   animation-duration: 120s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.mainCont > .round.round01 {
+  top: -22rem;
+  left: -22rem;
+}
+
+.mainCont > .round.round02 {
+  bottom: 22rem;
+  left: -22rem;
 }
 
 @keyframes spinningItself {
