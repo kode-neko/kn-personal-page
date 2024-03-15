@@ -1,0 +1,19 @@
+services:
+  nosql:
+    image: mongo
+    restart: always
+    ports:
+      - 3001:27017
+    volumes:
+      - "nosql-data:/data/db"
+      - "./scripts/db:/docker-entrypoint-initdb.d"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+
+networks:
+  net_personal_page:
+    driver: bridge
+
+volumes:
+  nosql-data:
