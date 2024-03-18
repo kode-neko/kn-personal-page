@@ -15,7 +15,7 @@ class ContactRest implements IContact {
     return this._instance;
   }
 
-  newMesvsage(contact: Contact): Promise<Contact> {
+  newMessage(contact: Contact): Promise<Contact> {
     return Promise.resolve(contact);
   }
 }

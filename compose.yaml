@@ -1,19 +1,37 @@
 services:
-  nosql:
+  
+  mongo1:
     image: mongo
     restart: always
     ports:
       - 3001:27017
     volumes:
-      - "nosql-data:/data/db"
+      - "nosql-data1:/data/db"
       - "./scripts/db:/docker-entrypoint-initdb.d"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 1234
+    depends_on:
+      - mongo2
+    entrypoint: ['/usr/bin/mongod', '--replSet', 'dbrs']
+
+  mongo2:
+    image: mongo
+    restart: always
+    ports:
+      - 3002:27017
+    volumes:
+      - "nosql-data2:/data/db"
+      - "./scripts/db:/docker-entrypoint-initdb.d"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+    entrypoint: ['/usr/bin/mongod', '--replSet', 'dbrs']
 
 networks:
   net_personal_page:
     driver: bridge
 
 volumes:
-  nosql-data:
+  nosql-data1:
+  nosql-data2:

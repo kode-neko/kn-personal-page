@@ -1,6 +1,6 @@
 import { Contact } from "@/models";
 import IContact from "../IContact";
-import { PrismaClient } from "@prisma/client/extension";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -17,7 +17,7 @@ class ContactPrisma implements IContact {
     return this._instance
   }
 
-  newMesvsage(contact: Contact): Promise<Contact> {
+  newMessage(contact: Contact): Promise<Contact> {
     return prisma.contact.create({data: contact})
   }
 
