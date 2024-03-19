@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import { ContactForm, SubTitle } from '@/components'
 import { useState } from 'react'
 import { Contact } from '@/models'
-import { getContact, newMessage } from '@/services'
+import { newMessage } from '@/services'
 
 const Contact = () => {
   const [isSubmit, setIsSubmit] = useState<boolean>(false)
@@ -17,7 +17,7 @@ const Contact = () => {
 
   const handleSendMessage = async (contact: Contact) => {
     setIsSubmit(true);
-    getContact().newMessage(contact)
+    newMessage(contact)
       .then(contact => console.log('message sended'))
       .catch(err => console.log(err))
       .finally(() => setTimeout(() => setIsSubmit(false), 5000))

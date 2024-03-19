@@ -1,1 +1,1 @@
-export { getContact } from './getters'
+export { newMessage } from './getters'

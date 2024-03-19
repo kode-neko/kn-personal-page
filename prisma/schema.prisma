@@ -1,5 +1,5 @@
 datasource db {
-  provider =  "mongodb"
+  provider =  "mysql"
   url =       env("DATABASE_URL")
 }
 
@@ -7,8 +7,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Contact {
-  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+model contact {
+  id    Int  @id @default(autoincrement())
   name  String
   mail  String
   msg   String
