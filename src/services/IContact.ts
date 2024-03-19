@@ -4,4 +4,4 @@ interface IContact {
   newMessage: (contact: Contact) => Promise<Contact>
 }
  
-export default IContact 
+export default IContact;

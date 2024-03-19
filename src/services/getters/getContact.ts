@@ -1,12 +1,11 @@
 'use server'
 
-import { Contact } from "@/models";
 import IContact from "../IContact";
 import { ContactLocal } from "../local";
 import { ContactPrisma } from "../prisma";
 import { ContactRest } from "../rest";
 
-function getContact(): IContact {
+function getContact() {
   let contact: IContact
 
   switch(process.env.NEXT_PUBLIC_SERVICE) {
@@ -19,15 +18,9 @@ function getContact(): IContact {
     default:
       contact = ContactLocal.getInstance();
   }
-
-  return contact;
+  return {
+    newMessage: contact.newMessage
+  };
 }
 
-function newMessage(contact: Contact): Promise<Contact> {
-  const obj: IContact = getContact();
-  return obj.newMessage(contact) 
-}
-
-export {
-  newMessage
-};
+export default getContact
