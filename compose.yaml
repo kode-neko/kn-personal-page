@@ -1,37 +1,22 @@
 services:
   
-  mongo1:
-    image: mongo
+  db:
+    image: mariadb
     restart: always
     ports:
-      - 3001:27017
+      - 3001:3306
     volumes:
-      - "nosql-data1:/data/db"
+      - "perpage:/var/lib/mysql:Z"
       - "./scripts/db:/docker-entrypoint-initdb.d"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 1234
-    depends_on:
-      - mongo2
-    entrypoint: ['/usr/bin/mongod', '--replSet', 'dbrs']
-
-  mongo2:
-    image: mongo
-    restart: always
-    ports:
-      - 3002:27017
-    volumes:
-      - "nosql-data2:/data/db"
-      - "./scripts/db:/docker-entrypoint-initdb.d"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 1234
-    entrypoint: ['/usr/bin/mongod', '--replSet', 'dbrs']
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: perpage
+      MYSQL_USER: perpage-admin
+      MYSQL_PASSWORD: qwerty
 
 networks:
-  net_personal_page:
+  perpage:
     driver: bridge
 
 volumes:
-  nosql-data1:
-  nosql-data2:
+  perpage:
