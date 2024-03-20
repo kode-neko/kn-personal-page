@@ -6,15 +6,17 @@ import mariadb from 'mariadb'
 let sequelize:Sequelize
 class ContactSeq extends Model {}
 
+const {MARIADB_HOST, MARIADB_PORT, DB_NAME, DB_USER, DB_PASS} = process.env
+
 function initSequalize() {
   sequelize = new Sequelize({
     dialect: 'mariadb', 
     dialectModule: mariadb, 
-    host: 'localhost', 
-    port: 3001, 
-    database: 'perpage', 
-    username: 'perpage-user', 
-    password: 'qwerty'
+    host: MARIADB_HOST, 
+    port: Number(MARIADB_PORT), 
+    database: DB_NAME, 
+    username: DB_USER, 
+    password: DB_PASS
   });
   ContactSeq.init({
     id: {

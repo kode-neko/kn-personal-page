@@ -9,7 +9,7 @@ import { ContactSequalize } from "../sequalize";
 function getContact(): IContact {
   let contact: IContact
 
-  switch(process.env.NEXT_PUBLIC_SERVICE) {
+  switch(process.env.SERVICE_TYPE) {
     case 'sequelize':
       contact = ContactSequalize.getInstance();
       break;
