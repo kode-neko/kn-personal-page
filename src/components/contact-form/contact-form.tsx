@@ -100,7 +100,6 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
           <button 
             type='submit'
             disabled={!isValidForm()}
-            onClick={() => onSubmit(contact)}
           >
             { isSubmit ? 
               <Image

@@ -4,14 +4,14 @@ import { Contact } from "@/models";
 import IContact from "../IContact";
 import { ContactLocal } from "../local";
 import { ContactPrisma } from "../prisma";
-import { ContactRest } from "../rest";
+import { ContactSequalize } from "../sequalize";
 
 function getContact(): IContact {
   let contact: IContact
 
   switch(process.env.NEXT_PUBLIC_SERVICE) {
-    case 'rest':
-      contact = ContactRest.getInstance();
+    case 'sequelize':
+      contact = ContactSequalize.getInstance();
       break;
     case 'prisma':
       contact = ContactPrisma.getInstance();
