@@ -1,6 +1,6 @@
 import { Contact } from "@/models";
 import IContact from "../IContact";
-import { ContactSeq } from "./models";
+import { ContactModel } from "./models";
 class ContactSequalize implements IContact {
 
   private static _instance: ContactSequalize;
@@ -16,7 +16,7 @@ class ContactSequalize implements IContact {
   }
 
   newMessage(contact: Contact): Promise<Contact> {
-    return ContactSeq.create({...contact})
+    return ContactModel.create({...contact})
       .then(c => Promise.resolve(c)) as Promise<Contact>;
   }
 }

@@ -1,1 +1,1 @@
-export {default as ContactSeq} from './ContactSeq'
+export {default as ContactModel} from './ContactModel'

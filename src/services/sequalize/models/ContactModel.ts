@@ -1,9 +1,9 @@
 import { getConnSeq } from "@/services/connection";
 import { DataTypes, Model } from "sequelize";
 
-class ContactSeq extends Model {}
+class ContactModel extends Model {}
 
-ContactSeq.init({
+ContactModel.init({
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -29,4 +29,4 @@ ContactSeq.init({
   timestamps: false
 })
 
-export default ContactSeq
+export default ContactModel
