@@ -1,5 +1,5 @@
+import { getConnSeq } from "@/services/connection";
 import { DataTypes, Model } from "sequelize";
-import getSequalize from "../connect";
 
 class ContactSeq extends Model {}
 
@@ -22,7 +22,7 @@ ContactSeq.init({
     allowNull: false
   }
 }, {
-  sequelize: getSequalize(),
+  sequelize: getConnSeq(),
   freezeTableName: true,
   tableName: 'contact',
   modelName: 'ContactSeq',

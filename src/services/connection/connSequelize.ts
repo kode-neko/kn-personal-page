@@ -1,7 +1,7 @@
 import mariadb from 'mariadb'
 import { Sequelize } from "sequelize";
 
-let sequelize:Sequelize
+let conn:Sequelize
 
 function connection() {
   const {MARIADB_HOST, MARIADB_PORT, DB_NAME, DB_USER, DB_PASS} = process.env
@@ -17,11 +17,13 @@ function connection() {
 
 }
 
-function getSequalize(): Sequelize {
-  if(!sequelize) {
-    sequelize = connection()
+function getConnSeq(): Sequelize {
+  if(!conn) {
+    conn = connection()
   }
-  return sequelize
+  return conn
 }
 
-export default getSequalize
+export {
+  getConnSeq
+}
