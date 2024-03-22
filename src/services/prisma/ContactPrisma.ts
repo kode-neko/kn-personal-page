@@ -1,8 +1,7 @@
 import { Contact } from "@/models";
 import IContact from "../IContact";
-import { PrismaClient, contactCreateInput } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { contactCreateInput } from "@prisma/client";
+import { getPrisma } from "../connection";
 
 class ContactPrisma implements IContact {
 
@@ -18,10 +17,9 @@ class ContactPrisma implements IContact {
   }
 
   newMessage(contact: Contact): Promise<Contact> {
-    return prisma.contact.create({ data: contact as contactCreateInput }) as unknown as Promise<Contact>
+    return getPrisma().contact
+      .create({ data: contact as contactCreateInput }) as unknown as Promise<Contact>
   }
-
-  
 
 }
 
