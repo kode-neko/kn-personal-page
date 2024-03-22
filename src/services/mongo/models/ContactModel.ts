@@ -9,6 +9,6 @@ const schema = new Schema({
   collection: 'contact'
 })
 
-const ContactMongo = model('contact', schema)
+const ContactModel = model('contact', schema)
 
-export default ContactMongo;
+export default ContactModel;
