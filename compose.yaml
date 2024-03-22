@@ -20,7 +20,7 @@ services:
     ports:
       - 3002:27017
     volumes:
-      - "perpage-mongo:/var/lib/mysql:Z"
+      - "perpage-mongo:/data/db"
       - "./scripts/mongo:/docker-entrypoint-initdb.d"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root

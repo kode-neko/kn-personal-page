@@ -1,16 +1,15 @@
-conn = Mongo();
-db = conn.getDB('perpage')
+db = connect( 'mongodb://localhost' );
 
 db.createUser({
-  user: 'animalikos-admin',
+  user: 'perpage-admin',
   pwd: '1234',
   roles: [
     { role: 'dbOwner', db: 'perpage' }
   ]
 });
 
-db.cerateUser({
-  user: 'animalikos-user',
+db.createUser({
+  user: 'perpage-user',
   pwd: 'qwerty',
   roles: [
     { role: 'readWrite', db: 'perpage' }

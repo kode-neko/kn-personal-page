@@ -25,8 +25,7 @@ ContactModel.init({
   sequelize: getConnSeq(),
   freezeTableName: true,
   tableName: 'contact',
-  modelName: 'ContactSeq',
-  timestamps: false
+  timestamps: false,
 })
 
 export default ContactModel
