@@ -5,13 +5,17 @@ import IContact from "../IContact";
 import { ContactLocal } from "../local";
 import { ContactPrisma } from "../prisma";
 import { ContactSequalize } from "../sequalize";
+import { ContactMongo } from "../mongo";
 
-function getContact(): IContact {
+async function getContact(): Promise<IContact> {
   let contact: IContact
 
   switch(process.env.SERVICE_TYPE) {
     case 'sequelize':
       contact = ContactSequalize.getInstance();
+      break;
+    case 'mongo':
+      contact = await ContactMongo.getInstance();
       break;
     case 'prisma':
       contact = ContactPrisma.getInstance();
@@ -23,7 +27,7 @@ function getContact(): IContact {
 }
 
 function newMessage(contact: Contact): Promise<Contact> {
-  return getContact().newMessage(contact);
+  return getContact().then(c => c.newMessage(contact));
 } 
 
 export {

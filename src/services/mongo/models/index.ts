@@ -1,1 +1,1 @@
-export {default as ContactMongo} from './ContactMongo'
+export {default as ContactMongo} from './ContactModel'
