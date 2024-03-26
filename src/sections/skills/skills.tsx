@@ -15,7 +15,10 @@ const Techs = ({techs}: {techs: string[]}) => {
 
 const Skills = () => {
   return (
-    <section className={styles.skills}>
+    <section 
+      className={styles.skills}
+      id="sectSkills"
+    >
       <SubTitle label='Skills' />
       <ul className={styles.areas}>
         {listSkill.map(s => (

@@ -1,15 +1,26 @@
+'use client'
+
 import { menuOpts } from "@/globals"
 import styles from './styles.module.css'
 import Link from "next/link"
+import { MouseEvent } from "react"
 
 const MainMenu = () => {
+  const handleClick = (eleStr: string, e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const ele = document.querySelector(eleStr) as HTMLDivElement;
+    scroll({
+      top: ele.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (
     <ul className={styles.mainMenu}>
     {menuOpts.map(o => (
       <li key={o.id}>
         <Link
-          about={o.path}
-          href={o.path}
+          href={o.path as string}
+          onClick={(e: MouseEvent<HTMLAnchorElement>) => handleClick(o.path as string, e)}
         >
           {o.id}
         </Link>
