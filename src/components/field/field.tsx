@@ -21,6 +21,7 @@ const Field = ({value, name, icon, hint='', placeholder, onChange, onBlur}: Fiel
           icon={icon} 
         />
         <input
+          data-test={'field-' + name}
           value={value} 
           name={name} 
           placeholder={placeholder}

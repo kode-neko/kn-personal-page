@@ -62,6 +62,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
 
   return (
     <form
+      data-test="form-contact"
       action={() => onSubmit(contact)} 
       className={styles.form}
     >
@@ -97,10 +98,10 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
       <div className={styles.bottom}>
          {/* <p className={styles.hint}>Quis nulla deserunt nostrud anim</p> */}
         <div className={styles.actions}>
-          <button 
+          <button
+            data-test="btn-submit" 
             type='submit'
             disabled={!isValidForm()}
-            onClick={() => onSubmit(contact)}
           >
             { isSubmit ? 
               <Image

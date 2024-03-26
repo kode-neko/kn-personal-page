@@ -2,23 +2,22 @@
 
 import Image from 'next/image'
 import styles from './styles.module.css'
-import { ContactForm, Icon, SubTitle } from '@/components'
+import { ContactForm, SubTitle } from '@/components'
 import { useState } from 'react'
 import { Contact } from '@/models'
-import { getContact } from '@/services'
+import { newMessage } from '@/services'
 
 const Contact = () => {
   const [isSubmit, setIsSubmit] = useState<boolean>(false)
-  const [contact, setContact] = useState<Contact>({
+  const contact = {
     name: '',
     mail: '',
     msg: ''
-  });
+  };
 
-  const handleSendMessage = (contact: Contact) => {
+  const handleSendMessage = async (contact: Contact) => {
     setIsSubmit(true);
-    const contactService = getContact();
-    contactService.newMesvsage(contact)
+    newMessage(contact)
       .then(contact => console.log('message sended'))
       .catch(err => console.log(err))
       .finally(() => setTimeout(() => setIsSubmit(false), 5000))

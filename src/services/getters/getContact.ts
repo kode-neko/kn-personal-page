@@ -1,18 +1,35 @@
-import { ContactLocal, ContactRest } from "..";
-import IContact from "../IContact";
+'use server'
 
-function getContact(): IContact {
+import { Contact } from "@/models";
+import IContact from "../IContact";
+import { ContactLocal } from "../local";
+import { ContactPrisma } from "../prisma";
+import { ContactSequalize } from "../sequalize";
+import { ContactMongo } from "../mongo";
+
+async function getContact(): Promise<IContact> {
   let contact: IContact
 
-  switch(process.env.SERVICE) {
-    case 'rest':
-      contact = ContactRest.getInstance();
+  switch(process.env.SERVICE_TYPE) {
+    case 'sequelize':
+      contact = ContactSequalize.getInstance();
+      break;
+    case 'mongo':
+      contact = await ContactMongo.getInstance();
+      break;
+    case 'prisma':
+      contact = ContactPrisma.getInstance();
       break;
     default:
       contact = ContactLocal.getInstance();
   }
-
-  return contact;
+  return contact
 }
 
-export default getContact;
+function newMessage(contact: Contact): Promise<Contact> {
+  return getContact().then(c => c.newMessage(contact));
+} 
+
+export {
+  newMessage
+}

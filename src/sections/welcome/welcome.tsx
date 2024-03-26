@@ -7,7 +7,7 @@ const Welcome = () => {
   return (
     <section className={styles.welcome}>
       <div className={styles.left}>
-        <h1 className={styles.title}>mainTitle</h1>
+        <h1 className={styles.title} data-test="welcome">mainTitle</h1>
         <div className={styles.cont}>
           <div className={styles.desc}>
             <h2>Kodeneko</h2>
