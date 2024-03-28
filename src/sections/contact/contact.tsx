@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 
 import Image from 'next/image'
@@ -6,6 +7,7 @@ import { ContactForm, SubTitle } from '@/components'
 import { useState } from 'react'
 import { Contact } from '@/models'
 import { newMessage } from '@/services'
+import useAkNoti from '@/components/notification/useNoti'
 
 const Contact = () => {
   const [isSubmit, setIsSubmit] = useState<boolean>(false)
@@ -18,8 +20,8 @@ const Contact = () => {
   const handleSendMessage = async (contact: Contact) => {
     setIsSubmit(true);
     newMessage(contact)
-      .then(contact => console.log('message sended'))
-      .catch(err => console.log(err))
+      .then(contact => useAkNoti({ msg: '🍙 Message sended 🍙' }))
+      .catch(err => useAkNoti({ msg: '🍙 There was an error 🍙' }))
       .finally(() => setTimeout(() => setIsSubmit(false), 5000))
   }
 

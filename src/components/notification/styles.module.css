@@ -1,0 +1,40 @@
+.stack {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.tag {
+  padding: 20px;
+  background: var(--red);
+  color: var(--light);
+  display: flex;
+  width: 250px;
+  gap: 10px;
+  border-radius: 4px 0 0 4px;
+  justify-content: center;
+  font-family: "Montserrat";
+  transform: translateX();
+  animation-name: ani;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  font-weight: bold;
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--shadow);
+}
+
+@keyframes ani {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.tag .msg {
+  font-size: 16px;
+}
