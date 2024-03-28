@@ -24,7 +24,10 @@ const Contact = () => {
   }
 
   return (
-    <section className={styles.contact}>
+    <section 
+      className={styles.contact}
+      id="sectContact"
+    >
       <SubTitle
         label="contact"
         align='right'
