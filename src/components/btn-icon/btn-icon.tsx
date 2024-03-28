@@ -8,10 +8,10 @@ interface BtnIconProps {
   icon: string;
   size: 'sm' | 'md' | 'lg';
   color: 'pink' | 'blue';
-  href: string
+  href?: string
 }
 
-const BtnIcon = ({icon, size = 'md', color = 'pink', href}: BtnIconProps) => {
+const BtnIcon = ({icon, size = 'md', color = 'pink', href = ''}: BtnIconProps) => {
   return (
     <Link
       href={href}
