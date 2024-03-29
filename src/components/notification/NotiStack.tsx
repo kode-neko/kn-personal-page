@@ -5,6 +5,7 @@ import NotiHub from './NotiHub';
 import styles from './styles.module.css';
 import { Noti } from './types';
 import { v4 as uuidv4 } from 'uuid';
+import { Icon } from '..';
 
 const notiHub: NotiHub = NotiHub.getInstance();
 
@@ -17,6 +18,12 @@ const NotiTag: React.FunctionComponent<NotiTagProps> = ({
 }: NotiTagProps) => {
   return (
     <div className={styles.tag}>
+      <div onClick={() => notiHub.deleteMsg(noti.id as string)}>
+        <Icon
+          icon="fa-regular fa-circle-xmark"
+          className={styles.close}
+        />
+      </div>
       <div className={styles.msg}>{noti.msg}</div>
     </div>
   );

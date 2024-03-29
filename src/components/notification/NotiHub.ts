@@ -18,15 +18,17 @@ class AkNotiHub {
     return AkNotiHub._instance;
   }
 
+  deleteMsg(id: string) {
+    const list: Noti[] = this.messages.filter((n: Noti) => n.id !== id);
+    this.messages = list;
+    this.subscribers.map((s: NotiListener) => s.callback(this.messages));
+  }
+
   sendMessage(msg: Noti) {
     const id: string = uuidv4();
     this.messages = [...this.messages, { ...msg, id }];
     this.subscribers.map((s: NotiListener) => s.callback(this.messages));
-    setTimeout(() => {
-      const list: Noti[] = this.messages.filter((n: Noti) => n.id !== id);
-      this.messages = list;
-      this.subscribers.map((s: NotiListener) => s.callback(this.messages));
-    }, 3000);
+    setTimeout(() => this.deleteMsg(id), 5000);
   }
 
   subscribe(callback: (list: Noti[]) => void): string {

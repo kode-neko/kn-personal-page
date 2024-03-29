@@ -20,9 +20,9 @@ const Contact = () => {
   const handleSendMessage = async (contact: Contact) => {
     setIsSubmit(true);
     newMessage(contact)
-      .then(contact => useAkNoti({ msg: '🍙 Message sended 🍙' }))
-      .catch(err => useAkNoti({ msg: '🍙 There was an error 🍙' }))
-      .finally(() => setTimeout(() => setIsSubmit(false), 5000))
+      .then(() => useAkNoti({ msg: '😃 Message sended' }))
+      .catch(() => useAkNoti({ msg: '☹️ There was an error' }))
+      .finally(() => setIsSubmit(false))
   }
 
   return (
