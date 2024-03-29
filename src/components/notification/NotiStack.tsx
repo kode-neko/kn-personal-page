@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react';
+import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import NotiHub from './NotiHub';
 import styles from './styles.module.css';
 import { Noti } from './types';
-import { v4 as uuidv4 } from 'uuid';
 import { Icon } from '..';
 
 const notiHub: NotiHub = NotiHub.getInstance();
@@ -47,9 +47,18 @@ const NotiStack: React.FunctionComponent = () => {
 
   return (
     <div className={styles.stack}>
-      {notiList.map((n: Noti) => (
-        <NotiTag key={n.id} noti={n} />
-      ))}
+      <AnimatePresence>
+        {notiList.map((n: Noti) => (
+          <motion.div 
+            key={n.id}
+            initial={{ transform: 'translateX(21.88rem)' }}
+            animate={{ transform: 'translateX(0)' }}
+            exit={{ transform: 'translateX(-21.88rem)' }}
+          >
+            <NotiTag noti={n} />
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   );
 };
