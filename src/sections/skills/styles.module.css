@@ -15,6 +15,7 @@ section.skills {
 
 .skills .areas {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3.75rem;
 }

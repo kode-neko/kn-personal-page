@@ -17,13 +17,13 @@
 /* Tablet */
 @media (max-width: 1200px) {
   :root {
-    font-size: calc(var(--base-size) * 1.25);
+    font-size: calc(var(--base-size) * 0.75);
   }
 }
 /* Mobile */
 @media (max-width: 600px) {
   :root {
-    font-size: calc(var(--base-size) * 1.5);
+    font-size: calc(var(--base-size) * 0.75);
   }
 }
 
