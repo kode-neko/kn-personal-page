@@ -7,18 +7,23 @@ import Project from '@/models/Project'
 import { iconProjectDic, listProject } from '@/globals'
 import { BtnIcon, Icon, SubTitle, Tag } from '@/components'
 import { useEffect, useState } from 'react'
+import { MEDIA_TABLET, useMedia } from "@/actions";
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {id, pic: {id: idPic, src, width, height}, social, tags} = project
+  const isTablet = useMedia(MEDIA_TABLET)
+  
   return (
     <>
-      <Image
-        src="/projects/akkaunt.png"
-        alt={idPic}
-        width={width}
-        height={height}
-        className={styles.pic}
-      />
+      <div className={styles.picCont}>
+        <Image
+          src="/projects/akkaunt.png"
+          alt={idPic}
+          width={isTablet ? width/1.5 : width}
+          height={isTablet ? height/1.5 : height}
+          className={styles.pic}
+        />
+      </div>
       <div className={styles.info}>
         <div className={styles.title}>
           <h3>{id}</h3>
