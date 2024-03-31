@@ -1,5 +1,5 @@
 .form {
-  flex-basis: 50%;
+  width: 100%;
   display: flex;
   gap: 2.5rem;
   flex-direction: column;
