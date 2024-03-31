@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
+  --base-size: 16px;
   --color-back: rgb(15, 8, 31);
   --color-light: rgb(244, 236, 251);
   --color-pink: rgb(126, 16, 143);
@@ -8,11 +9,22 @@
   --trans-light: rgb(244, 236, 251, 0.04);
   --color-trans: rgb(0, 0, 0, 0);
   --color-disabled: rgb(182, 84, 197);
-
   font-family: "Roboto";
-  font-size: 16px;
   background-color: var(--color-back);
   color: var(--color-light);
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  :root {
+    font-size: calc(var(--base-size) * 0.75);
+  }
+}
+/* Mobile */
+@media (max-width: 600px) {
+  :root {
+    font-size: calc(var(--base-size) * 0.75);
+  }
 }
 
 body {
@@ -67,22 +79,4 @@ textarea:focus-within {
 
 button:hover {
   cursor: pointer;
-}
-
-@media (max-width: 799px) {
-  body {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 800px) {
-  body {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 1.5rem;
-  }
 }
