@@ -1,61 +1,118 @@
 'use client'
 
-import { useFormState } from 'react-dom';
+import { ZodError, ZodString, z } from "zod";
 import { Field } from '../field'
-import styles from './styles.module.css'
 import { Contact } from '@/models';
-import { useEffect } from 'react';
+import { useState } from 'react';
+import styles from './styles.module.css'
+import Image from 'next/image';
 
-export async function action( previousState: string | undefined | null, formData: FormData,) {
-  console.log("previous recorded state ", previousState);
-  return {
-    name: formData.get("name")?.toString(),
-    mail: formData.get("mail")?.toString(),
-    msg: formData.get("msg")?.toString(),
-  };
+const schema: {[key: string]: ZodString} = {
+  name: z.string().min(1, { message: "El campo es requerido" }),
+  mail: z.string().email({message: 'wrong mail'}),
+  msg: z.string().min(1, { message: "El campo es requerido" }),
+}
+const contactSchema = z.object(schema);
+const defaultHint: {[key: string]: string} = {
+  name: '',
+  mail: '',
+  msg: ''
+}
+const defaultDirty: {[key: string]: boolean} = {
+  name: false,
+  mail: false,
+  msg: false
 }
 
 interface ContactFormProps {
-  values: Contact,
-  onSubmit: (contact: Contact) => void
+  initValues: Contact,
+  onSubmit: (contact: Contact) => void,
+  isSubmit: boolean,
 }
 
-const ContactForm = ({values, onSubmit}: ContactFormProps) => {
-  const [state, formAction] = useFormState(action, values);
+const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
+  const [contact, setContact] = useState(initValues);
+  const [hint, setHint] = useState(defaultHint)
+  const [dirty, setDirty] = useState(defaultDirty)
 
-  useEffect(() => {
-    onSubmit(state as Contact)
-  }, [state])
+  const chkData = (field: string, val: string) => {
+    let msg = ''
+    try {
+      schema[field].parse(val)
+    } catch(err) {
+      msg = (err as ZodError).issues[0].message
+    }
+    setHint({...hint, [field]: msg})
+  }
+
+  const handleChange = (field: string, val: string) => {
+    setContact({...contact, [field]: val})
+    if(dirty[field] === true) chkData(field, val)
+  }
+
+  const setDirtyField = (field: string) => {
+    setDirty({...dirty, [field]: true})
+    chkData(field, contact[field])
+  }
+
+  const isValidForm = (): boolean => {
+    const result = contactSchema.safeParse(contact)
+    return result.success;
+  }
 
   return (
-    <form 
-      action={formAction}
+    <form
+      data-test="form-contact"
+      action={() => onSubmit(contact)} 
       className={styles.form}
     >
       <div className={styles.fieldset}>
         <Field
+          value={contact.name}
           name='name'
           icon='fa-solid fa-face-smile'
+          hint={hint.name}
           placeholder='my name is...'
-          onChange={() => console.log('cambio name')}
+          onChange={(val) => handleChange('name', val)}
+          onBlur={() => setDirtyField('name')}
         />
         <Field
+          value={contact.mail}
           name='mail'
           icon='fa-solid fa-envelope'
+          hint={hint.mail}
           placeholder='mail@mail.com'
-          onChange={() => console.log('cambio mail')}
+          onChange={(val) => handleChange('mail', val)}
+          onBlur={() => setDirtyField('mail')}
         />
         <Field
+          value={contact.msg}
           name='msg'
           icon='fa-solid fa-comment-dots'
+          hint={hint.msg}
           placeholder='Congrats, critics, bla, bla'
-          onChange={() => console.log('cambio msg')}
+          onChange={(val) => handleChange('msg', val)}
+          onBlur={() => setDirtyField('msg')}
         />
       </div>
       <div className={styles.bottom}>
-        <p className={styles.hint}>Quis nulla deserunt nostrud anim</p>
+         {/* <p className={styles.hint}>Quis nulla deserunt nostrud anim</p> */}
         <div className={styles.actions}>
-          <button type='submit'>enviar</button>
+          <button
+            data-test="btn-submit" 
+            type='submit'
+            disabled={!isValidForm()}
+          >
+            { isSubmit ? 
+              <Image
+                src='/spinner.png'
+                alt=''
+                width={37}
+                height={37}
+                className={styles.spinner}
+              /> : 
+              <span>enviar</span> }
+          </button>
         </div>
       </div>
     </form>

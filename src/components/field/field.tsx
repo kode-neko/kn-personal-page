@@ -1,24 +1,35 @@
+import { ChangeEvent } from 'react';
 import Icon from '../icon'
 import styles from './styles.module.css'
 
 interface FieldProps {
+  value: string;
   name: string;
-  icon: string, 
+  icon: string;
+  hint?: string;
   placeholder: string, 
-  onChange: () => {}
+  onChange: (val: string) => void,
+  onBlur?: () => void
 }
 
-const Field = ({name, icon, placeholder, onChange}: FieldProps) => {
+const Field = ({value, name, icon, hint='', placeholder, onChange, onBlur}: FieldProps) => {
   return (
-    <div className={styles.field}>
-      <Icon 
-        className={styles.icon} 
-        icon={icon} 
-      />
-      <input 
-        name={name} 
-        placeholder={placeholder} 
-      />
+    <div className={styles.cont}>
+      <div className={styles.field}>
+        <Icon 
+          className={styles.icon} 
+          icon={icon} 
+        />
+        <input
+          data-test={'field-' + name}
+          value={value} 
+          name={name} 
+          placeholder={placeholder}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
+          onBlur={() => onBlur && onBlur()}
+        />
+      </div>
+      <div className={styles.hint}>{hint}</div>
     </div>
   )
 }

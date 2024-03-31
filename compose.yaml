@@ -1,0 +1,32 @@
+services:
+  
+  mariadb:
+    image: mariadb
+    restart: always
+    ports:
+      - 3001:3306
+    volumes:
+      - "perpage-mariadb:/var/lib/mysql:Z"
+      - "./scripts/mariadb:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: perpage
+      MYSQL_USER: perpage-admin
+      MYSQL_PASSWORD: qwerty
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 3002:27017
+    volumes:
+      - "perpage-mongo:/data/db"
+      - "./scripts/mongo:/docker-entrypoint-initdb.d"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+      MONGO_INITDB_DATABASE: perpage
+
+volumes:
+  perpage-mariadb:
+  perpage-mongo:

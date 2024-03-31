@@ -1,0 +1,15 @@
+datasource db {
+  provider =  "mysql"
+  url =       env("MARIADB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model contact {
+  id    Int  @id @default(autoincrement())
+  name  String
+  mail  String
+  msg   String
+}
