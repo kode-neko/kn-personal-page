@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MEDIA_LAPTOP = 1920
 const MEDIA_TABLET = 1200
@@ -13,6 +13,10 @@ function useMedia(limit: number) {
   }
 
   mql.addEventListener('change', handleChange)
+
+  useEffect(() => {
+    setIsMedia(mql.matches)
+  }, [])
 
   return isMedia;
 }
