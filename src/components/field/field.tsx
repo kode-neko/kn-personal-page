@@ -26,7 +26,7 @@ const Field = ({value, name, icon, hint='', placeholder, isTextarea = false, onC
               data-test={'field-' + name}
               value={value} 
               name={name} 
-              rows={8}
+              rows={12}
               placeholder={placeholder}
               onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange(e.target.value)}
               onBlur={() => onBlur && onBlur()}
