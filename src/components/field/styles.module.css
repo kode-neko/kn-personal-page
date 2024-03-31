@@ -3,7 +3,7 @@
 
 .field {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.25rem;
 }
 
@@ -21,8 +21,10 @@
 }
 
 .field > textarea {
+  align-self: stretch;
   flex-grow: 1;
   border-bottom: 0.25rem solid var(--color-pink);
+  font-size: 1.5rem;
   color: var(--color-light);
 }
 
@@ -32,7 +34,7 @@
 }
 
 .field > textarea::placeholder {
-  color: var(--color-light);
+  color: var(--color-pink);
   font-style: oblique;
 }
 

@@ -86,6 +86,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
           onBlur={() => setDirtyField('mail')}
         />
         <Field
+          isTextarea
           value={contact.msg}
           name='msg'
           icon='fa-solid fa-comment-dots'
