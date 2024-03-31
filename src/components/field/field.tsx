@@ -8,12 +8,12 @@ interface FieldProps {
   icon: string;
   hint?: string;
   placeholder: string, 
-  isTextarea: boolean,
+  isTextarea?: boolean,
   onChange: (val: string) => void,
   onBlur?: () => void
 }
 
-const Field = ({value, name, icon, hint='', placeholder, isTextarea, onChange, onBlur}: FieldProps) => {
+const Field = ({value, name, icon, hint='', placeholder, isTextarea = false, onChange, onBlur}: FieldProps) => {
   return (
     <div className={styles.cont}>
       <div className={styles.field}>
@@ -26,6 +26,7 @@ const Field = ({value, name, icon, hint='', placeholder, isTextarea, onChange, o
               data-test={'field-' + name}
               value={value} 
               name={name} 
+              rows={8}
               placeholder={placeholder}
               onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange(e.target.value)}
               onBlur={() => onBlur && onBlur()}

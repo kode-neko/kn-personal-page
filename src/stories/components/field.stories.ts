@@ -13,6 +13,7 @@ const meta = {
     name: 'name',
     icon: 'fa-solid fa-face-smile', 
     placeholder: 'type your name', 
+    isTextarea: false
   }
 } satisfies Meta<typeof Field>;
 
@@ -20,3 +21,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const def: Story = {};
+
+export const textarea: Story = {
+  args: {
+    isTextarea: true
+  }
+};
