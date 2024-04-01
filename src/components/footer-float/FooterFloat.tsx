@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 
 function useVisibilityEle(limitScroll: number) {
   const [visible, setVisible] = useState<boolean>(false);
-  document.addEventListener('scroll', (event) => {
+  window.addEventListener('scroll', (event) => {
     if(window.scrollY > limitScroll)
       setVisible(true)
     else
