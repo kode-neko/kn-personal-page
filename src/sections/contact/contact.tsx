@@ -40,7 +40,8 @@ const Contact = () => {
       <div className={styles.cont}>
         <div className={styles.contPic}>
           <Image
-            src='/mailBox.png'
+            unoptimized={false}
+            src='/mail-box.apng'
             alt=''
             width={isTablet ? 399/1.5 : 399}
             height={isTablet ? 280/1.5 : 280}
