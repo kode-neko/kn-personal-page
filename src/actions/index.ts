@@ -7,5 +7,7 @@ export {
 export {
   LangSel,
   LangList,
+  changeLang,
+  getCurrentLang,
   t
 } from './lang'
