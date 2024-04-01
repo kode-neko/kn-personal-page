@@ -28,7 +28,6 @@ function t(strKey: string) {
   const keys = strKey.split('.')
   const dicLang = dics[currentLang]
   const lastKey = keys[keys.length - 1]
-  console.log('dicLang', dicLang)
   return getKey(dicLang, keys)[lastKey]
 }
 
