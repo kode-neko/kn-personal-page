@@ -6,6 +6,5 @@ export {
 } from './useMedia'
 export {
   LangSel,
-  changeLang,
-  getCurrentLang
+  LangList
 } from './lang'
