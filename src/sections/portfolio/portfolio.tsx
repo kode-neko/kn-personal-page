@@ -38,7 +38,7 @@ const InfoPortfolio = ({project}: {project: Project}) => {
             </li>
           ))}</ul>
         </div>
-        <p>Anim reprehenderit laboris occaecat laboris velit aliqua nisi minim labore amet irure adipisicing velit nisi. Fugiat dolore ad fugiat commodo voluptate.</p>
+        <p>{id}</p>
         <ul className={styles.tags}>
           {tags.map(t => (
             <li key={t}>

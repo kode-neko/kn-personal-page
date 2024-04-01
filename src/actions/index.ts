@@ -6,5 +6,6 @@ export {
 } from './useMedia'
 export {
   LangSel,
-  LangList
+  LangList,
+  t
 } from './lang'
