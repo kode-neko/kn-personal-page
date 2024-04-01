@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './styles.module.css'
 import { avatarPic, socialList } from '@/globals'
 import { BtnIcon } from '@/components'
+import { t } from '@/actions'
 
 const Welcome = () => {
   return (
@@ -14,7 +15,7 @@ const Welcome = () => {
           className={styles.title} 
           data-test="welcome" 
         >
-          mainTitle
+          {t('welcome')}
         </h1>
         <div className={styles.cont}>
           <div className={styles.desc}>

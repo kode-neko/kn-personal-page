@@ -20,13 +20,16 @@ function getKey(
   dics: any, 
   keys: string[]
 ): {[key:string]: string} {
-  if (keys.length == 1) return dics[keys[0]]
+  if (keys.length === 1) return dics
   return getKey(dics[keys[0]], keys.slice(1))
 }
 
 function t(strKey: string) {
   const keys = strKey.split('.')
-  return getKey(dics, keys)
+  const dicLang = dics[currentLang]
+  const lastKey = keys[keys.length - 1]
+  console.log('dicLang', dicLang)
+  return getKey(dicLang, keys)[lastKey]
 }
 
 export {
@@ -36,4 +39,3 @@ export {
   getCurrentLang,
   t
 }
-

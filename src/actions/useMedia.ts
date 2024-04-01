@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from "react";
 
 const MEDIA_LAPTOP = 1920
