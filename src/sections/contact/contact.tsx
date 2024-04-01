@@ -38,17 +38,15 @@ const Contact = () => {
         align='right'
       />
       <div className={styles.cont}>
-        {!is900 && (
-          <div className={styles.contPic}>
-            <Image
-              src='/mailBox.png'
-              alt=''
-              width={isTablet ? 399/1.5 : 399}
-              height={isTablet ? 280/1.5 : 280}
-              className={styles.pic}
-            />
-          </div>
-        )}
+        <div className={styles.contPic}>
+          <Image
+            src='/mailBox.png'
+            alt=''
+            width={isTablet ? 399/1.5 : 399}
+            height={isTablet ? 280/1.5 : 280}
+            className={styles.pic}
+          />
+        </div>
         <div className={styles.contForm}>
           <ContactForm 
             initValues={contact} 

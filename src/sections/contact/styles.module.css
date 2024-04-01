@@ -39,3 +39,13 @@
     flex-basis: 75%;
   }
 }
+
+@media (max-width: 900px) {
+  .contact > .cont > .contPic {
+    display: none;
+  }
+
+  .contact > .cont > .contForm {
+    flex-basis: auto;
+  }
+}
