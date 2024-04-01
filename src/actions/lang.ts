@@ -32,6 +32,8 @@ function t(strKey: string) {
 export {
   LangSel,
   LangList,
+  changeLang,
+  getCurrentLang,
   t
 }
 
