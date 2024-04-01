@@ -1,6 +1,6 @@
 .mainBar {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 1.25rem 2.5rem;
 }
 
