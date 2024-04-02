@@ -1,4 +1,5 @@
 'use server'
+
 import { LangSel } from '@/globals';
 import dics from '../dictionaries'
 
@@ -33,7 +34,7 @@ async function t(strKey: string): Promise<string> {
   const keys = strKey.split('.')
   let transFound
   try{
-    const dicLang = (dics as Record<string, any>)[currentLang]
+    const dicLang = (dics as Record<string, any>)[await getCurrentLang()]
     transFound = await getKey(dicLang, keys)
   }
   catch(e) {
