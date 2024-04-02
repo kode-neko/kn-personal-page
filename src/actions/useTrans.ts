@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { t } from "./lang";
 
 function useT(key: string): string {
-  const [trans, setTrans] = useState<string>(key)
+  const [trans, setTrans] = useState<string>('')
   useEffect(() => {
     t(key)
       .then(setTrans)
@@ -15,7 +15,7 @@ function useT(key: string): string {
 
 function useTlistStr(keyList: string[], prefix = ''): Record<string, string> {
   const objInit: Record<string, string> = {}
-  keyList.forEach(k => objInit[k] = k)
+  keyList.forEach(k => objInit[k] = '')
   const [objTrans, setObjTrans] = useState<Record<string, string>>(objInit)
 
   useEffect(() => {
