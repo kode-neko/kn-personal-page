@@ -7,7 +7,7 @@ export default {
     contact: 'Contact'
   },
   skills: {
-    fron: 'Front',
+    front: 'Front',
     back: 'Backend',
     design: 'Design',
     tools: 'Tools'

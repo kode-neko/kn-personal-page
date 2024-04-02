@@ -7,10 +7,10 @@ export default {
     contact: 'Contacto'
   },
   skills: {
-    fron: 'Front',
+    front: 'Front',
     back: 'Backend',
     design: 'Diseño',
-    tools: 'Herramientas'
+    tools: 'Herram'
   },
   occu: 'Web/Mobile Developer - Frontend',
   desc: 'Casi una década picando código alucinante. Fullstack MERN/MEVN.',
