@@ -35,6 +35,8 @@ async function t(strKey: string): Promise<string> {
   let transFound
   try{
     const dicLang = (dics as Record<string, any>)[await getCurrentLang()]
+    // console.log('dicLang', dicLang)
+    
     transFound = await getKey(dicLang, keys)
   }
   catch(e) {

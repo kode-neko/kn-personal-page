@@ -28,6 +28,16 @@ export default {
     design: 'Design',
     tools: 'Tools'
   },
+  project: {
+    akkount: {
+      title: 'm',
+      desc: 'm'
+    },
+    lionmiss: {
+      title: 'm',
+      desc: 'm'
+    }
+  },
   placeH: {
     name: 'My name is...',
     email: 'my@mail.com',
