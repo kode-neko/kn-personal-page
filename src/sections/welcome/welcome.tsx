@@ -20,10 +20,8 @@ const Welcome = () => {
         <div className={styles.cont}>
           <div className={styles.desc}>
             <h2>Kodeneko</h2>
-            <h3>occupation</h3>
-            <p>
-              Sunt do ad nulla exercitation exercitation eu occaecat ea velit.
-            </p>
+            <h3>{t('occu')}</h3>
+            <p>{t('desc')}</p>
           </div>
           <ul className={styles.social}>
             {socialList.map(s => (
