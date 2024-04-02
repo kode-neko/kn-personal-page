@@ -12,7 +12,7 @@ export default {
     design: 'Design',
     tools: 'Tools'
   },
-  occupation: 'Web/Mobile Developer - Frontend',
+  occu: 'Web/Mobile Developer - Frontend',
   desc: 'Almost a decade breaking keys to typing awesome code. Fullstack MERN/MEVN',
   projects: {
    akkount: {

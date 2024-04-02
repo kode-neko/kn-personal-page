@@ -12,7 +12,7 @@ export default {
     design: 'Diseño',
     tools: 'Herramientas'
   },
-  occupation: 'Web/Mobile Developer - Frontend',
+  occu: 'Web/Mobile Developer - Frontend',
   desc: 'Casi una década picando código alucinante. Fullstack MERN/MEVN',
   projects: {
    akkount: {
