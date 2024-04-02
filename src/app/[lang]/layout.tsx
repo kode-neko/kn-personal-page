@@ -4,11 +4,11 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }]
 }
 
-const RootLayout = ({
+const RootLayout = async ({
   children,
   params
 }: any ) => {
-  changeLang(params.lang)
+  await changeLang(params.lang)
   return <>{children}</>;
 }
 
