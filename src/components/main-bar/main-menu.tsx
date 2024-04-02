@@ -4,6 +4,7 @@ import { menuOpts } from "@/globals"
 import styles from './styles.module.css'
 import Link from "next/link"
 import { MouseEvent } from "react"
+import { t } from "@/actions"
 
 const MainMenu = () => {
   const handleClick = (eleStr: string, e: MouseEvent<HTMLAnchorElement>) => {
@@ -22,7 +23,7 @@ const MainMenu = () => {
           href={o.path as string}
           onClick={(e: MouseEvent<HTMLAnchorElement>) => handleClick(o.path as string, e)}
         >
-          {o.id}
+          {t(`opts.${o.id}`) }
         </Link>
       </li>
     ))}
