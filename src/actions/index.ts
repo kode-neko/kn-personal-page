@@ -13,4 +13,4 @@ export {
   useT,
   useTlistStr,
   useTlistObj
-} from './useListT'
+} from './useTrans'
