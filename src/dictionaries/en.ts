@@ -1,7 +1,7 @@
 export default {
   mainTitle: 'Welcome!',
   opts: {
-    welcome: 'Bienvenida',
+    welcome: 'Welcome',
     skills: 'Skills',
     portfolio: 'Portfolio',
     contact: 'Contact'

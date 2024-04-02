@@ -15,7 +15,7 @@ const Welcome = () => {
           className={styles.title} 
           data-test="welcome" 
         >
-          {t('welcome')}
+          {t('mainTitle')}
         </h1>
         <div className={styles.cont}>
           <div className={styles.desc}>
