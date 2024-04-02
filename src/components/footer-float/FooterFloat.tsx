@@ -1,18 +1,17 @@
 'use client'
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from ".."
 import styles from './styles.module.css'
 
 function useVisibilityEle(limitScroll: number) {
   const [visible, setVisible] = useState<boolean>(false);
-  window.addEventListener('scroll', (event) => {
-    if(window.scrollY > limitScroll)
-      setVisible(true)
-    else
-      setVisible(false)
-  })
+  useEffect(() => {
+    window.addEventListener('scroll', (event) => {
+      setVisible(window.scrollY > limitScroll)
+    })
+  }, [])
   return visible;
 }
 
