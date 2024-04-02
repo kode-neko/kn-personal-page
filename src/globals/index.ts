@@ -1,4 +1,9 @@
 export {
+  LangSel,
+  LangList
+} from './lang'
+
+export {
   welcomePath,
   skillsPath,
   portfolioPath,
