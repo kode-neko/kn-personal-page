@@ -44,4 +44,4 @@ export default {
     mailSuc: '😃 Message sended',
     mailFail: '☹️ There was an error. Try again later.'
   }
-}
+} as Record<string, any>

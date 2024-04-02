@@ -1,19 +1,14 @@
-import { throws } from 'assert';
+'use server'
+import { LangSel } from '@/globals';
 import dics from '../dictionaries'
-
-enum LangSel {
-  EN = 'en',
-  ES = 'es'
-}
-const LangList = Object.values(LangSel);
 
 let currentLang = LangSel.EN;
 
-function changeLang(lang: LangSel) {
+async function changeLang(lang: string) {
   currentLang = lang
 }
 
-function getCurrentLang(): LangSel {
+async function getCurrentLang(): Promise<string> {
   return currentLang;
 }
 
@@ -23,35 +18,31 @@ class ErrorGetTrans extends Error {
   }
 }
 
-function getKey(
-  dics: any, 
+async function getKey(
+  dics: Record<string, any>, 
   keys: string[]
-): {[key:string]: string} | never {
+): Promise<string> {
   const subDic = dics[keys[0]]
   if (!subDic) throw new ErrorGetTrans();
-  if (keys.length === 1) return dics
+  if (keys.length === 1) return dics[keys[0]]
   const subKeys = keys.slice(1)
   return getKey(subDic, subKeys)
 }
 
-function t(strKey: string) {
+async function t(strKey: string): Promise<string> {
   const keys = strKey.split('.')
   let transFound
   try{
-    const dicLang = dics[currentLang]
-    const lastKey = keys[keys.length - 1]
-    transFound = getKey(dicLang, keys)[lastKey]
+    const dicLang = (dics as Record<string, any>)[currentLang]
+    transFound = await getKey(dicLang, keys)
   }
   catch(e) {
-    console.log('error', strKey)
     transFound = strKey
   }
   return transFound
 }
 
 export {
-  LangSel,
-  LangList,
   changeLang,
   getCurrentLang,
   t
