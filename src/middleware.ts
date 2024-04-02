@@ -1,5 +1,5 @@
-import { LangList, LangSel } from "@/actions"
 import { NextRequest, NextResponse } from "next/server"
+import { LangList, LangSel } from "./globals"
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
