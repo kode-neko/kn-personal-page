@@ -7,7 +7,8 @@ export {
 export {
   changeLang,
   getCurrentLang,
-  t
+  t,
+  tList
 } from './lang'
 export {
   useT,

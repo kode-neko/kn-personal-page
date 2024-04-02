@@ -42,8 +42,22 @@ async function t(strKey: string): Promise<string> {
   return transFound
 }
 
+async function tList(strKey: string[]): Promise<Record<string, string>> {
+  const objTrans: Record<string, string> = {}
+  const promises = strKey.map(k => t(k))
+  const resTrans = await Promise.all(promises)
+
+  resTrans.forEach((trans, i) => {
+    const keyStr = strKey[i]
+    objTrans[keyStr] = trans
+  })
+
+  return objTrans;
+}
+
 export {
   changeLang,
   getCurrentLang,
-  t
+  t,
+  tList
 }

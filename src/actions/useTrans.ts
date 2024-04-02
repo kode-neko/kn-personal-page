@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { t } from "./lang";
+import { t, tList } from "./lang";
 
 function useT(key: string): string {
   const [trans, setTrans] = useState<string>('')
+
   useEffect(() => {
     t(key)
       .then(setTrans)
@@ -15,20 +16,16 @@ function useT(key: string): string {
 
 function useTlistStr(keyList: string[], prefix = ''): Record<string, string> {
   const objInit: Record<string, string> = {}
-  keyList.forEach(k => objInit[k] = '')
+  const keyListPrefix = keyList.map(k => `${prefix}${k}`)
+  keyListPrefix.forEach(k => objInit[k] = '')
   const [objTrans, setObjTrans] = useState<Record<string, string>>(objInit)
 
   useEffect(() => {
-    const promises: Promise<string>[] = []
-    keyList.forEach(k => 
-      promises.push(t(`${prefix}${k}`))
-    )
-    Promise.all(promises)
-      .then(transList => {
-        const objAux: Record<string, string> = {}
-        transList.forEach((t, i) => objAux[keyList[i]] = t)
-        setObjTrans(objAux)
-      })
+    tList(keyListPrefix).then(resTrans => {
+      const objTransMod: Record<string, string> = {}
+      keyList.forEach((k, i) => objTransMod[k] = resTrans[keyListPrefix[i]])
+      setObjTrans(objTransMod)
+    })
   }, [])
 
   return objTrans;
