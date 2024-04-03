@@ -53,7 +53,6 @@ const InfoPortfolio = ({project}: {project: Project}) => {
  
 const Portfolio = () => {
   const trans = useT('projects')
-  console.log('project', trans)
   const [scope, animate] = useAnimate()
   const [idProject, setIdProject] = useState<number>(0);
 

@@ -17,6 +17,7 @@ function useT(key: string): string {
 function useTlistStr(keyList: string[], prefix = ''): Record<string, string> {
   const objInit: Record<string, string> = {}
   const keyListPrefix = keyList.map(k => `${prefix}${k}`)
+  console.log('useTlistStr', keyListPrefix)
   keyListPrefix.forEach(k => objInit[k] = '')
   const [objTrans, setObjTrans] = useState<Record<string, string>>(objInit)
 

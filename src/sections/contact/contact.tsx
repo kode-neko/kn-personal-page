@@ -8,10 +8,9 @@ import { useState } from 'react'
 import { Contact } from '@/models'
 import { newMessage } from '@/services'
 import useAkNoti from '@/components/notification/useNoti'
-import { useMedia, MEDIA_MOBILE, MEDIA_TABLET } from '@/actions'
+import { useMedia, MEDIA_MOBILE, MEDIA_TABLET, useT, useTlistStr } from '@/actions'
 
 const Contact = () => {
-  const is900 = useMedia(900);
   const isTablet = useMedia(MEDIA_TABLET);
   const [isSubmit, setIsSubmit] = useState<boolean>(false)
   const contact = {
@@ -34,7 +33,7 @@ const Contact = () => {
       id="sectContact"
     >
       <SubTitle
-        label="contact"
+        label={useT('opts.contact')}
         align='right'
       />
       <div className={styles.cont}>

@@ -30,15 +30,15 @@ export default {
    codetest: {
     title: 'Code\'s Pieces',
     desc: 'Diversos ejemplos de código'
-   },
-   placeholder: {
-    name: 'Mi nombre es...',
-    mail: 'mail@mail.es',
-    msg: 'felicitaciones, propuestas, críticas, bla, bla...'
-   },
-   labels: {
-    send: 'Envío'
    }
+  },
+  placeholder: {
+   name: 'Mi nombre es...',
+   mail: 'mail@mail.es',
+   msg: 'felicitaciones, propuestas, críticas, bla, bla...'
+  },
+  labels: {
+   send: 'Envío'
   },
   msg: {
     mailSuc: '😃 ¡Mensaje enviado!',

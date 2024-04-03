@@ -30,16 +30,16 @@ export default {
    codetest: {
     title: 'Code\'s Pieces',
     desc: 'Dolore velit Lorem sint eu adipisicing nostrud minim'
-   },
-   placeholder: {
+   }
+  },
+  placeholder: {
     name: 'my name is...',
     mail: 'mail@mail.es',
     msg: 'Congrats, critics, bla, bla...'
    },
-   labels: {
+  labels: {
     send: 'Send'
-   }
-  },
+   },
   msg: {
     mailSuc: '😃 Message sended',
     mailFail: '☹️ There was an error. Try again later.'

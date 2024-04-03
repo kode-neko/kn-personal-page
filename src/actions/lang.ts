@@ -34,9 +34,7 @@ async function t(strKey: string): Promise<string> {
   const keys = strKey.split('.')
   let transFound
   try{
-    const dicLang = (dics as Record<string, any>)[await getCurrentLang()]
-    // console.log('dicLang', dicLang)
-    
+    const dicLang = (dics as Record<string, any>)[await getCurrentLang()]   
     transFound = await getKey(dicLang, keys)
   }
   catch(e) {
