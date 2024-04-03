@@ -6,6 +6,7 @@ import { Contact } from '@/models';
 import { useState } from 'react';
 import styles from './styles.module.css'
 import Image from 'next/image';
+import { useT, useTlistStr } from "@/actions";
 
 const schema: {[key: string]: ZodString} = {
   name: z.string().min(1, { message: "El campo es requerido" }),
@@ -31,6 +32,8 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
+  const placeH = useTlistStr(['name', 'mail', 'msg'], 'placeholder.') 
+  const labelSend = useT('labels.send') 
   const [contact, setContact] = useState(initValues);
   const [hint, setHint] = useState(defaultHint)
   const [dirty, setDirty] = useState(defaultDirty)
@@ -72,7 +75,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
           name='name'
           icon='fa-solid fa-face-smile'
           hint={hint.name}
-          placeholder='my name is...'
+          placeholder={placeH.name}
           onChange={(val) => handleChange('name', val)}
           onBlur={() => setDirtyField('name')}
         />
@@ -81,7 +84,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
           name='mail'
           icon='fa-solid fa-envelope'
           hint={hint.mail}
-          placeholder='mail@mail.com'
+          placeholder={placeH.mail}
           onChange={(val) => handleChange('mail', val)}
           onBlur={() => setDirtyField('mail')}
         />
@@ -91,7 +94,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
           name='msg'
           icon='fa-solid fa-comment-dots'
           hint={hint.msg}
-          placeholder='Congrats, critics, bla, bla'
+          placeholder={placeH.msg}
           onChange={(val) => handleChange('msg', val)}
           onBlur={() => setDirtyField('msg')}
         />
@@ -112,7 +115,7 @@ const ContactForm = ({initValues, onSubmit, isSubmit}: ContactFormProps) => {
                 height={37}
                 className={styles.spinner}
               /> : 
-              <span>enviar</span> }
+              <span>{labelSend}</span> }
           </button>
         </div>
       </div>

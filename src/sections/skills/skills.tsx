@@ -2,24 +2,25 @@ import { listSkill } from '@/globals'
 import styles from './styles.module.css'
 import { BtnIcon, Icon, SubTitle } from '@/components';
 import clsx from 'clsx';
+import { t } from '@/actions';
 
 const Techs = ({techs}: {techs: string[]}) => {
   return (
     <ul className={styles.techs}>
-      { techs.map(t => (
-        <li key={t}>{t}</li>
+      {techs.map(te => (
+        <li key={te}>{t(te)}</li>
       ))}
     </ul>
   );
 }
 
-const Skills = () => {
+const Skills = async () => {
   return (
     <section 
       className={styles.skills}
       id="sectSkills"
     >
-      <SubTitle label='Skills' />
+      <SubTitle label={await t('opts.skills')} />
       <ul className={styles.areas}>
         {listSkill.map(s => (
           <li key={s.id}>
@@ -28,7 +29,7 @@ const Skills = () => {
                 icon={s.icon} 
                 className={styles.icon} 
               />
-              <span>{s.id}</span>
+              <span>{t(`skills.${s.id}`)}</span>
             </h3>
             <Techs techs={s.techs} />
           </li>
