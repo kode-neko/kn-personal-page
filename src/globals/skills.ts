@@ -1,4 +1,4 @@
-import { Skill } from "@/models";
+import { Skill } from "../model"
 
 const frontSkills: Skill = {
   id: 'front',

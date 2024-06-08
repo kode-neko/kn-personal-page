@@ -1,2 +1,2 @@
-export {default as MainBar} from './main-bar'
-export {default as MainMenu} from './main-menu'
+export {default as MainBar} from './MainBar'
+export {default as MainMenu} from './MainMenu'

@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { faCodepen, faFigma, faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
@@ -26,19 +25,3 @@ library.add(
   faArrowUp,
   faCircleXmark
 )
-
-interface IconProps {
-  icon: string, 
-  className?: string
-}
-
-const Icon = ({icon, ...props}: IconProps) => {
-  return (
-    <FontAwesomeIcon
-      icon={icon}
-      {...props}
-    />
-  )
-}
-
-export default Icon

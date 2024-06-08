@@ -1,26 +1,18 @@
 import { ChangeEvent } from 'react';
-import Icon from '../icon'
 import styles from './styles.module.css'
-
-interface FieldProps {
-  value: string;
-  name: string;
-  icon: string;
-  hint?: string;
-  placeholder: string, 
-  isTextarea?: boolean,
-  onChange: (val: string) => void,
-  onBlur?: () => void
-}
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import FieldProps from './types.d.ts'
 
 const Field = ({value, name, icon, hint='', placeholder, isTextarea = false, onChange, onBlur}: FieldProps) => {
   return (
     <div className={styles.cont}>
       <div className={styles.field}>
-        <Icon 
-          className={styles.icon} 
-          icon={icon} 
-        />
+        <FontAwesomeIcon
+    className={styles.icon} 
+    icon={icon as IconProp}
+  />
+
         {isTextarea 
           ? <textarea 
               data-test={'field-' + name}

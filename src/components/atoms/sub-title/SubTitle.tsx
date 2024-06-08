@@ -1,11 +1,6 @@
-import React from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
-
-interface SubTitleProps {
-  label: string,
-  align?: 'center' | 'left' | 'right'
-}
+import SubTitleProps from './types'
 
 const SubTitle = ({label, align = 'center'}: SubTitleProps) => {
   return (

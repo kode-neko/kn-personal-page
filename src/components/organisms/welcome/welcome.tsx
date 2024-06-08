@@ -1,10 +1,11 @@
-import Image from 'next/image'
+import { useTranslation } from 'react-i18next'
+import { avatarPic, socialList } from '../../../globals'
+import avatar from '../../../assets/avatar.png'
+import { BtnIcon } from '../../atoms'
 import styles from './styles.module.css'
-import { avatarPic, socialList } from '@/globals'
-import { BtnIcon } from '@/components'
-import { t } from '@/actions'
 
-const Welcome = () => {
+const WelcomeSection = () => {
+  const {t} = useTranslation();
   return (
     <section 
       className={styles.welcome}
@@ -26,20 +27,21 @@ const Welcome = () => {
           <ul className={styles.social}>
             {socialList.map(s => (
               <li key={s.id}>
+                <a href={s.path as string}>
                 <BtnIcon
-                  href={s.path as string}
                   color='blue'
                   size='lg'
                   icon={s.icon as string}
                 />
+                </a>
               </li>
             ))}
           </ul>
         </div>
       </div>
       <div className={styles.right}>
-        <Image
-          src={avatarPic.src}
+        <img
+          src={avatar}
           alt={avatarPic.id}
           width={avatarPic.width}
           height={avatarPic.height}
@@ -50,4 +52,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default WelcomeSection

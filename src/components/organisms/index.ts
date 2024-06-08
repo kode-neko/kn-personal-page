@@ -1,0 +1,7 @@
+export {ContactSection} from './contact-section'
+export {Footer} from './footer'
+export {FooterFloat} from './footer-float'
+export {MainBar} from './main-bar'
+export {PortfolioSection} from './portfolio-section'
+export {SkillsSections} from './skills-secions'
+export {Welcome} from './welcome'

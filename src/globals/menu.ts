@@ -1,5 +1,5 @@
-import { Link } from "@/models";
 import { contactPath, portfolioPath, skillsPath, welcomePath } from ".";
+import { Link } from "../model";
 
 const welcomeOpt: Link = {
   id: 'welcome',

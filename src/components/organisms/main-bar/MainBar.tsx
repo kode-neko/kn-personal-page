@@ -1,6 +1,5 @@
-import React from 'react'
 import styles from './styles.module.css'
-import MainMenu from './main-menu'
+import MainMenu from './MainMenu
 
 const MainBar = () => {
   return (

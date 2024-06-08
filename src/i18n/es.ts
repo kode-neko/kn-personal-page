@@ -1,4 +1,7 @@
+import zod from "zod-i18n-map/locales/es/zod.json";
+
 export default {
+  zod,
   menu: {
     welcome: 'Bienvenido',
     skills: 'Skills',

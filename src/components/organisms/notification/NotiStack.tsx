@@ -1,11 +1,10 @@
-'use client'
-
 import { useEffect, useState } from 'react';
-import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import NotiHub from './NotiHub';
 import styles from './styles.module.css';
 import { Noti } from './types';
-import { Icon } from '..';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const notiHub: NotiHub = NotiHub.getInstance();
 
@@ -19,8 +18,8 @@ const NotiTag: React.FunctionComponent<NotiTagProps> = ({
   return (
     <div className={styles.tag}>
       <div onClick={() => notiHub.deleteMsg(noti.id as string)}>
-        <Icon
-          icon="fa-regular fa-circle-xmark"
+        <FontAwesomeIcon
+          icon={"fa-regular fa-circle-xmark" as IconProp}
           className={styles.close}
         />
       </div>

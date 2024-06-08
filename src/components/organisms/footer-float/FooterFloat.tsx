@@ -1,9 +1,8 @@
-'use client'
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Icon } from ".."
 import styles from './styles.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 function useVisibilityEle(limitScroll: number) {
   const [visible, setVisible] = useState<boolean>(false);
@@ -33,8 +32,8 @@ const FooterFloat = () => {
           className={styles.button} 
           onClick={handleClick}
         >
-          <Icon 
-            icon='fa-solid fa-arrow-up'
+          <FontAwesomeIcon 
+            icon={'fa-solid fa-arrow-up' as IconProp} 
             className={styles.arrow} 
           />
         </motion.button> 

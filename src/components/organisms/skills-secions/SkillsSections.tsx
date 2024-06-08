@@ -1,32 +1,28 @@
-import { listSkill } from '@/globals'
 import styles from './styles.module.css'
-import { BtnIcon, Icon, SubTitle } from '@/components';
 import clsx from 'clsx';
-import { t } from '@/actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { SubTitle } from '../../atoms';
+import { listSkill } from '../../../globals';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { useTranslation } from 'react-i18next';
+import Techs from './Techs';
 
-const Techs = ({techs}: {techs: string[]}) => {
-  return (
-    <ul className={styles.techs}>
-      {techs.map(te => (
-        <li key={te}>{t(te)}</li>
-      ))}
-    </ul>
-  );
-}
+const SkillsSection = async () => {
 
-const Skills = async () => {
+  const {t} = useTranslation();
+
   return (
     <section 
       className={styles.skills}
       id="sectSkills"
     >
-      <SubTitle label={await t('opts.skills')} />
+      <SubTitle label={t('opts.skills')} />
       <ul className={styles.areas}>
         {listSkill.map(s => (
           <li key={s.id}>
             <h3>
-              <Icon 
-                icon={s.icon} 
+              <FontAwesomeIcon 
+                icon={s.icon as IconProp} 
                 className={styles.icon} 
               />
               <span>{t(`skills.${s.id}`)}</span>
@@ -41,4 +37,4 @@ const Skills = async () => {
   )
 }
 
-export default Skills
+export default SkillsSection
