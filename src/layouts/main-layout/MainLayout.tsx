@@ -6,6 +6,7 @@ const MainLayout = ({children}: React.PropsWithChildren) => {
       <header className={styles.mainHeader}></header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.mainFooter}></footer>
+      <div className={styles.round}></div>
     </div>
   )
 }
