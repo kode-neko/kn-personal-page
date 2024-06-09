@@ -1,6 +1,6 @@
 import { useAnimate } from "framer-motion";
 import { useState } from 'react'
-import styles from './styles.module.css'
+import styles from './styles.module.less'
 import InfoPortfolio from "./InfoPortFolio";
 import { listProject } from "../../../globals";
 import { SubTitle } from "../../atoms";

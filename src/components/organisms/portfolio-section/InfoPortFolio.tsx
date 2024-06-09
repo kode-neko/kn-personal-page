@@ -1,5 +1,5 @@
 import { Project } from "../../../model";
-import styles from './styles.module.css'
+import styles from './styles.module.less'
 import { BtnIcon, Tag } from "../../atoms";
 import { iconProjectDic } from "../../../globals";
 
