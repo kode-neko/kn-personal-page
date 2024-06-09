@@ -43,7 +43,7 @@ export default {
   },
   placeH: {
     name: 'My name is...',
-    email: 'my@mail.com',
+    mail: 'my@mail.com',
     msg: 'Congrats, offers, propousals, critics...'
   }
 };

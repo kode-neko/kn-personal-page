@@ -6,8 +6,10 @@ import { listProject } from "../../../globals";
 import { SubTitle } from "../../atoms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { useTranslation } from "react-i18next";
  
 const PortfolioSection = () => {
+  const {t} = useTranslation();
   const [scope, animate] = useAnimate()
   const [idProject, setIdProject] = useState<number>(0);
 
@@ -32,7 +34,7 @@ const PortfolioSection = () => {
       <div className={styles.cont}>
         <div className={styles.header}>
           <SubTitle
-            label="portfolio"
+            label={t('label.portfolio')}
             align='left'
           />
           <div className={styles.arrows}>

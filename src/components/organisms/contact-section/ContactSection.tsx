@@ -28,7 +28,7 @@ const ContactSection = () => {
       id="sectContact"
     >
       <SubTitle
-        label={t('label.opts.contact')}
+        label={t('label.contact')}
         align='right'
       />
       <div className={styles.cont}>

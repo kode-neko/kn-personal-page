@@ -16,13 +16,13 @@ const WelcomeSection = () => {
           className={styles.title} 
           data-test="welcome" 
         >
-          {t('mainTitle')}
+          {t('label.title')}
         </h1>
         <div className={styles.cont}>
           <div className={styles.desc}>
             <h2>Kodeneko</h2>
-            <h3>{t('occu')}</h3>
-            <p>{t('desc')}</p>
+            <h3>{t('label.occu')}</h3>
+            <p>{t('text.desc')}</p>
           </div>
           <ul className={styles.social}>
             {socialList.map(s => (

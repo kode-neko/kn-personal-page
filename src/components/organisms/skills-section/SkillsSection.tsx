@@ -15,7 +15,7 @@ const SkillsSection = () => {
       className={styles.skills}
       id="sectSkills"
     >
-      <SubTitle label={t('opts.skills')} />
+      <SubTitle label={t('label.skills')} />
       <ul className={styles.areas}>
         {listSkill.map(s => (
           <li key={s.id}>
