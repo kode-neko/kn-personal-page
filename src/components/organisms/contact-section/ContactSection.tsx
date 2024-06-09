@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import mailBoxAnim from '../../../assets/mail-box.apng'
+import mailBoxAnim from '../../../../assets/mail-box.apng'
 import { Contact } from '../../../model'
 import useAkNoti from '../notification/useNoti'
 import { sendMsg } from '../../../service'

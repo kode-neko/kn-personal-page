@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import spinnerAnimation from '../../assets/spinner.png'
+import spinnerAnimation from '../../../../assets/spinner.png'
 import styles from './styles.module.css'
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';

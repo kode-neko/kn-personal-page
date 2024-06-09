@@ -7,13 +7,13 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 const BtnIcon = ({icon, size = 'md', color = 'pink'}: BtnIconProps) => {
   return (
     <FontAwesomeIcon
-    className={clsx(
-      styles.btn,
-      styles[size], 
-      styles[color]
-    )} 
-    icon={icon as IconProp}
-  />
+      className={clsx(
+        styles.btn,
+        styles[size], 
+        styles[color]
+      )} 
+      icon={icon as IconProp}
+    />
   )
 }
 

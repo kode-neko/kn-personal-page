@@ -1,18 +1,21 @@
-import { BtnIcon } from '@/components';
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../app/globals.css'
+import { BtnIcon } from '../../components';
 
 const meta = {
   title: 'Personal Page/BtnIcon',
   component: BtnIcon,
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component: 'Descripción del componente',
+      }
+    }
   },
   args: {
     icon: 'fa-brands fa-twitter',
     size: 'sm',
-    color: 'pink',
-    href: ''
+    color: 'pink'
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof BtnIcon>;

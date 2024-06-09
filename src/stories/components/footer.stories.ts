@@ -1,6 +1,5 @@
-import { Footer } from '@/components';
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../app/globals.css'
+import { Footer } from '../../components';
 
 const meta = {
   title: 'Personal Page/Footer',

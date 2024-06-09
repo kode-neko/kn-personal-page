@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { avatarPic, socialList } from '../../../globals'
-import avatar from '../../../assets/avatar.png'
+import avatar from '../../../../assets/avatar.png'
 import { BtnIcon } from '../../atoms'
 import styles from './styles.module.css'
 
