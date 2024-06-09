@@ -7,8 +7,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useTranslation } from 'react-i18next';
 import Techs from './Techs';
 
-const SkillsSection = async () => {
-
+const SkillsSection = () => {
   const {t} = useTranslation();
 
   return (
