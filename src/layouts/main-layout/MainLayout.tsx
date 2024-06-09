@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.less'
 
 const MainLayout = ({children}: React.PropsWithChildren) => {
   return (
