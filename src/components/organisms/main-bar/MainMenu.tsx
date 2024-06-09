@@ -22,7 +22,7 @@ const MainMenu = () => {
           href={o.path as string}
           onClick={(e: MouseEvent<HTMLAnchorElement>) => handleClick(o.path as string, e)}
         >
-          {t(`label.${o.id}`)}
+          {t(`menu.${o.id}`)}
         </a>
       </li>
     ))}
