@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.less'
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SubTitle } from '../../atoms';
