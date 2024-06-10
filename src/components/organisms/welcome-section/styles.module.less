@@ -6,48 +6,61 @@
   padding: 0 2.5rem 5rem 2.5rem;
 }
 
+/* Tablet */
+@media (max-width: 1200px) {
+  .welcome {
+    align-items: center;
+    flex-direction: column;
+    gap: 3.35rem;
+  }
+
+  .welcome .left {
+    text-align: center;
+
+    .cont {
+      .social {
+        justify-content: center;
+      }
+    }
+  }
+}
+
 .welcome .left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.welcome .left .title {
-  font-size: 7rem;
-  font-weight: bold;
-}
+  .title {
+    font-size: 7rem;
+    font-weight: bold;
+  }
 
-.welcome .left .cont {
-  display: flex;
-  flex-direction: column;
-  gap: 0.63rem;
-}
+  .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.63rem;
 
-.welcome .left .cont .desc {
-  display: flex;
-  flex-direction: column;
-  gap: 0.63rem;
-}
+    .desc {
+      display: flex;
+      flex-direction: column;
+      gap: 0.63rem;
 
-.welcome .left .cont .desc > h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: var(--color-pink);
-}
+      & > h2 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: var(--color-pink);
+      }
 
-.welcome .left .cont .desc > h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
+      & > h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+    }
 
-.welcome .left .cont .social {
-  display: flex;
-  gap: 1.75rem;
-  padding-top: 1.25rem;
-}
-
-.welcome .right {
-}
-
-.welcome .right .pic {
+    .social {
+      display: flex;
+      gap: 1.75rem;
+      padding-top: 1.25rem;
+    }
+  }
 }
