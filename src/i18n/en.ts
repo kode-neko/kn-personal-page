@@ -20,7 +20,8 @@ export default {
     front: 'Front',
     back: 'Back',
     design: 'Design',
-    tools: 'Tools'
+    tools: 'Tools',
+    send: 'Send'
   },
   skills: {
     front: 'Front',

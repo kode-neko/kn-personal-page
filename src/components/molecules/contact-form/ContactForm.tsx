@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import spinnerAnimation from '../../../../assets/spinner.png'
 import styles from './styles.module.css'
 import { useTranslation } from 'react-i18next';
@@ -10,7 +9,6 @@ import { Field } from '../../atoms';
 import ContactFormProps from './types';
 
 const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
-  const isSubmit = useState<boolean>(false);
   const {t} = useTranslation()
 
   const {values, handleSubmit, handleChange, handleBlur, touched, errors, isSubmitting} = useFormik({
@@ -65,7 +63,7 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
             type='submit'
             disabled={isSubmitting}
           >
-            { isSubmit ? 
+            { isSubmitting ? 
               <img
                 src={spinnerAnimation}
                 alt=''
