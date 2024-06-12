@@ -3,49 +3,47 @@
   flex-direction: column;
   gap: 2.5rem;
   padding: 5rem 2.5rem;
-}
 
-.contact > h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: right;
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: right;
+  }
+  .cont {
+    display: flex;
+    gap: 2.5rem;
+  }
 }
 
 .contact > .cont {
-  display: flex;
-  gap: 2.5rem;
-}
+  .contPic {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.contact > .cont > .contPic {
-  flex-basis: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact > .cont > .contForm {
-  flex-basis: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    img {
+      max-width: 100%;
+    }
+  }
+  .contForm {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 1200px) {
-  .contact > .cont > .contPic {
-    flex-basis: 25%;
-  }
-
-  .contact > .cont > .contForm {
-    flex-basis: 75%;
+  .contact > .cont {
+    .contPic {
+      display: none;
+    }
+    .contForm {
+      flex-basis: 100%;
+    }
   }
 }
 
-@media (max-width: 900px) {
-  .contact > .cont > .contPic {
-    display: none;
-  }
-
-  .contact > .cont > .contForm {
-    flex-basis: auto;
-  }
+@media (max-width: 600px) {
 }
