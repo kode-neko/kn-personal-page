@@ -2,8 +2,10 @@ import { Project } from "../../../model";
 import styles from './styles.module.less'
 import { BtnIcon, Tag } from "../../atoms";
 import { iconProjectDic } from "../../../globals";
+import { useTranslation } from "react-i18next";
 
 const InfoPortfolio = ({project}: {project: Project}) => {
+  const {t} = useTranslation();
   const {id, pic: {id: idPic}, social, tags} = project
   
   return (
@@ -17,7 +19,7 @@ const InfoPortfolio = ({project}: {project: Project}) => {
       </div>
       <div className={styles.info}>
         <div className={styles.title}>
-          <h3>{id}</h3>
+          <h3>{t(`project.${id}.title`)}</h3>
           <ul className={styles.social}>{social.map(s => (
             <li key={s.id}>
               <a href={s.path}>
@@ -31,7 +33,7 @@ const InfoPortfolio = ({project}: {project: Project}) => {
             </li>
           ))}</ul>
         </div>
-        <p>{id}</p>
+        <p>{t(`project.${id}.desc`)}</p>
         <ul className={styles.tags}>
           {tags.map(t => (
             <li key={t}>

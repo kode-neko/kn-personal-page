@@ -31,12 +31,12 @@ export default {
   },
   project: {
     akkount: {
-      title: 'm',
-      desc: 'm'
+      title: 'Akkaount',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
     },
     lionmiss: {
-      title: 'm',
-      desc: 'm'
+      title: 'LionMiss',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
     }
   },
   placeH: {
