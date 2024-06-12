@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --size-tablet: 1200px;
+  --size-mobile: 600px;
+
+  --base-size: 16px;
+  --color-back: rgb(15, 8, 31);
+  --color-light: rgb(244, 236, 251);
+  --color-pink: rgb(126, 16, 143);
+  --color-blue: rgb(32, 148, 255);
+  --trans-light: rgb(244, 236, 251, 0.04);
+  --color-trans: rgb(0, 0, 0, 0);
+  --color-disabled: rgb(182, 84, 197);
+  font-family: "Roboto";
+  background-color: var(--color-back);
+  color: var(--color-light);
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  :root {
+    font-size: calc(var(--base-size) * 0.75);
+  }
+}
+/* Mobile */
+@media (max-width: 600px) {
+  :root {
+    font-size: calc(var(--base-size) * 0.75);
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: radial-gradient(
+      circle farthest-corner at 0% 0%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    radial-gradient(
+      circle farthest-corner at 100% 40%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    radial-gradient(
+      circle farthest-corner at 0% 70%,
+      rgba(157, 11, 160, 0.3) 0%,
+      rgba(0, 0, 0, 0) 20%
+    );
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+input,
+textarea,
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font-family: "Roboto";
+}
+
+input:focus-within,
+textarea:focus-within {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

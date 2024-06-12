@@ -1,4 +1,4 @@
-import { Picture } from "@/models";
+import { Picture } from "../model"
 
 const avatarPic: Picture = {
   id: 'avatar',

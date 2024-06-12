@@ -1,8 +1,12 @@
-import i18next from 'i18next';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import es from './es'
 import en from './en'
+import { z } from 'zod';
+import { makeZodI18nMap } from 'zod-i18n-map';
 
-i18next
+i18n
+.use(initReactI18next)
   .init({
     lng: 'en',
     debug: true,
@@ -20,9 +24,6 @@ i18next
     }
   });
 
-const {t, changeLanguage} = i18next
+z.setErrorMap(makeZodI18nMap());
 
-export {
-  t, 
-  changeLanguage
-}
+export default i18n

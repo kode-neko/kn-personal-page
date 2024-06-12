@@ -1,0 +1,134 @@
+section.skills {
+  align-items: center;
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(
+    0deg,
+    var(--trans-light) 0%,
+    var(--color-trans) 20%
+  );
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.75rem;
+  padding-top: 3.75rem;
+  padding-bottom: 6.25rem;
+  padding: 3.75rem 2.5rem 6.25rem 2.5rem;
+}
+
+.skills .areas {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* justify-content: center;*/
+  gap: 3.75rem;
+
+  & > li {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    border: 0.13rem solid var(--trans-light);
+    border-radius: 1.25rem;
+    transition: background-color 0.2s;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.88rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+
+      .icon {
+        color: var(--color-pink);
+        height: 2.63rem;
+      }
+    }
+
+    .techs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.63rem;
+
+      li {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover {
+      background-color: var(--trans-light);
+    }
+  }
+}
+
+.skills > .line {
+  position: absolute;
+  height: 0.25rem;
+  width: 100%;
+  left: 0;
+  background-color: var(--trans-light);
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.skills > .line.line01 {
+  bottom: 3rem;
+  transform: rotate(1.8deg);
+  animation-name: moveLine01;
+}
+
+.skills > .line.line02 {
+  bottom: 2rem;
+  transform: rotate(-1deg);
+  animation-name: moveLine02;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .skills .areas {
+    grid-template-columns: auto auto auto;
+    gap: 1.8rem;
+
+    & > li {
+      padding: 1.5rem;
+      h3 {
+        font-size: 2.3rem;
+        .icon {
+          height: 2.63rem;
+        }
+      }
+      .techs {
+        li {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .skills .areas {
+    grid-template-columns: auto auto;
+  }
+}
+
+@keyframes moveLine02 {
+  0% {
+    transform: rotate(1deg) translateY(-0.2rem);
+  }
+  100% {
+    transform: rotate(-1deg) translateY(0.2rem);
+  }
+}
+
+@keyframes moveLine01 {
+  0% {
+    transform: rotate(-1.8deg) translateY(-0.2rem);
+  }
+  100% {
+    transform: rotate(1.8deg) translateY(0.2rem);
+  }
+}

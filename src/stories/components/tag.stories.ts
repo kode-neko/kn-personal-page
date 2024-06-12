@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../app/globals.css'
-import { Tag } from '@/components/tag';
+import { Tag } from '../../components';
 
 const meta = {
   title: 'Personal Page/Tag',

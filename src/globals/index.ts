@@ -1,9 +1,4 @@
 export {
-  LangSel,
-  LangList
-} from './lang'
-
-export {
   welcomePath,
   skillsPath,
   portfolioPath,
@@ -59,3 +54,7 @@ export {
 
   socialList
 } from './social'
+
+export {
+  contactFormSchema
+} from './form-schemas'
