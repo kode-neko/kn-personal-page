@@ -20,7 +20,8 @@ export default {
     front: 'Front',
     back: 'Back',
     design: 'Design',
-    tools: 'Tools'
+    tools: 'Tools',
+    send: 'Send'
   },
   skills: {
     front: 'Front',
@@ -28,9 +29,19 @@ export default {
     design: 'Design',
     tools: 'Tools'
   },
+  project: {
+    akkount: {
+      title: 'Akkaount',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
+    },
+    lionmiss: {
+      title: 'LionMiss',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
+    }
+  },
   placeH: {
     name: 'My name is...',
-    email: 'my@mail.com',
+    mail: 'my@mail.com',
     msg: 'Congrats, offers, propousals, critics...'
   }
 };

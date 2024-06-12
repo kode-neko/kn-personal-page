@@ -1,0 +1,51 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 5rem 2.5rem;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: right;
+  }
+  .cont {
+    display: flex;
+    gap: 2.5rem;
+  }
+}
+
+.contact > .cont {
+  .contPic {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      border: 0.13rem solid var(--color-pink);
+      border-radius: 0.63rem;
+    }
+  }
+  .contForm {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact > .cont {
+    .contPic {
+      display: none;
+    }
+    .contForm {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+}

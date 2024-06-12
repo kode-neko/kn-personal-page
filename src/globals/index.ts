@@ -54,3 +54,7 @@ export {
 
   socialList
 } from './social'
+
+export {
+  contactFormSchema
+} from './form-schemas'

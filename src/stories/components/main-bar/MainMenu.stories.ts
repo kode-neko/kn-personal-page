@@ -1,6 +1,5 @@
-import { MainMenu } from '@/components';
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../../app/globals.css'
+import { MainMenu } from '../../../components/organisms/main-bar';
 
 const meta = {
   title: 'Personal Page/MainMenu',

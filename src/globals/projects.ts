@@ -1,4 +1,4 @@
-import Project from "@/models/Project";
+import { Project } from "../model";
 
 const akkountProject: Project = {
   id: 'akkount',
