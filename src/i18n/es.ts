@@ -1,4 +1,7 @@
+import zod from "zod-i18n-map/locales/es/zod.json";
+
 export default {
+  zod,
   menu: {
     welcome: 'Bienvenido',
     skills: 'Skills',
@@ -20,7 +23,8 @@ export default {
     front: 'Front',
     back: 'Back',
     design: 'Design',
-    tools: 'Tools'
+    tools: 'Tools',
+    send: 'Enviar'
   },
   skills: {
     front: 'Front',
@@ -30,17 +34,17 @@ export default {
   },
   project: {
     akkount: {
-      title: 'm',
-      desc: 'm'
+      title: 'Akkaount',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi.'
     },
     lionmiss: {
-      title: 'm',
-      desc: 'm'
+      title: 'LionMiss',
+      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi.'
     }
   },
   placeH: {
     name: 'My name is...',
-    email: 'my@mail.com',
+    mail: 'my@mail.com',
     msg: 'Congrats, offers, propousals, critics...'
   }
 };

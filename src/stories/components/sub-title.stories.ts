@@ -1,6 +1,5 @@
-import { SubTitle } from '@/components';
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../app/globals.css'
+import { SubTitle } from '../../components';
 
 const meta = {
   title: 'Personal Page/SubTitle',

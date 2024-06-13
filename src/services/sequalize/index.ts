@@ -1,1 +1,2 @@
-export {default as ContactSequalize} from './ContactSequalize'
+export {default as ContactSeq} from './ContactSeq'
+export {default as UserSeq} from './UserSeq'

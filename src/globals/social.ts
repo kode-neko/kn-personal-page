@@ -1,4 +1,4 @@
-import { Link } from "@/models"
+import { Link } from "../model"
 import { codepenPath, figmaPath, githubPath, stackblitzPath, twitterPath } from "./paths"
 
 const twitterLink: Link = {
