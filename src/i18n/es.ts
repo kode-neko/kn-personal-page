@@ -2,6 +2,10 @@ import zod from "zod-i18n-map/locales/es/zod.json";
 
 export default {
   zod,
+  lang: {
+    en: "Inglés",
+    es: "Español"
+  },
   menu: {
     welcome: 'Bienvenido',
     skills: 'Habilidades',
