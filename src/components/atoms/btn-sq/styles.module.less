@@ -45,8 +45,20 @@
 
 .pink {
   background-color: var(--color-pink);
+  &:disabled {
+    color: var(--color-disabled-pink);
+  }
+  &:disabled:hover {
+    transform: none;
+  }
 }
 
 .blue {
   background-color: var(--color-blue);
+  &:disabled {
+    color: var(--color-disabled-blue);
+  }
+  &:disabled:hover {
+    transform: none;
+  }
 }

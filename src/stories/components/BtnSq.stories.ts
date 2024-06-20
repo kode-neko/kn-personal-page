@@ -14,9 +14,9 @@ const meta = {
   },
   args: {
     icon: 'fa-brands fa-twitter',
-    label: 'Minim mollit',
     size: 'sm',
-    color: 'pink'
+    color: 'pink',
+    children: 'Minim mollit'
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof BtnSq>;

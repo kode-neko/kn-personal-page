@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import { toFormikValidate } from 'zod-formik-adapter';
 import { Contact } from '../../../model';
 import { contactFormSchema } from '../../../globals';
-import { Field } from '../../atoms';
+import { BtnSq, Field } from '../../atoms';
 import ContactFormProps from './types';
 
 const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
@@ -22,7 +22,7 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
 
   return (
     <form
-    onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
       data-test="form-contact"
       className={styles.form}
     >
@@ -58,10 +58,11 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
       </div>
       <div className={styles.bottom}>
         <div className={styles.actions}>
-          <button
-            data-test="btn-submit" 
+          <BtnSq
             type='submit'
-            disabled={isSubmitting}
+            disabled={!isSubmitting}
+            size='lg'
+            color='pink'
           >
             { isSubmitting ? 
               <img
@@ -72,7 +73,7 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
                 className={styles.spinner}
               /> : 
               <span>{t('label.send')}</span> }
-          </button>
+          </BtnSq>
         </div>
       </div>
     </form>

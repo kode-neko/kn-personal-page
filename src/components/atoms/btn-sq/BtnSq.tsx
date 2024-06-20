@@ -1,26 +1,31 @@
 import clsx from 'clsx';
 import styles from './styles.module.less'
-import BtnISqProps from './types';
+import BtnSqProps from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const BtnISq = ({icon, label, size = 'md', color = 'pink'}: BtnISqProps) => {
+const BtnSq = ({children, icon, size = 'md', color = 'pink', type, onClick, disabled = false}: React.PropsWithChildren<BtnSqProps>) => {
   return (
-    <button className={clsx(
-      styles.btn,
-      styles[size], 
-      styles[color]
-    )} >
+    <button 
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={clsx(
+        styles.btn,
+        styles[size], 
+        styles[color]
+      )}
+    >
       { icon && <FontAwesomeIcon
         className={styles.icon} 
         icon={icon as IconProp}
       /> }
       <div className={styles.label}>
-        {label}
+        {children}
       </div>
     </button>
 
   )
 }
 
-export default BtnISq
+export default BtnSq

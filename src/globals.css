@@ -11,7 +11,8 @@
   --color-blue: rgb(32, 148, 255);
   --trans-light: rgb(244, 236, 251, 0.04);
   --color-trans: rgb(0, 0, 0, 0);
-  --color-disabled: rgb(182, 84, 197);
+  --color-disabled-pink: rgb(182, 84, 197);
+  --color-disabled-blue: rgb(21, 67, 110);
   font-family: "Roboto";
   background-color: var(--color-back);
   color: var(--color-light);

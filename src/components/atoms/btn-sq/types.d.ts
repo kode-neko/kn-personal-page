@@ -1,8 +1,10 @@
-interface BtnISqProps {
-  icon: string;
-  label: JSX.Element | string;
-  size: 'sm' | 'md' | 'lg';
-  color: 'pink' | 'blue';
+interface BtnSqProps {
+  icon?: string;
+  type?: "submit" | "reset" | "button" | undefined;
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'pink' | 'blue';
+  disabled: boolean;
+  onClick?: () => void
 }
 
-export default BtnISqProps;
+export default BtnSqProps;
