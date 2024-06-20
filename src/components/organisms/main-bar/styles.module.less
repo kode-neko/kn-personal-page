@@ -4,14 +4,24 @@
   /* background: var(--color-back); */
   display: flex;
   justify-content: flex-end;
+
+  .left {
+    flex-grow: 1;
+  }
+
+  .left,
+  .right {
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .mainMenu {
   display: flex;
   gap: 3.25rem;
-  padding: 0;
   margin: 0;
-  padding: 1.25rem 2.5rem;
+  padding: 0;
 }
 
 .mainMenu > li {

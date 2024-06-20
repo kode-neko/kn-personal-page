@@ -4,33 +4,33 @@ export default {
   zod,
   menu: {
     welcome: 'Bienvenido',
-    skills: 'Skills',
+    skills: 'Habilidades',
     portfolio: 'Portfolio',
-    contact: 'Contact'
+    contact: 'Contacto'
   },
   text: {
-    desc: 'Almost a decade breaking keys to typing awesome code. Fullstack MERN/MEVN stack',
-    formatMail: 'The mail format is xxx@xxx.xxx',
-    emptyfield: 'The field is empty'
+    desc: 'Casi una década picando código web. Fullstack MERN/MEVN',
+    formatMail: 'El formato del email es xxx@xxx.xxx',
+    emptyfield: 'El campo está vacío'
   },
   label: {
-    title: 'Welcome!',
+    title: 'Bienvenido',
     subtitle: 'Kodeneko',
-    occu: 'Web / Mobile / Front-end',
-    skills: 'Skills',
+    occu: 'Web / Móvil / Front-end',
+    skills: 'Habilidades',
     portfolio: 'Portfolio',
-    contact: 'Contact',
+    contact: 'Contacto',
     front: 'Front',
     back: 'Back',
-    design: 'Design',
-    tools: 'Tools',
+    design: 'Diseño',
+    tools: 'Herram.',
     send: 'Enviar'
   },
   skills: {
     front: 'Front',
     back: 'Back',
-    design: 'Design',
-    tools: 'Tools'
+    design: 'Diseño',
+    tools: 'Herram.'
   },
   project: {
     akkount: {
@@ -43,8 +43,8 @@ export default {
     }
   },
   placeH: {
-    name: 'My name is...',
-    mail: 'my@mail.com',
-    msg: 'Congrats, offers, propousals, critics...'
+    name: 'Mi nombre es...',
+    mail: 'mi@mail.com',
+    msg: 'Felicitaciones, ofertas, propeustas, críticas...'
   }
 };
