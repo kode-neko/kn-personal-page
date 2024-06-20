@@ -3,7 +3,7 @@ interface BtnSqProps {
   type?: "submit" | "reset" | "button" | undefined;
   size?: 'sm' | 'md' | 'lg';
   color?: 'pink' | 'blue';
-  disabled: boolean;
+  disabled?: boolean;
   onClick?: () => void
 }
 
