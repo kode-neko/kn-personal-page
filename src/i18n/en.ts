@@ -1,4 +1,8 @@
 export default {
+  lang: {
+    en: "English",
+    es: "Spanish"
+  },
   menu: {
     welcome: 'Welcome',
     skills: 'Skills',
@@ -6,7 +10,7 @@ export default {
     contact: 'Contact'
   },
   text: {
-    desc: 'Almost a decade breaking keys to typing awesome code. Fullstack MERN/MEVN stack',
+    desc: 'Almost a decade breaking keys to typing awesome code. Fullstack MERN/MEVN',
     formatMail: 'The mail format is xxx@xxx.xxx',
     emptyfield: 'The field is empty'
   },

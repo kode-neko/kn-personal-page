@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { menuOpts } from '../../../globals';
-import styles from './styles.module.css'
+import styles from './styles.module.less'
 import { MouseEvent } from "react"
 
 const MainMenu = () => {
