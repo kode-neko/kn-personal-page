@@ -1,3 +1,3 @@
-export {BtnIcon,Field,SubTitle,Tag,SwLang} from './atoms'
+export {BtnIcon,Field,SubTitle,Tag,SwLang, BtnSq} from './atoms'
 export {ContactForm} from './molecules'
 export {ContactSection,Footer,FooterFloat,MainBar,PortfolioSection,SkillsSection,WelcomeSection} from './organisms'

@@ -1,0 +1,52 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  padding: 0.63rem 1.25rem;
+  gap: 0.63rem;
+  border-radius: 0.63rem;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translate(0.2rem, -0.2rem);
+  }
+}
+
+.btn.sm {
+  .icon {
+    height: 1.25rem;
+  }
+
+  .label {
+    font-size: 1.25rem;
+  }
+}
+
+.btn.md {
+  .icon {
+    height: 1.5rem;
+  }
+
+  .label {
+    font-size: 1.5rem;
+  }
+}
+
+.btn.lg {
+  .icon {
+    height: 2rem;
+  }
+
+  .label {
+    font-size: 2rem;
+  }
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
