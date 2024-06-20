@@ -1,4 +1,3 @@
-import React from 'react'
 import enImg from '../../../../assets/en.png'
 import esImg from '../../../../assets/es.png'
 import styles from './styles.module.less'

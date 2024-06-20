@@ -4,9 +4,9 @@ export default {
   zod,
   menu: {
     welcome: 'Bienvenido',
-    skills: 'Skills',
+    skills: 'Habilidades',
     portfolio: 'Portfolio',
-    contact: 'Contact'
+    contact: 'Contacto'
   },
   text: {
     desc: 'Almost a decade breaking keys to typing awesome code. Fullstack MERN/MEVN stack',
@@ -14,9 +14,9 @@ export default {
     emptyfield: 'The field is empty'
   },
   label: {
-    title: 'Welcome!',
+    title: 'Bienvenido',
     subtitle: 'Kodeneko',
-    occu: 'Web / Mobile / Front-end',
+    occu: 'Web / Móvil / Front-end',
     skills: 'Skills',
     portfolio: 'Portfolio',
     contact: 'Contact',
