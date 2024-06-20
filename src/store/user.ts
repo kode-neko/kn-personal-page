@@ -4,7 +4,7 @@ import {atom} from 'jotai'
 import { User } from '../model'
 
 const userAtom = atom<User>({
-  lang: 'en',
+  lang: i18next.language as 'es' | 'en',
   theme: 'dark'
 })
 

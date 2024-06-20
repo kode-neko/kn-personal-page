@@ -1,4 +1,8 @@
 export default {
+  lang: {
+    en: "English",
+    es: "Spanish"
+  },
   menu: {
     welcome: 'Welcome',
     skills: 'Skills',

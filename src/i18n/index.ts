@@ -5,10 +5,12 @@ import en from './en'
 import { z } from 'zod';
 import { makeZodI18nMap } from 'zod-i18n-map';
 
+const langBrowser = window.navigator.language;
+
 i18n
 .use(initReactI18next)
   .init({
-    lng: 'en',
+    lng: [/es/, /en/].some(rx => rx.test(langBrowser)) ? langBrowser : 'en',
     debug: true,
     fallbackLng: "en",
     interpolation: {
