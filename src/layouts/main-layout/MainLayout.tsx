@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Footer, MainBar } from '../../components'
+import { Footer, FooterFloat, MainBar } from '../../components'
 import styles from './styles.module.less'
 
 const MainLayout = ({children}: React.PropsWithChildren) => {
@@ -12,6 +12,7 @@ const MainLayout = ({children}: React.PropsWithChildren) => {
       <footer className={styles.mainFooter}>
         <Footer></Footer>
       </footer>
+      <FooterFloat />
       <div className={clsx(styles.round, styles.round01)}></div>
       <div className={clsx(styles.round, styles.round02)}></div>
     </div>
