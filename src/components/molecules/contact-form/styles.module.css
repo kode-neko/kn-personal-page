@@ -34,3 +34,9 @@ form > .bottom > .hint {
 form > .bottom > .actions {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .form {
+    padding: 2.5rem;
+  }
+}
