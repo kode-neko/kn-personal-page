@@ -16,17 +16,17 @@ const MainMenu = () => {
   }
   return (
     <ul className={styles.mainMenu}>
-    {menuOpts.map(o => (
-      <li key={o.id}>
-        <a
-          href={o.path as string}
-          onClick={(e: MouseEvent<HTMLAnchorElement>) => handleClick(o.path as string, e)}
-        >
-          {t(`menu.${o.id}`)}
-        </a>
-      </li>
-    ))}
-  </ul>
+      {menuOpts.map(o => (
+        <li key={o.id}>
+          <a
+            href={o.path as string}
+            onClick={(e: MouseEvent<HTMLAnchorElement>) => handleClick(o.path as string, e)}
+          >
+            {t(`menu.${o.id}`)}
+          </a>
+        </li>
+      ))}
+    </ul>
   )
 }
 
