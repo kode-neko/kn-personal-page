@@ -2,12 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { menuOpts } from '../../../globals';
 import styles from './styles.module.less'
 import { MouseEvent } from "react"
+import { MainMenuProps } from './types';
 
-const MainMenu = () => {
+const MainMenu = ({onSelected}: MainMenuProps) => {
   const {t} = useTranslation();
 
   const handleClick = (eleStr: string, e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    onSelected();
     const ele = document.querySelector(eleStr) as HTMLDivElement;
     scroll({
       top: ele.offsetTop,

@@ -58,12 +58,11 @@
     display: none;
     position: fixed;
     top: 0;
-    right: 2rem;
+    right: 0;
     padding: 2rem;
   }
   .mainMenuMobile {
     width: calc(100% - 2rem);
-    display: none;
     position: fixed;
     z-index: 11;
     flex-direction: column;
@@ -71,6 +70,8 @@
     left: 0;
     background-color: var(--color-pink);
     padding: 1rem;
+    transform: translateY(-29rem);
+    transition: all 0.5s;
     .header {
       display: flex;
       padding: 1rem;
@@ -114,6 +115,7 @@
     position: fixed;
     min-width: 100%;
     min-height: 100vh;
+    transition: all 0.3s;
   }
 }
 
@@ -128,10 +130,12 @@
     .btnMenu {
       display: block;
     }
-    .mainMenuMobile {
+
+    .mainMenuMobile.visible {
       display: flex;
+      transform: translateY(0rem);
     }
-    .overlay {
+    .overlay.visible {
       display: block;
     }
   }

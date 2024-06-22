@@ -16,11 +16,13 @@ const BtnSq = ({children, icon, size = 'md', color = 'pink', type, onClick, disa
         styles[color]
       )}
     >
-      { icon && <FontAwesomeIcon
-        className={styles.icon} 
-        icon={icon as IconProp}
-      /> }
-      <div className={styles.label}>
+      { icon && 
+        <FontAwesomeIcon
+          className={styles.icon} 
+          icon={icon as IconProp}
+        /> 
+      }
+      <div className={clsx(styles.label, children && styles.sep)}>
         {children}
       </div>
     </button>
