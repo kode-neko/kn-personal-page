@@ -15,7 +15,7 @@ const MainBarMobile = () => {
       <div className={styles.mainMenuMobile}>
         <div className={styles.header}>
           <div className={styles.left}>
-            <BtnBlog color='purple' />
+            <BtnBlog color='purple' size='lg' />
             <SwLang 
               isEn={lang === 'en'} 
               onClick={() => changeLang()} 
@@ -25,12 +25,13 @@ const MainBarMobile = () => {
             <BtnIcon 
               icon='fa-regular fa-circle-xmark' 
               color='light' 
-              size='sm' 
+              size='md' 
             />
           </div>
         </div>
         <MainMenu />
       </div>
+      <div className={styles.overlay} />
     </div>
   )
 }
