@@ -19,7 +19,9 @@
   border-radius: 0.63rem;
   background-color: var(--color-blue);
   color: var(--color-light);
-  transition: background-color 0.2s, cursor 0.2s;
+  transition:
+    background-color 0.2s,
+    cursor 0.2s;
 }
 
 .button:hover {
@@ -36,3 +38,10 @@
 .button:hover .arrow {
   color: var(--color-back);
 }
+/*
+@media (max-width: 1200px) {
+  .cont {
+    display: none;
+  }
+}
+*/
