@@ -1,8 +1,3 @@
-export {
-  Contact,
-  Portfolio,
-  Skills,
-  Welcome,
-} from './sections'
-export {default as Footer} from './footer'
-export {default as MainMenu} from './main-menu'
+export {BtnIcon,Field,SubTitle,Tag,SwLang, BtnSq} from './atoms'
+export {ContactForm, BtnBlog} from './molecules'
+export {ContactSection,Footer,FooterFloat,MainBar,PortfolioSection,SkillsSection,WelcomeSection} from './organisms'

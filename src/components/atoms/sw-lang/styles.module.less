@@ -1,0 +1,18 @@
+.cont {
+  display: flex;
+  gap: 0.63rem;
+}
+
+.lang > img {
+  height: 2.5rem;
+}
+
+.lang:not(.active) > img {
+  filter: grayscale(100%);
+  opacity: 50%;
+  transition: all 0.3s;
+  &:hover {
+    filter: drop-shadow(0rem 0rem 0.5rem var(--color-light));
+    cursor: pointer;
+  }
+}

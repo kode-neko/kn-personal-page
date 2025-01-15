@@ -1,0 +1,42 @@
+.form {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--trans-light);
+  padding: 3.65rem;
+  border-radius: 1.25rem;
+}
+
+form > .fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+form > .bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1.25rem;
+}
+
+form > .bottom > .hint {
+  flex-grow: 1;
+  display: flex;
+  color: var(--color-blue);
+  font-size: 1.5rem;
+  font-style: oblique;
+  margin-left: 4.1rem;
+}
+
+form > .bottom > .actions {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 2.5rem;
+  }
+}

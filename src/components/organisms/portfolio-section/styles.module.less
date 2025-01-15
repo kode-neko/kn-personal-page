@@ -1,0 +1,133 @@
+.portfolio {
+  display: flex;
+  background-color: var(--color-back);
+  flex-direction: column;
+  background-image: url("../../../../assets/office.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: padding-box;
+  padding: 5rem 2.5rem 5rem 2.5rem;
+}
+
+.portfolio > .cont {
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  .header {
+    display: flex;
+
+    h2 {
+      flex-grow: 1;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .arrows {
+      display: flex;
+      gap: 0.63rem;
+
+      button {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 0.63rem;
+        background-color: var(--color-pink);
+        color: var(--color-light);
+        transition:
+          background-color 0.2s,
+          cursor 0.2s;
+
+        &:hover {
+          background-color: var(--color-light);
+          cursor: pointer;
+        }
+
+        .arrow {
+          color: var(--color-back);
+          height: 2.63rem;
+        }
+      }
+    }
+  }
+}
+
+.portfolio > .cont > .content {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+
+  .picCont > .pic {
+    border: 0.13rem solid var(--color-pink);
+    border-radius: 0.63rem;
+    max-height: 400px;
+  }
+
+  .info {
+    display: flex;
+    flex-basis: 1;
+    flex-direction: column;
+    gap: 0.63rem;
+
+    .title {
+      display: flex;
+      gap: 1.25rem;
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+        li > a {
+          color: var(--color-blue);
+        }
+      }
+    }
+
+    p {
+      font-size: 2rem;
+    }
+
+    .tags {
+      display: flex;
+      margin-top: 3.13rem;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+
+      li {
+        font-size: 1.5rem;
+        padding: 0.38rem 0.75rem;
+        border-radius: 0.63rem;
+        background-color: var(--color-blue);
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio > .cont > .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio > .cont {
+    gap: 2rem;
+  }
+
+  .portfolio > .cont > .content {
+    .picCont > .pic {
+      max-height: 300px;
+    }
+    .info > p {
+      display: none;
+    }
+  }
+}
