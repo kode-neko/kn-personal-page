@@ -7,7 +7,6 @@ const frontSkills: Skill = {
     'React',
     'Vue',
     'Next',
-    'Nuxt',
     'React Native'
   ]
 }
@@ -19,7 +18,8 @@ const backSkills: Skill = {
     'Node',
     'Express/Koa',
     'Mongo',
-    'Mongoose'
+    'SQL',
+    'Prisma'
   ]
 }
 
@@ -28,8 +28,7 @@ const designSkills: Skill = {
   icon: 'fa-solid fa-paint-roller',
   techs: [
     'Figma',
-    'Photoshop',
-    'Illustrator'
+    'Photoshop'
   ]
 }
 
@@ -46,8 +45,9 @@ const toolsSkills: Skill = {
 const listSkill = [
   frontSkills,
   backSkills,
-  designSkills,
-  toolsSkills
+  toolsSkills,
+  designSkills
+  
 ]
 
 export {
