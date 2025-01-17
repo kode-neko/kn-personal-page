@@ -37,18 +37,34 @@ export default {
     tools: 'Herram.'
   },
   project: {
-    akkount: {
-      title: 'Akkaount',
-      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi.'
+    landRest: {
+      title: 'Landing Restaurant',
+      desc: 'Página landing de un restaurante de comida asiática. Trata de una landing que muestra una descripción, menu, localización y otros servicios.'
+    },
+    landMed: {
+      title: 'Landing Medical',
+      desc: 'Página landing de un centro médico. Trata de una landing que muestra una descripción, servicios y localización.'
     },
     lionmiss: {
       title: 'LionMiss',
-      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi.'
+      desc: 'Proyecto back de una tienda online.'
+    },
+    akkount: {
+      title: 'Akkaount',
+      desc: 'App con react Native para llevar las cuentas personales. Creado para experimentar con la interfaz.'
+    },
+    cheetty: {
+      title: 'Cheetty',
+      desc: 'Web para recopilar apuntes y cheat-sheets.'
+    },
+    codeTest: {
+      title: 'Colecciones',
+      desc: 'Colección de ejemplos y trabajos en distintas plataformas: Github, Codepen, StackBlitz y Figma.'
     }
   },
   placeH: {
     name: 'Mi nombre es...',
     mail: 'mi@mail.com',
-    msg: 'Felicitaciones, ofertas, propeustas, críticas...'
+    msg: 'Felicitaciones, ofertas, propuestas, críticas...'
   }
 };
