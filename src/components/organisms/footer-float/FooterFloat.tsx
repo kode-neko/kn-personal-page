@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import styles from './styles.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import BtnIcon from "../../atoms/btn-icon/BtnIcon";
+
+const {VITE_BLOG_URL} = import.meta.env
 
 function useVisibilityEle(limitScroll: number) {
   const [visible, setVisible] = useState<boolean>(false);
@@ -16,27 +18,44 @@ function useVisibilityEle(limitScroll: number) {
 
 const FooterFloat = () => {
   const visible = useVisibilityEle(400);
-  const handleClick = () => scroll({
+  const handleClickBlog = () => window.open(VITE_BLOG_URL, '_blank')
+  const handleClickScroll = () => scroll({
     top: 0,
     behavior: "smooth"
   })
+
   return (
     <div className={styles.cont}>
       <AnimatePresence>
-      {visible && (
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{duration: 0.5 }}
-          className={styles.button} 
-          onClick={handleClick}
-        >
-          <FontAwesomeIcon 
-            icon={'fa-solid fa-arrow-up' as IconProp} 
-            className={styles.arrow} 
-          />
-        </motion.button> 
+        {visible && (
+          <div className={styles.contBtn}>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{duration: 0.5 }}
+              onClick={handleClickBlog}
+            >
+              <BtnIcon
+                icon={'fa-solid fa-feather' as IconProp}
+                color='blue'
+                size='sm'
+              />
+            </motion.button> 
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{duration: 0.5 }}
+              onClick={handleClickScroll}
+            >
+              <BtnIcon
+                icon={'fa-solid fa-arrow-up' as IconProp}
+                color='blue'
+                size='sm'
+              />
+            </motion.button> 
+          </div>
       )}
       </AnimatePresence>
     </div>

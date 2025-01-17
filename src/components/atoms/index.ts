@@ -1,4 +1,4 @@
-export {BtnIcon} from './btn-icon'
+export {BtnIconTrans} from './btn-icon-trans'
 export {Field} from './field'
 export {SubTitle} from './sub-title'
 export {Tag} from './tag'

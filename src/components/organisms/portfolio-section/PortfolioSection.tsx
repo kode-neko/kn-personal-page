@@ -7,6 +7,8 @@ import { SubTitle } from "../../atoms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useTranslation } from "react-i18next";
+import { BtnBlog } from "../../molecules";
+import BtnIcon from "../../atoms/btn-icon/BtnIcon";
  
 const PortfolioSection = () => {
   const {t} = useTranslation();
@@ -37,19 +39,19 @@ const PortfolioSection = () => {
             label={t('label.portfolio')}
             align='left'
           />
-          <div className={styles.arrows}>
-            <button onClick={() => handleClickBtn(-1)}>
-              <FontAwesomeIcon 
-                icon={'fa-solid fa-chevron-left' as IconProp}
-                className={styles.arrow} 
-              />
-            </button>
-            <button onClick={() => handleClickBtn(1)}>
-              <FontAwesomeIcon 
-                icon={'fa-solid fa-chevron-right' as IconProp}
-                className={styles.arrow} 
-              />
-            </button>
+          <div className={styles.actions}>
+            <BtnBlog
+              size="sm"
+              color="blue"
+            />
+            <div className={styles.arrows}>
+              <button onClick={() => handleClickBtn(-1)}>
+                <BtnIcon icon={'fa-solid fa-chevron-left' as IconProp} />
+              </button>
+              <button onClick={() => handleClickBtn(1)}>
+                <BtnIcon icon={'fa-solid fa-chevron-right' as IconProp} />
+              </button>
+            </div>
           </div>
         </div>
         <div 
