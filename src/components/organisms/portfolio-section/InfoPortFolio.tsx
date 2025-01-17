@@ -6,13 +6,13 @@ import { useTranslation } from "react-i18next";
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {t} = useTranslation();
-  const {id, pic: {id: idPic}, social, tags} = project
+  const {id, pic: {id: idPic, src}, social, tags} = project
   
   return (
     <>
       <div className={styles.picCont}>
         <img
-          src="/projects/akkaunt.png"
+          src={src}
           alt={idPic}
           className={styles.pic}
         />

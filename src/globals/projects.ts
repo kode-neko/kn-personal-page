@@ -4,7 +4,7 @@ const landRestProject: Project = {
   id: 'landRest',
   pic: {
     id: "landRest",
-    src: "/project/landRest.webp",
+    src: "project/landRest.png",
     width: 450,
     height: 450
   },
@@ -29,7 +29,7 @@ const landMedProject: Project = {
   id: 'landMed',
   pic: {
     id: "landMed",
-    src: "/project/landMed.webp",
+    src: "project/landMed.png",
     width: 450,
     height: 450
   },
@@ -54,7 +54,7 @@ const lionmissProject: Project = {
   id: 'lionmiss',
   pic: {
     id: "lionmiss",
-    src: "/project/lionmiss.webp",
+    src: "project/lionmiss.png",
     width: 450,
     height: 450
   },
@@ -71,7 +71,7 @@ const akkountProject: Project = {
   id: 'akkount',
   pic: {
     id: "akkount",
-    src: "/project/akkount.webp",
+    src: "project/akkount.png",
     width: 450,
     height: 450
   },
@@ -92,7 +92,7 @@ const cheettyProject: Project = {
   id: 'cheetty',
   pic: {
     id: "cheetty",
-    src: "/project/cheetty.webp",
+    src: "project/cheetty.png",
     width: 450,
     height: 450
   },
@@ -117,7 +117,7 @@ const codeTestProject: Project = {
   id: 'codeTest',
   pic: {
     id: "codeTest",
-    src: "/project/code-test.webp",
+    src: "project/code-test.png",
     width: 450,
     height: 450
   },
@@ -131,7 +131,7 @@ const codeTestProject: Project = {
       path: 'https://codepen.io/kodeneko'
     },
     {
-      id: 'stackblitz',
+      id: 'stackBlitz',
       path: 'https://stackblitz.com/'
     },
     {
