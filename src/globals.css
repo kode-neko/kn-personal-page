@@ -14,6 +14,11 @@
   --overlay: rgba(15, 8, 31, 0.7);
   --color-disabled-pink: rgb(182, 84, 197);
   --color-disabled-blue: rgb(21, 67, 110);
+
+  --size-sm: 2.13rem;
+  --size-md: 2.63rem;
+  --size-lg: 3.25rem;
+
   font-family: "Roboto";
   background-color: var(--color-back);
   color: var(--color-light);

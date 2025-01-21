@@ -34,13 +34,29 @@ export default {
     tools: 'Tools'
   },
   project: {
-    akkount: {
-      title: 'Akkaount',
-      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
+    landRest: {
+      title: 'Landing Restaurant',
+      desc: 'Landing page about a asian food restaurant. Consist on a landing which shows a description, menu, location and other services.'
+    },
+    landMed: {
+      title: 'Landing Medical',
+      desc: 'Landing page about a medical center. Consist on a landing which shows a description, services and location.'
     },
     lionmiss: {
       title: 'LionMiss',
-      desc: 'Reprehenderit laborum proident irure duis excepteur proident consequat minim nisi. Quis occaecat minim ea non occaecat eiusmod qui minim. Id culpa occaecat ullamco duis non reprehenderit Lorem nisi. Est pariatur commodo sunt sint id nostrud ullamco excepteur. Non fugiat Lorem culpa sint aute reprehenderit elit in laborum sit ut.'
+      desc: 'Back project of an online store.'
+    },
+    akkount: {
+      title: 'Akkaount',
+      desc: 'App with react Native to manage personal accounts. Created to experiment with the interface.'
+    },
+    cheetty: {
+      title: 'Cheetty',
+      desc: 'Web to collect notes and cheat-sheets.'
+    },
+    codeTest: {
+      title: 'Colecciones',
+      desc: 'Collection of examples and works in several platforms: Github, Codepen, StackBlitz y Figma.'
     }
   },
   placeH: {

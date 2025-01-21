@@ -1,19 +1,24 @@
 import clsx from 'clsx';
-import styles from './styles.module.css'
-import BtnIconProps from './types';
+import styles from './styles.module.less'
+import BtnIconTransProps from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const BtnIcon = ({icon, size = 'md', color = 'pink'}: BtnIconProps) => {
+const BtnIcon = ({icon, size = 'md', color = 'pink'}: BtnIconTransProps) => {
   return (
-    <FontAwesomeIcon
+    <div
       className={clsx(
-        styles.btn,
+        styles.btnn,
         styles[size], 
         styles[color]
-      )} 
-      icon={icon as IconProp}
-    />
+      )}
+    >
+      <FontAwesomeIcon
+        className={styles.icon}
+        icon={icon as IconProp}
+      />
+    </div>
+
   )
 }
 

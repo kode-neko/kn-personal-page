@@ -1,18 +1,18 @@
 import { Project } from "../../../model";
 import styles from './styles.module.less'
-import { BtnIcon, Tag } from "../../atoms";
+import { BtnIconTrans, Tag } from "../../atoms";
 import { iconProjectDic } from "../../../globals";
 import { useTranslation } from "react-i18next";
 
 const InfoPortfolio = ({project}: {project: Project}) => {
   const {t} = useTranslation();
-  const {id, pic: {id: idPic}, social, tags} = project
+  const {id, pic: {id: idPic, src}, social, tags} = project
   
   return (
     <>
       <div className={styles.picCont}>
         <img
-          src="/projects/akkaunt.png"
+          src={src}
           alt={idPic}
           className={styles.pic}
         />
@@ -23,7 +23,7 @@ const InfoPortfolio = ({project}: {project: Project}) => {
           <ul className={styles.social}>{social.map(s => (
             <li key={s.id}>
               <a href={s.path}>
-              <BtnIcon
+              <BtnIconTrans
                 color='blue'
                 size='sm'
                 icon={iconProjectDic[s.id]}

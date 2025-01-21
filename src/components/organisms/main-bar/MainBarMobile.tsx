@@ -1,6 +1,6 @@
 import styles from './styles.module.less'
 import MainMenu from './MainMenu'
-import { BtnIcon, BtnSq, SwLang } from '../../atoms'
+import { BtnIconTrans, BtnSq, SwLang } from '../../atoms'
 import { useAtom } from 'jotai';
 import { langAtom } from '../../../store';
 import { BtnBlog } from '../../molecules';
@@ -30,7 +30,7 @@ const MainBarMobile = () => {
           </div>
           <div className={styles.right}>
             <button onClick={() => setVisible(false)} >
-              <BtnIcon 
+              <BtnIconTrans 
                 icon='fa-regular fa-circle-xmark' 
                 color='light' 
                 size='md'

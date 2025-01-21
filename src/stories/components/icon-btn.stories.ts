@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BtnIcon } from '../../components';
+import { BtnIconTrans } from '../../components';
 
 const meta = {
-  title: 'Personal Page/BtnIcon',
-  component: BtnIcon,
+  title: 'Personal Page/BtnIconTrans',
+  component: BtnIconTrans,
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -18,7 +18,7 @@ const meta = {
     color: 'pink'
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof BtnIcon>;
+} satisfies Meta<typeof BtnIconTrans>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

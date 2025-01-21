@@ -1,0 +1,55 @@
+.btnn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.63rem;
+  padding: 0.5rem;
+
+  .icon {
+    color: var(--color-back);
+  }
+
+  // Sizes
+  &.sm {
+    height: var(--size-sm);
+    width: var(--size-sm);
+    .icon{
+      height: var(--size-sm);
+    }
+  }
+  &.md {
+    height: var(--size-md);
+    width: var(--size-md);
+    .icon{
+      height: var(--size-md);
+    }
+  }
+  &.lg {
+    height: var(--size-lg);
+    width: var(--size-lg);
+    .icon{
+      height: var(--size-lg);
+    }
+  }
+
+  // Colors
+  &.pink {
+    background-color: var(--color-pink);
+  }
+  
+  &.blue {
+    background-color: var(--color-blue);
+  }
+
+    // Effects
+
+    &:hover {
+      &.pink,
+      &.blue {
+        background-color: var(--color-light);
+        cursor: pointer;
+      }
+    }
+  
+    transition: all 0.2s;
+}
