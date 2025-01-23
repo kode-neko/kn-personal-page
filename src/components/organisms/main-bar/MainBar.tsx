@@ -9,7 +9,10 @@ const MainBar = () => {
         <MainSubMenu />
       </div>
       <div className={styles.right}>
-        <MainMenu />
+        <MainMenu
+          onSelected={() => {
+          throw new Error('Function not implemented.')
+        } } />
       </div>
     </div>
   )

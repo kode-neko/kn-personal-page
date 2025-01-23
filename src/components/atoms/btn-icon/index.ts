@@ -1,1 +1,1 @@
-export {default as BtnIconTrans} from './BtnIconTrans'
+export {default as BtnIcon} from './BtnIcon'

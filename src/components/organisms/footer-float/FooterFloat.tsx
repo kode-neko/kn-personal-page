@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import styles from './styles.module.css'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -9,7 +9,7 @@ const {VITE_BLOG_URL} = import.meta.env
 function useVisibilityEle(limitScroll: number) {
   const [visible, setVisible] = useState<boolean>(false);
   useEffect(() => {
-    window.addEventListener('scroll', (event) => {
+    window.addEventListener('scroll', () => {
       setVisible(window.scrollY > limitScroll)
     })
   }, [])

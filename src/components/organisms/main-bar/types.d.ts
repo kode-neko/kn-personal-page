@@ -1,5 +1,5 @@
 interface MainMenuProps {
-  onSelected?: () => void
+  onSelected: () => void
 }
 
 export {

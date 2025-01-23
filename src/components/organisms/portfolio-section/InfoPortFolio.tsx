@@ -26,7 +26,7 @@ const InfoPortfolio = ({project}: {project: Project}) => {
               <BtnIconTrans
                 color='blue'
                 size='sm'
-                icon={iconProjectDic[s.id]}
+                icon={iconProjectDic[s.id as keyof typeof iconProjectDic]}
               />
               </a>
               
