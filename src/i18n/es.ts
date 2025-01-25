@@ -20,7 +20,7 @@ export default {
   label: {
     title: 'Bienvenido',
     subtitle: 'Kodeneko',
-    occu: 'Front-end / Web / Móvil / Senior Developer',
+    occu: 'Front-end / Web Móvil / Senior Developer',
     skills: 'Habilidades',
     portfolio: 'Portfolio',
     contact: 'Contacto',
