@@ -29,7 +29,10 @@ const WelcomeSection = () => {
           <ul className={styles.social}>
             {socialList.map(s => (
               <li key={s.id}>
-                <a href={s.path as string}>
+                <a
+                  href={s.path as string}
+                  target="_blank"
+                >
                 <BtnIconTrans
                   color='blue'
                   size='lg'
