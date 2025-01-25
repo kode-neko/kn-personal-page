@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from './styles.module.css'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import BtnIcon from "../../atoms/btn-icon/BtnIcon";
+import { animOpacity } from "../../../globals";
 
 const {VITE_BLOG_URL} = import.meta.env
 
@@ -30,10 +31,7 @@ const FooterFloat = () => {
         {visible && (
           <div className={styles.contBtn}>
             <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{duration: 0.5 }}
+              {...animOpacity}
               onClick={handleClickBlog}
             >
               <BtnIcon
@@ -43,10 +41,7 @@ const FooterFloat = () => {
               />
             </motion.button> 
             <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{duration: 0.5 }}
+              {...animOpacity}
               onClick={handleClickScroll}
             >
               <BtnIcon

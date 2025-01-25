@@ -7,7 +7,7 @@ const MainLayout = ({children}: React.PropsWithChildren) => {
   return (
     <div className={styles.mainCont}>
       <header className={styles.mainHeader}>
-        <MainBar></MainBar>
+        <MainBar />
         <MainBarMobile />
       </header>
       <main className={styles.main}>{children}</main>

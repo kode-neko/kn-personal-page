@@ -2,12 +2,13 @@ import { useAnimate } from "motion/react";
 import { useState } from 'react'
 import styles from './styles.module.less'
 import InfoPortfolio from "./InfoPortFolio";
-import { listProject } from "../../../globals";
+import { animSecsPortfolio, listProject } from "../../../globals";
 import { SubTitle } from "../../atoms";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useTranslation } from "react-i18next";
 import { BtnBlog } from "../../molecules";
 import BtnIcon from "../../atoms/btn-icon/BtnIcon";
+import {motion} from 'motion/react'
  
 const PortfolioSection = () => {
   const {t} = useTranslation();
@@ -28,7 +29,8 @@ const PortfolioSection = () => {
   }
 
   return (
-    <section 
+    <motion.section 
+      {...animSecsPortfolio}
       className={styles.portfolio}
       id="sectPortfolio"
     >
@@ -60,7 +62,7 @@ const PortfolioSection = () => {
           <InfoPortfolio project={listProject[idProject]} />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
