@@ -7,7 +7,7 @@ import { BtnBlog } from '../../molecules';
 import { useState } from 'react';
 import clsx from 'clsx';
 import { motion } from 'motion/react'
-import { animFloatBtnsMobile } from '../../../globals';
+import { animOpacity } from '../../../globals';
 
 const MainBarMobile = () => {
   const [lang, changeLang] = useAtom(langAtom);
@@ -15,7 +15,7 @@ const MainBarMobile = () => {
   return (
     <div className={styles.mainBarMobile}>
       <motion.div
-        {...animFloatBtnsMobile}
+        {...animOpacity}
         className={styles.btnMenu}
       >
         <BtnSq 

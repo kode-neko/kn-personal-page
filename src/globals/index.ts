@@ -1,9 +1,9 @@
 export {
   animSecs,
   animSecsLeft,
-  anumSecsRight,
+  animSecsRight,
   animMainBar,
-  animFloatBtnsMobile,
+  animOpacity,
   animSecsPortfolio
 } from './animations'
 export {

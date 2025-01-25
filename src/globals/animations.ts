@@ -10,23 +10,9 @@ const animSecsLeft = {
   initial: { ...animSecs.initial, x: -100},
 }
 
-const anumSecsRight = {
+const animSecsRight = {
   ...animSecs,
   initial: { ...animSecs.initial, x: 100},
-}
-
-const animMainBar = {
-  initial: { y: -60 },
-  whileInView: { y: 0 },
-  transition: { duration: 0.6, delay: 0.2 },
-  viewport: { once: true }
-}
-
-const animFloatBtnsMobile = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  exit:{ opacity: 0 },
-  transition:{ duration: 0.8, delay: 0.2 }
 }
 
 const animSecsPortfolio = {
@@ -36,11 +22,27 @@ const animSecsPortfolio = {
   viewport: { once: true }
 }
 
+const animMainBar = {
+  initial: { y: -60 },
+  whileInView: { y: 0 },
+  transition: { duration: 0.6, delay: 0.2 },
+  viewport: { once: true }
+}
+
+const animOpacity = {
+  initial:{ opacity: 0 },
+  animate:{ opacity: 1 },
+  exit:{ opacity: 0 },
+  transition:{ duration: 0.8, delay: 0.2 }
+}
+
+
+
 export {
   animSecs,
   animSecsLeft,
-  anumSecsRight,
+  animSecsRight,
+  animSecsPortfolio,
   animMainBar,
-  animFloatBtnsMobile,
-  animSecsPortfolio
+  animOpacity
 }

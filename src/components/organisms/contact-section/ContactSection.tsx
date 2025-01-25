@@ -7,7 +7,7 @@ import { SubTitle } from '../../atoms'
 import { ContactForm } from '../../molecules'
 import { useTranslation } from 'react-i18next'
 import {motion} from 'framer-motion'
-import { anumSecsRight } from '../../../globals'
+import { animSecsRight } from '../../../globals'
 
 const ContactSection = () => {
   const contact = {
@@ -26,7 +26,7 @@ const ContactSection = () => {
 
   return (
     <motion.section 
-      {...anumSecsRight}
+      {...animSecsRight}
       className={styles.contact}
       id="sectContact"
     >

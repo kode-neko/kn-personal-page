@@ -2,7 +2,7 @@ import styles from './styles.module.less'
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SubTitle } from '../../atoms';
-import { anumSecsRight, listSkill } from '../../../globals';
+import { animSecsRight, listSkill } from '../../../globals';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useTranslation } from 'react-i18next';
 import Techs from './Techs';
@@ -13,7 +13,7 @@ const SkillsSection = () => {
 
   return (
     <motion.section 
-      {...anumSecsRight}
+      {...animSecsRight}
       className={styles.skills}
       id="sectSkills"
     >
