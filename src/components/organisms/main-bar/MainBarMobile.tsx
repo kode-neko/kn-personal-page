@@ -6,19 +6,24 @@ import { langAtom } from '../../../store';
 import { BtnBlog } from '../../molecules';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { motion } from 'motion/react'
+import { animFloatBtnsMobile } from '../../../globals';
 
 const MainBarMobile = () => {
   const [lang, changeLang] = useAtom(langAtom);
   const [isVisible, setVisible] = useState<boolean>(false);
   return (
     <div className={styles.mainBarMobile}>
-      <div className={styles.btnMenu}>
+      <motion.div
+        {...animFloatBtnsMobile}
+        className={styles.btnMenu}
+      >
         <BtnSq 
           icon='fa-solid fa-bars' 
           size='lg'
           onClick={() => setVisible(true)}
         />
-      </div>
+      </motion.div>
       <div className={clsx(styles.mainMenuMobile, isVisible && styles.visible)}>
         <div className={styles.header}>
           <div className={styles.left}>

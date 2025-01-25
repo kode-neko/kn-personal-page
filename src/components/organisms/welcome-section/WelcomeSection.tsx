@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next'
-import { avatarPic, socialList } from '../../../globals'
+import { animSecsLeft, avatarPic, socialList } from '../../../globals'
 import avatar from '../../../../assets/avatar.png'
 import { BtnIconTrans } from '../../atoms'
 import styles from './styles.module.less'
+import { motion } from "motion/react"
 
 const WelcomeSection = () => {
   const {t} = useTranslation();
   return (
-    <section 
+    <motion.div
+      {...animSecsLeft}
       className={styles.welcome}
       id="sectWelcome"
     >
@@ -48,7 +50,7 @@ const WelcomeSection = () => {
           className={styles.pic}
         />
       </div>
-    </section>
+    </motion.div>
   )
 }
 
