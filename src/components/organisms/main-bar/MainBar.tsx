@@ -1,17 +1,25 @@
 import styles from './styles.module.less'
 import MainMenu from './MainMenu'
 import MainSubMenu from './MainSubMenu'
+import { motion } from 'motion/react'
+import { animMainBar } from '../../../globals/animations'
 
 const MainBar = () => {
   return (
-    <div className={styles.mainBar}>
+    <motion.div
+      {...animMainBar}
+      className={styles.mainBar}
+    >
       <div className={styles.left}>
         <MainSubMenu />
       </div>
       <div className={styles.right}>
-        <MainMenu />
+        <MainMenu
+          onSelected={() => {
+          throw new Error('Function not implemented.')
+        } } />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

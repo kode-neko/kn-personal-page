@@ -1,4 +1,12 @@
 export {
+  animSecs,
+  animSecsLeft,
+  animSecsRight,
+  animMainBar,
+  animOpacity,
+  animSecsPortfolio
+} from './animations'
+export {
   welcomePath,
   skillsPath,
   portfolioPath,

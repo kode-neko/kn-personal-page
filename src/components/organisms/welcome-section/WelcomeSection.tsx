@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next'
-import { avatarPic, socialList } from '../../../globals'
+import { animSecsLeft, avatarPic, socialList } from '../../../globals'
 import avatar from '../../../../assets/avatar.png'
 import { BtnIconTrans } from '../../atoms'
 import styles from './styles.module.less'
+import { motion } from "motion/react"
 
 const WelcomeSection = () => {
   const {t} = useTranslation();
   return (
-    <section 
+    <motion.div
+      {...animSecsLeft}
       className={styles.welcome}
       id="sectWelcome"
     >
@@ -27,7 +29,10 @@ const WelcomeSection = () => {
           <ul className={styles.social}>
             {socialList.map(s => (
               <li key={s.id}>
-                <a href={s.path as string}>
+                <a
+                  href={s.path as string}
+                  target="_blank"
+                >
                 <BtnIconTrans
                   color='blue'
                   size='lg'
@@ -48,7 +53,7 @@ const WelcomeSection = () => {
           className={styles.pic}
         />
       </div>
-    </section>
+    </motion.div>
   )
 }
 

@@ -19,10 +19,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const def: Story = {};
+export const Def: Story = {
+  args: {
+    value: '',
+    name: 'name',
+    icon: 'fa-solid fa-face-smile',
+    placeholder: 'type your name',
+    isTextarea: false,
+    onChange: () => {}
+  }
+};
 
 export const textarea: Story = {
   args: {
-    isTextarea: true
+    value: '',
+    isTextarea: true,
+    onChange: () => {}
   }
 };

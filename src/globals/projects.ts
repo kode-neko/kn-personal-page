@@ -11,7 +11,7 @@ const landRestProject: Project = {
   social: [
     {
       id: 'web',
-      path: 'https://kodeneko.com/landing-restaurant'
+      path: 'https://kodeneko.com/land-restaurant'
     },
     {
       id: 'github',
@@ -36,7 +36,7 @@ const landMedProject: Project = {
   social: [
     {
       id: 'web',
-      path: 'https://kodeneko.com/landing-medical'
+      path: 'https://kodeneko.com/land-medical'
     },
     {
       id: 'github',
@@ -132,7 +132,7 @@ const codeTestProject: Project = {
     },
     {
       id: 'stackBlitz',
-      path: 'https://stackblitz.com/'
+      path: 'https://stackblitz.com/@kode-neko'
     },
     {
       id: 'figma',

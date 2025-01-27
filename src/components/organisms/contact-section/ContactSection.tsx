@@ -6,6 +6,8 @@ import { sendMsg } from '../../../service'
 import { SubTitle } from '../../atoms'
 import { ContactForm } from '../../molecules'
 import { useTranslation } from 'react-i18next'
+import {motion} from 'framer-motion'
+import { animSecsRight } from '../../../globals'
 
 const ContactSection = () => {
   const contact = {
@@ -23,7 +25,8 @@ const ContactSection = () => {
   }
 
   return (
-    <section 
+    <motion.section 
+      {...animSecsRight}
       className={styles.contact}
       id="sectContact"
     >
@@ -46,7 +49,7 @@ const ContactSection = () => {
           />
         </div>
       </div>                                 
-    </section>
+    </motion.section>
   )
 }
 

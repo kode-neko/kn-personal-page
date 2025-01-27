@@ -16,10 +16,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const def: Story = {};
-
-export const def02: Story = {
+export const Def: Story = {
   args: {
-    isEn: true
+    isEn: false,
+    onClick: () => {},
+  },
+};
+
+export const Def02: Story = {
+  args: {
+    isEn: true,
+    onClick: () => {},
   }
 };

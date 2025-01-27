@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import NotiHub from './NotiHub';
 import styles from './styles.module.css';
 import { Noti } from './types';

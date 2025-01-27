@@ -2,16 +2,18 @@ import styles from './styles.module.less'
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SubTitle } from '../../atoms';
-import { listSkill } from '../../../globals';
+import { animSecsRight, listSkill } from '../../../globals';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useTranslation } from 'react-i18next';
 import Techs from './Techs';
+import { motion } from "motion/react"
 
 const SkillsSection = () => {
   const {t} = useTranslation();
 
   return (
-    <section 
+    <motion.section 
+      {...animSecsRight}
       className={styles.skills}
       id="sectSkills"
     >
@@ -32,7 +34,7 @@ const SkillsSection = () => {
       </ul>
       <div className={clsx(styles.line, styles.line01)} />
       <div className={clsx(styles.line, styles.line02)} />
-    </section>
+    </motion.section>
   )
 }
 
