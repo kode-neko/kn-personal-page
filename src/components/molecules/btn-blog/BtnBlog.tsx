@@ -8,7 +8,7 @@ const BtnBlog = ({size = 'md', color = 'pink'}: BtnBlogProps) => {
       icon='fa-solid fa-feather' 
       size={size} 
       color={color} 
-      onClick={() => window.open(VITE_BLOG_URL, '_blank')}
+      onClick={() => window.open(VITE_BLOG_URL)}
     >
     Blog
   </BtnSq>
