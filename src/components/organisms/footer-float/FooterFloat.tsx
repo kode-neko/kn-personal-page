@@ -19,7 +19,7 @@ function useVisibilityEle(limitScroll: number) {
 
 const FooterFloat = () => {
   const visible = useVisibilityEle(400);
-  const handleClickBlog = () => window.open(VITE_BLOG_URL, '_blank')
+  const handleClickBlog = () => window.open(VITE_BLOG_URL)
   const handleClickScroll = () => scroll({
     top: 0,
     behavior: "smooth"
