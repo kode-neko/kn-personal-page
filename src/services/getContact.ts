@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { serviceContact } from '../../globals';
-import { Contact } from '../../model';
+import { Contact } from '../model';
+import { serviceContact } from '../globals';
 
 const {VITE_CONTACT_SEND} = process.env
 

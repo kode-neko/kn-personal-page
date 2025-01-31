@@ -12,7 +12,10 @@ const meta = {
     name: 'name',
     icon: 'fa-solid fa-face-smile', 
     placeholder: 'type your name', 
-    isTextarea: false
+    isTextarea: false,
+    errors: {},
+    dirtyFields: {},
+    touchedFields: {}
   }
 } satisfies Meta<typeof Field>;
 
@@ -21,19 +24,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Def: Story = {
   args: {
-    value: '',
     name: 'name',
     icon: 'fa-solid fa-face-smile',
     placeholder: 'type your name',
     isTextarea: false,
-    onChange: () => {}
   }
 };
 
-export const textarea: Story = {
+export const Textarea: Story = {
   args: {
-    value: '',
     isTextarea: true,
-    onChange: () => {}
   }
 };
