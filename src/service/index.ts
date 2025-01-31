@@ -1,3 +1,0 @@
-export {
-  sendMsg
-} from './contact'

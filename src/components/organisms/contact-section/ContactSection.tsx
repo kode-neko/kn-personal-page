@@ -6,8 +6,8 @@ import { SubTitle } from '../../atoms'
 import { ContactForm } from '../../molecules'
 import { useTranslation } from 'react-i18next'
 import { animSecsRight } from '../../../globals'
-import { sendMsg } from '../../../service'
 import {motion} from 'motion/react'
+import { sendMsg } from '../../../services'
 
 const ContactSection = () => {
 
