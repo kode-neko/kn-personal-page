@@ -52,7 +52,7 @@ const NotiStack: React.FunctionComponent = () => {
             key={n.id}
             initial={{ transform: 'translateX(21.88rem)' }}
             animate={{ transform: 'translateX(0)' }}
-            exit={{ transform: 'translateX(-21.88rem)' }}
+            exit={{ transform: 'translateX(21.88rem)' }}
           >
             <NotiTag noti={n} />
           </motion.div>

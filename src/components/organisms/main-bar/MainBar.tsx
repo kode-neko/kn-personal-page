@@ -14,10 +14,7 @@ const MainBar = () => {
         <MainSubMenu />
       </div>
       <div className={styles.right}>
-        <MainMenu
-          onSelected={() => {
-          throw new Error('Function not implemented.')
-        } } />
+        <MainMenu />
       </div>
     </motion.div>
   )

@@ -1,0 +1,1 @@
+export {sendMsg} from './getContact'
