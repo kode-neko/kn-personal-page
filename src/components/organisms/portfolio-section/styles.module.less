@@ -18,10 +18,13 @@
   .header {
     display: flex;
 
-    h2 {
+    .title {
       flex-grow: 1;
-      font-size: 4rem;
-      font-weight: bold;
+      h2 {
+        flex-grow: 1;
+        font-size: 4rem;
+        font-weight: bold;
+      }
     }
 
     .actions {
@@ -109,12 +112,17 @@
     gap: 2rem;
   }
 
-  .portfolio > .cont > .content {
-    .picCont > .pic {
-      max-height: 300px;
-    }
-    .info > p {
+  .portfolio > .cont > {
+    .header > .title {
       display: none;
+    }
+    .content {
+      .picCont > .pic {
+        max-height: 300px;
+      }
+      .info > p {
+        display: none;
+      }
     }
   }
 }

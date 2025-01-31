@@ -36,10 +36,12 @@ const PortfolioSection = () => {
     >
       <div className={styles.cont}>
         <div className={styles.header}>
-          <SubTitle
-            label={t('label.portfolio')}
-            align='left'
-          />
+          <div className={styles.title}>
+            <SubTitle
+              label={t('label.portfolio')}
+              align='left'
+            />
+          </div>
           <div className={styles.actions}>
             <BtnBlog
               size="sm"

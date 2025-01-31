@@ -33,7 +33,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   :root {
-    font-size: calc(var(--base-size) * 0.75);
+    font-size: calc(var(--base-size) * 0.85);
   }
 }
 
