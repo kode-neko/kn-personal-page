@@ -1,39 +1,34 @@
-import { ChangeEvent } from 'react';
 import styles from './styles.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import type FieldProps from './types.d.ts'
 
-const Field = ({value, name, icon, hint='', placeholder, isTextarea = false, onChange, onBlur}: FieldProps) => {
+const Field = ({ name, icon, placeholder, isTextarea = false, register, errors, dirtyFields, touchedFields }: FieldProps) => {
   return (
     <div className={styles.cont}>
       <div className={styles.field}>
         <FontAwesomeIcon
-    className={styles.icon} 
-    icon={icon as IconProp}
-  />
-
+          className={styles.icon} 
+          icon={icon as IconProp}
+        />
         {isTextarea 
           ? <textarea 
               data-test={'field-' + name}
-              value={value} 
-              name={name} 
               rows={8}
               placeholder={placeholder}
-              onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange(e.target.value)}
-              onBlur={(e) => onBlur && onBlur(e)}
+              {...register(name)}
             />
           : <input
               data-test={'field-' + name}
-              value={value} 
-              name={name} 
               placeholder={placeholder}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
-              onBlur={(e) => onBlur && onBlur(e)}
+              {...register(name)}
             />
         }
       </div>
-      <div className={styles.hint}>{hint}</div>
+      <div className={styles.hint}>{
+        (dirtyFields[name] || touchedFields[name]) &&
+        errors[name] && errors[name].message
+      }</div>
     </div>
   )
 }

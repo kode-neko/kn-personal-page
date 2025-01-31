@@ -1,68 +1,70 @@
 import spinnerAnimation from '../../../../assets/spinner.png'
 import styles from './styles.module.css'
 import { useTranslation } from 'react-i18next';
-import { useFormik } from 'formik';
-import { toFormikValidate } from 'zod-formik-adapter';
-import { Contact } from '../../../model';
 import { contactFormSchema } from '../../../globals';
 import { BtnSq, Field } from '../../atoms';
 import ContactFormProps from './types';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
-  const {values, handleSubmit, handleChange, handleBlur, touched, errors, isSubmitting} = useFormik({
-    initialValues: initValues,
-    onSubmit: values => {
-      console.log(JSON.stringify(values))
-      onSubmit(values as Contact)
-    },
-    validate: toFormikValidate(contactFormSchema)
-  })
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, touchedFields, dirtyFields, isSubmitting, isValid, isDirty }
+  } = useForm({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: initValues,
+    mode: 'onTouched'
+  });
+
+  console.log('isSubmitting: ', isSubmitting);
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       data-test="form-contact"
       className={styles.form}
     >
       <div className={styles.fieldset}>
         <Field
-          value={values.name}
           name='name'
           icon='fa-solid fa-face-smile'
-          hint={(touched.name && errors.name && errors.name) as string}
           placeholder={t('placeH.name')}
-          onChange={handleChange}
-          onBlur={handleBlur}
+          register={register}
+          errors={errors}
+          touchedFields={touchedFields}
+          dirtyFields={dirtyFields}
         />
         <Field
-          value={values.mail}
           name='mail'
           icon='fa-solid fa-envelope'
-          hint={(touched.mail && errors.mail && errors.mail) as string}
           placeholder={t('placeH.mail')}
-          onChange={handleChange}
-          onBlur={handleBlur}
+          register={register}
+          errors={errors}
+          touchedFields={touchedFields}
+          dirtyFields={dirtyFields}
         />
         <Field
           isTextarea
-          value={values.msg}
-          name='msg'
+          name='content'
           icon='fa-solid fa-comment-dots'
-          hint={(touched.msg && errors.msg && errors.msg) as string}
           placeholder={t('placeH.msg')}
-          onChange={handleChange}
-          onBlur={handleBlur}
+          register={register}
+          errors={errors}
+          touchedFields={touchedFields}
+          dirtyFields={dirtyFields}
         />
       </div>
       <div className={styles.bottom}>
         <div className={styles.actions}>
           <BtnSq
             type='submit'
-            disabled={!isSubmitting}
             size='lg'
             color='pink'
+            disabled={isDirty && !isValid}
           >
             { isSubmitting ? 
               <img
@@ -72,7 +74,8 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
                 height={37}
                 className={styles.spinner}
               /> : 
-              <span>{t('label.send')}</span> }
+              <span>{t('label.send')}</span>
+            }
           </BtnSq>
         </div>
       </div>

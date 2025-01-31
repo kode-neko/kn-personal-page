@@ -6,6 +6,7 @@ export {
   animOpacity,
   animSecsPortfolio
 } from './animations'
+
 export {
   welcomePath,
   skillsPath,
@@ -66,3 +67,7 @@ export {
 export {
   contactFormSchema
 } from './form-schemas'
+
+export {
+  serviceContact
+} from './services'
