@@ -1,15 +1,16 @@
 import styles from './styles.module.css'
 import mailBoxAnim from '../../../../assets/mail-box.apng'
 import { Contact } from '../../../model'
-import useAkNoti from '../notification/useNoti'
-import { sendMsg } from '../../../service'
+import sendNoti from '../notification/useNoti'
 import { SubTitle } from '../../atoms'
 import { ContactForm } from '../../molecules'
 import { useTranslation } from 'react-i18next'
-import {motion} from 'framer-motion'
 import { animSecsRight } from '../../../globals'
+import { sendMsg } from '../../../service'
+import {motion} from 'motion/react'
 
 const ContactSection = () => {
+
   const contact = {
     name: '',
     mail: '',
@@ -19,9 +20,10 @@ const ContactSection = () => {
   const {t} = useTranslation()
 
   const handleSendMessage = async (contact: Contact) => {
+    console.log('Form ok')
     sendMsg(contact)
-      .then(() => useAkNoti({ msg: '😃 Message sended' }))
-      .catch(() => useAkNoti({ msg: '☹️ There was an error' }))
+      .then(() => sendNoti({ msg: '😃 Message sended' }))
+      .catch(() => sendNoti({ msg: '☹️ There was an error' }))
   }
 
   return (

@@ -1,12 +1,15 @@
+import { Contact } from "../../../model";
+import { UseFormRegister, FieldErrors,FieldNamesMarkedBoolean,FieldNamesMarkedBoolean } from "react-hook-form";
+
 interface FieldProps {
-  value: string;
-  name: string;
+  name: 'name' | 'id' | 'mail' | 'content';
   icon: string;
-  hint?: string;
-  placeholder: string, 
-  isTextarea?: boolean,
-  onChange: (e: ChangeEvent<unknown>) => void,
-  onBlur?: (e: FocusEvent<unknown, Element>) => void;
+  placeholder: string;
+  isTextarea?: boolean;
+  register: UseFormRegister<Contact>;
+  errors: FieldErrors<Contact>;
+  dirtyFields: Partial<Readonly<FieldNamesMarkedBoolean<Contact>>>;
+  touchedFields: Partial<Readonly<FieldNamesMarkedBoolean<Contact>>>;
 }
 
 export default FieldProps
