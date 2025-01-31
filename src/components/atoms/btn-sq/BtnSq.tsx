@@ -4,7 +4,7 @@ import BtnSqProps from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const BtnSq = ({children, icon, size = 'md', color = 'pink', type, onClick, disabled = false}: React.PropsWithChildren<BtnSqProps>) => {
+const BtnSq = ({ children, icon, size = 'md', color = 'pink', type, onClick, disabled = false }: React.PropsWithChildren<BtnSqProps>) => {
   return (
     <button 
       type={type}

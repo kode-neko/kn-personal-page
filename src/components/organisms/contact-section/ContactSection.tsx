@@ -20,7 +20,6 @@ const ContactSection = () => {
   const {t} = useTranslation()
 
   const handleSendMessage = async (contact: Contact) => {
-    console.log('Form ok')
     sendMsg(contact)
       .then(() => sendNoti({ msg: '😃 Message sended' }))
       .catch(() => sendNoti({ msg: '☹️ There was an error' }))

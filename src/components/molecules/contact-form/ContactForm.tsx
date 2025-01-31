@@ -13,7 +13,7 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, touchedFields, dirtyFields, isSubmitting, isValid }
+    formState: { errors, touchedFields, dirtyFields, isSubmitting, isValid, isDirty }
   } = useForm({
     resolver: zodResolver(contactFormSchema),
     defaultValues: initValues,
@@ -64,7 +64,7 @@ const ContactForm = ({initValues, onSubmit}: ContactFormProps) => {
             type='submit'
             size='lg'
             color='pink'
-            disabled={!isValid}
+            disabled={isDirty && !isValid}
           >
             { isSubmitting ? 
               <img
