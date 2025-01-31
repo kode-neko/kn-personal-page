@@ -43,7 +43,7 @@ const MainBarMobile = () => {
             </button>
           </div>
         </div>
-        <MainMenu onSelected={() => setVisible(false)} />
+        <MainMenu />
       </div>
       <div className={clsx(styles.overlay, isVisible && styles.visible)} />
     </div>
